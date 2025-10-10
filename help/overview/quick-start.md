@@ -1,9 +1,9 @@
 ---
 title: Snabbstart
-description: Lär dig hur du kommer igång med LLM-optimering och går igenom introduktionsprocessen.
-source-git-commit: e8ea9ae0d6592ea3d1e9945ec117f852112ba9d7
+description: Kom igång med Adobe LLM Optimizer - ta in ditt varumärke i datorn, lås upp insikter om AI-synlighet och utforska instrumentpaneler för att förbättra sökresultatet.
+source-git-commit: db42183c922e6156a890e4e56732f348c26e7e44
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Startprocessen börjar med att du registrerar din domän. Processen skiljer sig 
 
 ### AEM Cloud-kunder
 
-AEM Cloud-kunder (Cloud Service/Managed Services/Edge Delivery) ser alternativet att testa LLM Optimizer via produkttilläggskortet i [Experience Hub](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
+AEM Cloud-kunder (Cloud Service/Managed Services/Edge Delivery) ser alternativet att testa LLM Optimizer via produkttilläggskortet i [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
 
 >[!NOTE]
 >Nyligen tillagda uppmaningar visas inte i Varumärkesnärvaro förrän bearbetningen är klar. AEM Cloud-kunder (Cloud Service, Managed Services/Edge Delivery) kan använda den kostnadsfria testversionen av LLM Optimizer. Användning av fler än 200 uppmaningar kräver ett separat licensavtal. Tillgång ges i befintligt skick och i befintligt skick och kan ändras, begränsas eller tas bort av Adobe när som helst. Kontakta din [kontorepresentant] om du vill ha mer information.
