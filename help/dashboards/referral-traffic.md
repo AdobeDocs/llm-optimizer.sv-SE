@@ -1,9 +1,9 @@
 ---
 title: Hänvisningstrafik
-description: Det här är artikelöversikten.
-source-git-commit: c83b4929a82331534654fcfdccd41d91eefe6d92
+description: Lär dig använda kontrollpanelen för hänvisningstrafik för att se hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar.
+source-git-commit: e8ea9ae0d6592ea3d1e9945ec117f852112ba9d7
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---

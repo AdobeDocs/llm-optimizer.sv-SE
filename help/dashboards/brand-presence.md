@@ -1,9 +1,9 @@
 ---
 title: Varumärkesnärvaro
-description: Det här är artikelöversikten.
-source-git-commit: 601c17b07ed102322b674f685c65326f1ed36995
+description: Lär dig använda kontrollpanelen för varumärkesnärvaro för att förstå hur ert varumärke uppfattas på nivån för AI-genererade svar.
+source-git-commit: e8ea9ae0d6592ea3d1e9945ec117f852112ba9d7
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1174'
 ht-degree: 0%
 
 ---

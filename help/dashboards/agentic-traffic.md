@@ -1,9 +1,9 @@
 ---
 title: Myndighetstrafik
-description: Det här är artikelöversikten.
-source-git-commit: f92ca3eaa81d05135c65df60267280314c6e2d6f
+description: Lär dig hur du använder kontrollpanelen för AI-trafik för att se hur AI-agenter interagerar med din webbplats.
+source-git-commit: e8ea9ae0d6592ea3d1e9945ec117f852112ba9d7
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---

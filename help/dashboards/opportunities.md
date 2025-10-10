@@ -1,9 +1,9 @@
 ---
 title: Optimeringsmöjligheter
-description: Det här är artikelöversikten.
-source-git-commit: ea8434daef2402f0dc9ac2d4f6060c38c9137fe6
+description: Lär dig hur du använder kontrollpanelen för affärsmöjligheter för att automatiskt upptäcka hur webbplatsen kan förbättras för att öka varumärkets synlighet.
+source-git-commit: e8ea9ae0d6592ea3d1e9945ec117f852112ba9d7
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
