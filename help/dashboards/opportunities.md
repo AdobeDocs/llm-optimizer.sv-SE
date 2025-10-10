@@ -1,9 +1,9 @@
 ---
 title: Optimeringsmöjligheter
 description: Det här är artikelöversikten.
-source-git-commit: 8c38027e46b53d85776fffe17597883c742235d6
+source-git-commit: ea8434daef2402f0dc9ac2d4f6060c38c9137fe6
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '609'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Nedan finns en tabell över de affärsmöjligheter som stöds:
 
 ### Återskapa innehållssynlighet {#recover-contet}
 
-Som anges ovan flaggar innehållssynligheten sidor där nyckelinnehåll förloras för AI-agenter på grund av klientåtergivning. För varje identifierad sida visas exakt vilket innehåll som saknas i AI-agentvyn, vilket hjälper dig att identifiera luckor i synligheten. Det stöds också av en edge-baserad förrenderingsfunktion som kan leverera mer HTML-innehåll till agell trafik utan att CMS (Content Management System) behöver ändras. Observera att den här funktionen för närvarande används i **tidig åtkomst** och kräver även konfiguration från LLMO-teamet för att optimerad innehållsleverans ska kunna aktiveras.
+Som anges ovan flaggar innehållssynligheten sidor där nyckelinnehåll förloras för AI-agenter på grund av klientåtergivning. För varje identifierad sida visas exakt vilket innehåll som saknas i AI-agentvyn, vilket hjälper dig att identifiera luckor i synligheten. Det stöds också av en edge-baserad förrenderingsfunktion som kan leverera mer HTML-innehåll till agell trafik utan att CMS (Content Management System) behöver ändras. Den här funktionen är för närvarande i tidig åtkomst och kräver konfiguration från LLMO-teamet. Kontakta `llmo-at-edge@adobe.com` för att aktivera innehållssynlighetsmöjligheten.
 
 ### Ytterligare verktyg
 

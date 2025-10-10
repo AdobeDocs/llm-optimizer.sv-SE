@@ -1,9 +1,9 @@
 ---
 title: Kundkonfiguration
 description: Det här är artikelöversikten.
-source-git-commit: e35ddb9b055d2f974fd94b3a21e13e92d05c8799
+source-git-commit: 5dbf794b87df92583daec83ab02063821ee7a412
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 I kundkonfigurationen definieras hur ert varumärke ska övervakas och analyseras inom plattformen. Ni kan anpassa kategorier (t.ex. affärsenheter eller produktlinjer), spåra konkurrenter och lägga till alias för varumärket för att fånga upp alla variationer av ert varumärke i olika uppmaningar. Med den här konfigurationen kan plattformen skräddarsy insikter efter verksamhetens sammanhang, vilket möjliggör korrekt synlighet, trafik och analys av affärsmöjligheter.
 
-![Trendar-URL:er som tävlar om källhänvisningar](/help/dashboards/assets/customer-config.png)
+![Kontrollpanel för kundkonfiguration](/help/dashboards/assets/customer-config.png)
 
 För att konfigurera hur LLM Optimizer övervakar och analyserar er varumärkesnärvaro på olika marknader och i olika konkurrenslandskap har du tillgång till följande flikar:
 

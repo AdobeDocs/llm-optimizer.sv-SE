@@ -1,20 +1,20 @@
 ---
 title: Collaboration
 description: Det här är artikelöversikten.
-source-git-commit: 57d086bbdb08200d832a1374ee356e5357a64d94
+source-git-commit: 5dbf794b87df92583daec83ab02063821ee7a412
 workflow-type: tm+mt
-source-wordcount: '74'
+source-wordcount: '94'
 ht-degree: 0%
 
 ---
 
 
-# Ökning
+# Samarbete
 
-Med Collaboration kan ni bjuda in teammedlemmar till organisationens LLM Optimizer-arbetsyta så att alla kan få tillgång till insikter och analyser på ett och samma ställe. Genom att lägga till kollegor kan ni se till att marknadsförings-, SEO-, PR- och tekniska team smidigt kan samarbeta kring förbättringar av synligheten för varumärken, dela med sig av sina resultat och vidta samordnade åtgärder för att hitta nya möjligheter.
+Med Collaboration kan ni bjuda in teammedlemmar till organisationens LLM Optimizer-arbetsyta så att alla kan få tillgång till insikter och analyser från ett och samma ställe. Genom att lägga till kollegor kan ni se till att marknadsförings-, SEO-, PR- och tekniska team smidigt kan samarbeta kring förbättringar av synligheten för varumärken, dela med sig av sina resultat och vidta samordnade åtgärder för att hitta nya möjligheter.
 
-**Lägg till bild här**
+## Så här bjuder du in teammedlemmar
 
-## Filter
+Du kan bjuda in teammedlemmar genom att lägga till deras e-post i fältet **E-postadress** och klicka på **Skicka inbjudan**. Om de godkänner det kommer de att gå med i din organisations LLM Optimizer-arbetsyta.
 
-Överst på kontrollpanelen kan du förfina vyn genom att:
+![Collaboration Invite](/help/dashboards/assets/collaboration.png)
