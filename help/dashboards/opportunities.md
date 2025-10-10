@@ -1,7 +1,7 @@
 ---
 title: Optimeringsmöjligheter
 description: Det här är artikelöversikten.
-source-git-commit: e35ddb9b055d2f974fd94b3a21e13e92d05c8799
+source-git-commit: 77bddfa7351d573c20a0f68a08b69000bc06beb8
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 0%
