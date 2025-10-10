@@ -1,9 +1,9 @@
 ---
 title: Kundkonfiguration
-description: Det här är artikelöversikten.
-source-git-commit: 5dbf794b87df92583daec83ab02063821ee7a412
+description: Använd kundkonfigurationen för att definiera hur ert varumärke ska övervakas och analyseras inom plattformen för optimering av livslångt lärande.
+source-git-commit: 7d01b35cb2153e020f0b64e493aad263fb9bb09f
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Kundkonfiguration
 
-I kundkonfigurationen definieras hur ert varumärke ska övervakas och analyseras inom plattformen. Ni kan anpassa kategorier (t.ex. affärsenheter eller produktlinjer), spåra konkurrenter och lägga till alias för varumärket för att fånga upp alla variationer av ert varumärke i olika uppmaningar. Med den här konfigurationen kan plattformen skräddarsy insikter efter verksamhetens sammanhang, vilket möjliggör korrekt synlighet, trafik och analys av affärsmöjligheter.
+I kundkonfigurationen definieras hur ert varumärke ska övervakas och analyseras inom plattformen för optimering av livslångt lärande. Ni kan anpassa kategorier (t.ex. affärsenheter eller produktlinjer), spåra konkurrenter och lägga till alias för varumärket för att fånga upp alla variationer av ert varumärke i olika uppmaningar. Med den här konfigurationen kan plattformen skräddarsy insikter efter verksamhetens sammanhang, vilket möjliggör korrekt synlighet, trafik och analys av affärsmöjligheter.
 
 ![Kontrollpanel för kundkonfiguration](/help/dashboards/assets/customer-config.png)
 
