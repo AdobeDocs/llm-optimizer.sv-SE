@@ -1,9 +1,9 @@
 ---
 title: Kundkonfiguration
 description: Använd kundkonfigurationen för att definiera hur ert varumärke ska övervakas och analyseras inom plattformen för optimering av livslångt lärande.
-source-git-commit: 653a6be856412faac8783fa9dc7b759a7c6e1f68
+source-git-commit: b39a6acbcb86c91d23c3aab790266f37b579f651
 workflow-type: tm+mt
-source-wordcount: '1594'
+source-wordcount: '1608'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ Se till att granska och uppdatera uppmaningarna regelbundet för att säkerstäl
 
 >[!TIP]
 >
->* Du kan använda verktyg som LLM Optimizer och Google Search Console med regex-filter för att identifiera vanliga frågestrukturer (till exempel&quot;how&quot;,&quot;what&quot;,&quot;when&quot;,&quot;where&quot;).
+>* Du kan använda verktyg som Adobe LLM Optimizer och Google Search Console med regex-filter för att identifiera vanliga frågestrukturer (till exempel&quot;hur&quot;,&quot;vad&quot;,&quot;när&quot;,&quot;var&quot;) och ta reda på vilka uppmaningar folk använder för att besöka din webbplats.
 >* För att ta reda på vilka frågor som är relevanta för er webbplats/varumärke kan ni använda sökdata på webbplatsen, Frågor och svar på sökmotorernas resultatsidor, eller till och med ställa frågor direkt om hur kunderna kan ställa frågor om ert varumärke.
 
 ### Bästa tillvägagångssätt för konkurrenter

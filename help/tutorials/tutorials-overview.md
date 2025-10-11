@@ -1,9 +1,9 @@
 ---
 title: LLM Optimizer Fundamentals
 description: Läs om hur Adobe LLM Optimizer ökar synligheten för varumärken i AI-driven sökning. Spåra omnämnanden, citat och insikter. Börja optimera idag för bättre engagemang och påverkan.
-source-git-commit: 227eb378bd5484fad2fb4165822394b0b605747b
+source-git-commit: b39a6acbcb86c91d23c3aab790266f37b579f651
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
@@ -62,75 +62,9 @@ Med Adobe LLM Optimizer kan man
 **Aktivera Team Collaboration** - Dela instrumentpaneler, tilldela ägare för frågor eller kategorier och se till att synlighetsmålen spåras för alla marknadsförings-, SEO- och kommunikationsfunktioner.
 
 
-## Referenser
-
-Lägg till fler länkar och information här.
 
 
 
-
-
-
-
-
-<!--## Understanding Brand Visibility and AI Search
-
-Use these as guidelines for creating tutorials - some may be covered already in docs
-
-## Using the Brand Presence Dashboard
-
-* Visibility Score
-* Mentions and Citations
-* Competitor Benchmarking
-* Sentiment Trend Analysis
-
-
-## Exploring the Data Insights Table
-
-* Topic-Level Performance
-* Sentiment and Position Analysis
-* Citation Breakdown
-* Optimization Prioritization
-
-
-## Tracking Agentic Traffic from AI Crawlers
-
-* Setup and Activation
-* Traffic Distribution and Trends
-* User Agent and URL Performance Analysis
-
-
-## Measuring Referral Traffic from AI Citations
-
-* Setup and Activation
-* Source, Region, and Channel Filters
-* Top Referral URLs and Traffic Quality
-
-
-## Inspecting URL Performance in AI Responses
-
-* Cited URLs and Prompt Coverage
-* Competing URLs and Citation Trends
-
-
-## Identifying Optimization Opportunities
-
-* Content Fixes (Headings, FAQs, Canonicals)
-* Technical Fixes (Blocked Agents, Errors)
-* Third-Party Influence Strategies
-
-## Collaborating Across Teams
-
-* Workspace Sharing
-* Role-Based Dashboards
-* Prompt and Category Ownership
-
-
-## Configuring Your Brand Monitoring Setup
-
-* Categories and Topics
-* Brand and Competitor Aliases
-* Domain Switching and Customization -->
 
 
 
