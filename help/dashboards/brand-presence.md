@@ -1,9 +1,9 @@
 ---
 title: Varumärkesnärvaro
 description: Lär dig använda kontrollpanelen för varumärkesnärvaro för att förstå hur ert varumärke uppfattas på nivån för AI-genererade svar.
-source-git-commit: e8ea9ae0d6592ea3d1e9945ec117f852112ba9d7
+source-git-commit: 4cbfbe420a8419a04c2d6c465b6a290ee00ff3d4
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1227'
 ht-degree: 0%
 
 ---
@@ -28,15 +28,17 @@ Den här sidan innehåller följande information:
 Överst på sidan kan du använda filter för att förfina visningen. De filter du väljer påverkar **alla** -avsnitt som finns på kontrollpanelen. Du kan anpassa följande:
 
 * **Datumintervall** - Välj tidsram för visade data. De senaste fyra veckorna, till exempel. Du kan också anpassa tidsperioden genom att välja alternativet **Anpassade veckor**.
-* **Kategori** - Filtrera de resultat som visas efter fördefinierade kategorier. Du kan också lägga till egna kategorier i det här fältet (**SR**-how?).
+* **Kategori** - Filtrera de resultat som visas med antingen fördefinierade kategorier eller anpassade kategorier.
 * **Plattform** - Välj vilken AI-motor som ska analyseras.
+* **Frågar om ursprung** - Välj källa för uppmaningarna. Ursprunget kan antingen vara användarinmatat eller AI-genererat.
+* **Prompt Branding** - Filtrera resultat antingen efter profilerade uppmaningar eller uppmaningar utan varumärke.
 * **Region** - Filtrera resultaten efter geografi. Alla regioner är inte tillgängliga vid lanseringen.
 
 När du har valt önskat filter klickar du på **Använd filter** för att använda markeringen på instrumentpanelen.
 
 ## Översikt, mått {#overview-metrics}
 
-Kontrollpanelen markerar tre viktiga mätvärden högst upp på sidan: synlighetspoäng, omnämnanden och citat. Ju lägre antal mätvärden desto värre blir ert varumärke, och ni bör agera för att förbättra ert varumärke. som **SR - Lägg till optimeringslänk här**. Nedan visas en kort beskrivning av varje mätvärde och vad det representerar.
+Kontrollpanelen markerar tre viktiga mätvärden högst upp på sidan: synlighetspoäng, omnämnanden och citat. Ju lägre antal mätvärden desto värre blir ert varumärke, och ni bör agera för att förbättra ert varumärke. Nedan visas en kort beskrivning av varje mätvärde och vad det representerar.
 
 ![Översiktsmått](/help/dashboards/assets/overview-metrics.png)
 
@@ -84,25 +86,26 @@ Klicka på flikarna nedan om du vill ha mer information om varje tabell och till
 
 Tabellen med datainsikter hjälper dig att utforska ämnen och användaruppmaningar för att utvärdera och optimera innehållets effekt. Här visas följande mått:
 
-* **Kategori** - Ämneskategorin representerar SEO-nyckelord och användarfrågor som rör ditt varumärke. Du kan klicka för att expandera varje ämne och se enskilda frågor analyserade för att se om det finns ett varumärke. Varje ämne och knapp har en **Detaljer** -knapp när du håller muspekaren över det. Om du klickar på knappen visas ett separat fönster med mer information.
+* **Ämne** - Ämneskategorin representerar SEO-nyckelord och användarfrågor som rör ditt varumärke. Du kan klicka för att expandera varje ämne och se enskilda frågor analyserade för att se om det finns ett varumärke. Varje ämne och knapp har en **Detaljer** -knapp när du håller muspekaren över det. Om du klickar på knappen visas ett separat fönster med mer information.
+* **Region** - visar regionen för uppmaningarna.
 * **Popularitet** - popularitetskategorin representerar sökvolymen för det här ämnet i förhållande till alla andra ämnen i analysen. Värdet kan vara antingen Hög, Medium eller Låg.
-* **Synlighetspoäng** - Synlighetspoäng för det ämnet. Den återspeglar viktade faktorer som omnämnanden, citat, känslor och rankning.
+* **Synlighetspoäng** - Synlighetspoängen för det ämnet. Den återspeglar viktade faktorer som omnämnanden, citat, känslor och rankning.
 * **Omnämnanden** - Det antal gånger ditt varumärke omnämns i AI-svar för det här ämnet eller den här kombinationen av ämne och fråga.
-* **Sentiment** - Varumärkesuppfattningen i AI-svar vad gäller respektive ämne. Uppskattningsvärdet kan vara antingen positivt, neutralt eller negativt.
-* **Position** - Hur tidigt ditt varumärke visas i AI-svaret, beräknat som ett genomsnitt för alla veckor.
+* **Sentiment** - Varumärkesuppfattningen i AI-svar som den relaterar till varje ämne som beräknas som ett genomsnitt för alla veckor. Endast populerat när ert varumärke faktiskt omnämns
+* **Position** - Varumärkets relativa framträdande i AI-svar, beräknat som ett genomsnitt för alla veckor.
 * **Alla källhänvisningar** - Antalet unika källor som anges i AI-svar för det här ämnet eller den här kombinationen av ämne och kommando (inklusive egna citat).
 * **Ägda citat** - Det antal gånger ditt varumärke citerades i AI-svar för det här nyckelordet eller den här nyckelords-/frågekombinationen.
 
 >[!TAB Delning av röst]
 
-Tabellen **andel av röst** jämför varumärkesuttrycket med andra konkurrenter i alla ämnen. Här visas följande mått:
+Tabellen Share of Voice ger en jämförande bild av hur ert varumärke fungerar i alla viktiga ämnen i generativa AI-svar. Det hjälper er att identifiera brister i synligheten, spåra konkurrensresultat och prioritera områden för optimering. Här visas följande mått:
 
 * **Ämne** - Det analyserade ämnet.
 * **Popularitet** - Sökvolymen för ämnet i förhållande till alla andra ämnen i din analys.
 * **Omnämnanden** - Antal gånger ditt varumärke omnämns i AI-svar för ämnet eller för kombinationen ämne/fråga.
 * **Rankning** - rankningen av ert varumärkes Voice i förhållande till alla identifierade konkurrenter.
-* **Andel av röst** - Den procentandel av tiden som ett varumärke anges i förhållande till alla omnämnanden i AI-svar.
-* **De fem främsta konkurrenterna** - De fem främsta konkurrenterna ordnade efter deras andel av röst (högst till lägst).
+* **Andel av röst** - Procentandel av det totala omnämnandet som ert varumärke har över AI-genererade svar.
+* **De fem främsta konkurrenterna** - de fem vanligaste varumärken som nämns för samma ämne. Konkurrenterna sorteras efter deras andel av rösten (högst upp till lägst).
 
 >[!ENDTABS]
 

@@ -1,7 +1,7 @@
 ---
 title: Snabbstart
 description: Kom igång med Adobe LLM Optimizer - ta in ditt varumärke i datorn, lås upp insikter om AI-synlighet och utforska instrumentpaneler för att förbättra sökresultatet.
-source-git-commit: c64995176f6cb50bf23543fe95471c4723ae9a10
+source-git-commit: 4cbfbe420a8419a04c2d6c465b6a290ee00ff3d4
 workflow-type: tm+mt
 source-wordcount: '908'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Se avsnittet nedan för mer ingående information om hur du aktiverar den kostna
 
 ### AEM Cloud-kunder
 
-Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
+Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
 
 >[!NOTE]
 >Nyligen tillagda uppmaningar visas inte på kontrollpanelen [Varumärkesnärvaro](/help/dashboards/brand-presence.md) förrän bearbetningen är klar. AEM Cloud-kunder (Cloud Service, Managed Services/Edge Delivery) kan använda den kostnadsfria testversionen av LLM Optimizer. Användning av fler än 200 uppmaningar kräver ett separat licensavtal. Tillgång ges i befintligt skick och i befintligt skick och kan ändras, begränsas eller tas bort av Adobe när som helst. Kontakta din kontorepresentant om du vill ha mer information.
@@ -79,11 +79,11 @@ När din domän har anslutits och du har angett kategorier och ämnen, kommer LL
 
 ### Steg 4: Ange information för vidarebefordran av CDN-loggar {#step-4}
 
-Om du vill låsa upp information om AGT- och REFERENSTRERINGSTRANSPLANER måste du ange information för vidarebefordran av CDN-loggar. Den kan läggas till från kontrollpanelen för kundkonfiguration genom att gå till fliken CDN-konfiguration och klicka på **Inbyggt CDN**.
+Om du vill låsa upp information om AGT- och REFERENSTRERINGSTRANSPLANER måste du ange information för vidarebefordran av CDN-loggar. Den kan läggas till från [kundkonfigurationspanelen](/help/dashboards/customer-configuration.md) genom att gå till fliken **CDN-konfiguration** och klicka på **Inbyggt CDN**.
 
 ![CDN för kundkonfiguration](/help/overview/assets/cc-cdn.png)
 
-Om ingen CDN-leverantör har valts i förväg uppmanas du att lägga till vidarebefordran av CDN-loggar när du för första gången öppnar kontrollpanelerna för AGATABLE- och Referral-trafik. Mer information finns i:
+Om ingen CDN-leverantör har lagts till i förväg uppmanas du att lägga till CDN-loggvidarebefordran när du för första gången öppnar kontrollpanelerna för Agenting och Referenstrafik. Mer information finns i:
 
 * [Myndighetstrafik](/help/dashboards/agentic-traffic.md#cdn-setup)
 * [Hänvisningstrafik](/help/dashboards/referral-traffic.md#setup#setup)

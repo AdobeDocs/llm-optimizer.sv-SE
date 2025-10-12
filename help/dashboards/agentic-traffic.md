@@ -1,9 +1,9 @@
 ---
 title: Myndighetstrafik
 description: Lär dig hur du använder kontrollpanelen för AI-trafik för att se hur AI-agenter interagerar med din webbplats.
-source-git-commit: e8ea9ae0d6592ea3d1e9945ec117f852112ba9d7
+source-git-commit: 4cbfbe420a8419a04c2d6c465b6a290ee00ff3d4
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
@@ -22,15 +22,26 @@ Den här sidan innehåller följande information:
 * [Övre och nedre flyttningar](#top-bottom-movers)
 * [Prestandaanalys för användaragent och URL](#user-url-performance)
 
-## Inställningar för CDN {#cdn-setup}
+## CDN-loggvidarebefordran {#cdn-setup}
 
-När du loggar in för första gången är kontrollpanelen för AGAL-trafik tom. Om du vill visa agentiska interaktioner måste du konfigurera **CDN-loggvidarebefordran**. **TBD-pekar på CDN-konfigurationen vid snabbstart/introduktion?**
+Utan **CDN-loggvidarebefordran** är instrumentpanelen för agenttrafik tom. Om du vill visa agentiska interaktioner måste du konfigurera **CDN-loggvidarebefordran**.  När du loggar in första gången visas ett meddelande enligt bilden nedan.
 
-![CDN-inställningar](/help/dashboards/assets/ag-log-forward.png)
+![CDN-inställningar](/help/dashboards/assets/ag-log-forward1.png)
+
+Välj **Gå till konfiguration** så navigerar du automatiskt till fliken **CDN-konfiguration** på kontrollpanelen för [kundkonfiguration](/help/dashboards/customer-configuration.md).
+
+![Inbyggt CDN-installationsprogram](/help/dashboards/assets/ag-log-forward2.png)
+
+Välj **Inbyggt CDN** på den här fliken. CDN-providerfönstret visas.
+
+![CDN-provider](/help/dashboards/assets/ag-log-forward3.png)
+
+I fönstret **Onboard CDN Provider**:
 
 1. Välj din CDN-leverantör (till exempel Akamai, Adobe-hanterad Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare eller Annan).
-2. Ange en primär e-postadress till kontakten.
-3. Klicka på **Begär aktivering** om du vill aktivera vidarebefordran av loggar.
+2. Klicka på **Anonboard** om du vill aktivera vidarebefordran av loggar.
+
+Om du väljer **Annan** måste du kontakta Adobe för att få hjälp.
 
 När loggarna har aktiverats hämtas de in och kontrollpanelen fylls i med mätvärden som total agentinteraktion, framgångsgrad, träffar per marknad, användaragentanalys och URL-nivåprestanda.
 
@@ -39,11 +50,11 @@ När loggarna har aktiverats hämtas de in och kontrollpanelen fylls i med mätv
 Överst på sidan kan du använda filter för att förfina visningen. De filter du väljer påverkar **alla** -avsnitt som finns på kontrollpanelen. Du kan anpassa följande:
 
 * **Datumintervall** - Välj tidsram för visade data. De senaste fyra veckorna, till exempel. Du kan också anpassa tidsperioden genom att välja alternativet **Anpassade veckor**.
-* **Kategori** - Filtrera de resultat som visas efter fördefinierade kategorier. Du kan också lägga till egna kategorier i det här fältet (**SR**-how?).
+* **Kategori** - Filtrera de resultat som visas efter fördefinierade kategorier eller anpassade kategorier.
 * **Plattform** - Välj vilken AI-motor som ska analyseras.
 * **Agenttyp** - Filtrera efter den typ av AI-agent som interagerade med din plats. Du kan filtrera mellan crawler, chattbotar eller alla agenter.
-* **Slutförandefrekvens** - Filtrera efter interaktionskvalitet (hög, medel eller låg). Det här måttet visar hur många procent lyckade HTTP-begäranden, inklusive både direkta lyckade svar och omdirigeringar.
-* **Innehållstyp** - Filtrera efter innehållstyp, antingen HTML eller text.
+* **Slutförandefrekvens** - Filtrera efter interaktionskvalitet (hög, medel eller låg). Det här måttet representerar procentandelen lyckade HTTP-begäranden, inklusive både direkt slutförda svar (2xx-statuskoder) och omdirigeringar (3xx-statuskoder).
+* **Innehållstyp** - Visa autentisk interaktion för olika innehållstyper, som HTML, PDF och så vidare.
 
 När du har valt önskat filter klickar du på **Använd filter** för att använda markeringen på instrumentpanelen.
 
@@ -69,10 +80,9 @@ Använd diagrammet&quot;Agentic Traffic Trends&quot; för att följa upp antalet
 
 ## Övre och nedre flyttningar {#top-bottom-movers}
 
-Dessa två mätvärden sorterar URL:erna enligt följande:
+I vyn Top and Bottom Movers (Översta och understa flytten) markeras URL:er med de största vecko-över-vecka-förändringarna i autentisk trafik - besök eller träffar från AI-system som använder ditt innehåll. De vanligaste sätten visar sidor som ökar synligheten eller engagemanget, medan de nedersta förflyttningarna visar URL:er med de brantaste minskningarna. På så sätt kan ni snabbt identifiera vilket innehåll som trasar uppåt, vilket kan behöva åtgärdas och var de AI-drivna identifieringsmönstren förskjuts.
 
-* **De översta topparna** - URL:er med den största ökningen av agentiell trafik från den äldsta till den senaste veckan.
-* **Bottom Movers** - URL:er med den största minskningen av den autentiska trafiken från den äldsta till den senaste veckan.
+![Övre och nedre flyttningar](/help/dashboards/assets/movers.png)
 
 ## Prestandaanalys för användaragent och URL {#user-url-performance}
 
@@ -104,6 +114,12 @@ Tabellen URL-prestandaanalys visar en detaljerad vy över enskilda URL:er. Detta
 * **Slutförandefrekvens** - Procentandel lyckade HTTP-begäranden, inklusive både direkta lyckade svar och omdirigeringar.
 * **Kategori** - Den kategori som bäst matchar sidans innehåll.
 
-I URL-prestandatabellen finns ett sökfält som ger snabb åtkomst till URL:er. Du kan också använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellen i den verkställande rapporten.
+I URL-prestandatabellen finns ett sökfält som ger snabb åtkomst till URL:er. Du kan också visa ytterligare information för varje URL genom att klicka på informationsikonen i slutet av varje rad.
+
+![URL-information](/help/dashboards/assets/details.png)
+
+Vyn URL-detaljer ger en helhetsbild av en sidas prestanda - som visar hur ofta den anges, känslan av AI-svar där den nämns, ämnen och uppmaningar som den visas i samt trender för faktisk och hänvisningstrafik över tid.
 
 >[!ENDTABS]
+
+För båda tabellerna kan du använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellen i den verkställande rapporten.
