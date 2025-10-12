@@ -1,9 +1,9 @@
 ---
 title: LLM Optimizer - översikt
 description: Läs om hur Adobe LLM Optimizer ökar synligheten för varumärken i AI-driven sökning. Spåra omnämnanden, citat och insikter. Börja optimera idag för bättre engagemang och påverkan.
-source-git-commit: bb3e3e4ebc7499fb8c8dfc165eb87595b40a4b4c
+source-git-commit: 29e067086f9b6dd41c04b349c86ddc1c2baf8d2f
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,8 @@ Här är resurser som hjälper dig att få ut mesta möjliga av LLM Optimizer:
 
 * [Quickstart](/help/overview/quick-start.md) hjälper dig att komma igång snabbt.
 * [Kontrollpanelsöversikt](/help/dashboards/dashboards-overview.md) beskriver alla instrumentpaneler som är tillgängliga i LLM Optimizer.
-* [Bästa praxis](/help/tutorials/best-practices.md) guidar dig genom hur du använder verktyget för att få de insikter du behöver för ditt varumärke.
+* [Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar och konkurrenter](/help/overview/best-practices-topics-prompts.md) innehåller viktig information för att konfigurera LLM Optimizer.
+* Med [Bästa praxis](/help/tutorials/best-practices.md) kan du upptäcka bästa praxis för optimering av LLM för att öka varumärkets synlighet vid AI-sökning.
 
 
 

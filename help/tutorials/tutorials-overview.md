@@ -1,7 +1,7 @@
 ---
-title: LLM Optimizer Fundamentals
+title: LLM Optimizer - översikt
 description: Läs om hur Adobe LLM Optimizer ökar synligheten för varumärken i AI-driven sökning. Spåra omnämnanden, citat och insikter. Börja optimera idag för bättre engagemang och påverkan.
-source-git-commit: b39a6acbcb86c91d23c3aab790266f37b579f651
+source-git-commit: 29e067086f9b6dd41c04b349c86ddc1c2baf8d2f
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 0%
@@ -32,9 +32,6 @@ Adobe LLM Optimizer har en programsvit för generativ motoroptimering:
 * Upptäck användbara möjligheter: Identifiera innehåll och tekniska förbättringar (som vanliga frågor och svar, abstrakt, schema, crawlbarhet) för att lyfta fram omnämnanden och citat.
 * Spåra trafikpåverkan: Övervaka både agell (AI-assistent) och hänvisningstrafik till ägda egendomar, länka synlighet till engagemang.
 * Aktivera Team Collaboration: Dela instrumentpaneler, tilldela ägare och anpassa mål mellan marknadsförings-, SEO- och kommunikationsteam.
-
-
-<!-- I'm adding headings because LLMs like them and that way we'll rank better. Generally question format/question words in the the title is preferred. We can discuss. Or we can mirror what we did for Sites Optimizer and have this info on another page-->
 
 ## Varför optimering av LLM är viktigt för ert varumärke
 

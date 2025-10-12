@@ -1,17 +1,15 @@
 ---
 title: LLM Optimizer bästa praxis
 description: Upptäck bästa praxis för optimering av livslångt lärande som ökar varumärkets synlighet i AI-sökningar. Insikter för att testa och optimera innehåll.
-source-git-commit: 70d0b8c042cbdd87bab1c9ef3139af9c72a4a09d
+source-git-commit: 29e067086f9b6dd41c04b349c86ddc1c2baf8d2f
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
 
 
-# Bästa praxis
-
-[UTKAST]
+# LLM Optimizer bästa praxis
 
 LLM-optimering, som även kallas GEO (Generative Engine Optimization), AEO (Answer Engine Optimization) eller AI Optimization (AIO), är hur du gör varumärket och innehållet synligt, tillförlitligt och återgivbart i AI-genererade svar - i ChatGPT, Perplexity, Copilot, Gemini och andra LLM-drivna assistenter.
 
@@ -19,11 +17,46 @@ Om den traditionella SEO-funktionen har hjälpt er att vinna en första sidrankn
 
 I den här artikeln beskrivs de bästa sätten att mäta och förbättra din synlighet och påverkan i AI-drivna sökmiljöer med Adobe LLM Optimizer.
 
+* [LLM vs SEO](#key-differences)
+* [Låsa upp LLM:s varumärkessynlighet](#unlocking-llm-brand-visibility)
+* [Strategisk kampanjplanering](#strategic-campaign-planning)
+* [Användbara optimeringssteg](#actionable-optimization-steps)
+* [Optimering offline för att öka LLM-synligheten](#offsite-optimization-for-llm-visibility)
+* [Mäta LLM-synlighet](#measuring-llm-visibility)
+* [Spåra synlighetsändringar](#tracking-visibility-changes)
+
+## LLM jämfört med SEO: Viktiga skillnader {#key-differences}
+
+En stark SEO-grund har stöd för LLM-optimering, men det krävs nya strategier för att säkerställa synlighet i AI-genererade svar.
+
+>[!NOTE]
+>
+>För närvarande är SEO-trafiken fortfarande den största drivkraften för trafik till de flesta webbplatser, vilket gör den mycket viktig för ert varumärkes synlighetsstrategi.
+
+
+| SEO | LLM |
+|---------|----------|
+| Indexbaserad | *Tokenbaserade (tränade data) |
+| Länkauktoritetsfrågor | **Varumärkesomnämnanden betyder mer |
+| JS-rendering stöds | Mycket begränsad JS-rendering på klientsidan |
+| Indexering i realtid | ***Retrieval-Augmented Generation (RAG) för färskhet |
+
+*Trots att LLM-resultat inte använder indexerade sidor använder LLM-medlemmar sökmotorer för att förbättra snabba svar via Retrievel-Augmented Generation (RAG).
+
+** LLM prioriterar innehållsrelevans och närvaro framför bakåtkompatibilitet.
+
+*** RAG minskar hallucinationer
+
+Andra aspekter att tänka på vid optimering av livslångt lärande:
+
+* Det viktiga är innehållets frihet: Hanterarna av livslångt lärande prioriterar nyligen uppdaterat innehåll. (Sökmotorer prioriterar även detta för tidskänsliga frågor, men förlitar sig mer på andra värden.)
+* Det är mycket viktigt att få intäkter (från tredje part) i form av omnämnanden och citat.
+
 ## Låsa upp varumärkets synlighet
 
-Optimeringen av stora språkmodeller (LLM) förändrar hur varumärken identifieras och refereras i AI-drivna miljöer. Adobe LLM Optimizer erbjuder ett strukturerat arbetssätt som förbättrar varumärkets synlighet.
+LLM:s synlighet handlar om hur ofta och hur tydligt ert varumärke visas i AI-genererade svar.
 
-Följ de här stegen för att förbättra din synlighet för LLM:
+För att förbättra din synlighet
 
 1. **Analysera:** Granska hur varumärket visas i viktiga kundfrågor för alla plattformar.
 2. **Planera:** Målgruppskluster med uppmaningar med liknande avsikt för fokuserade kampanjer.
@@ -34,33 +67,16 @@ Följ de här stegen för att förbättra din synlighet för LLM:
 
 Genom att förstå och utnyttja dessa steg kan ert varumärke förbli relevant eftersom AI blir en central del i informationsidentifieringen.
 
-## LLM jämfört med SEO: Viktiga skillnader
-
-En bra strategi för livslångt lärande bygger vidare på en bra SEO-strategi. En SEO-strategi är grunden för alla optimeringar av livslångt lärande. För närvarande är SEO-trafiken fortfarande den största drivkraften för trafik till de flesta webbplatser, vilket gör den mycket viktig för ert varumärkes synlighetsstrategi.
-
-Det är viktigt att förstå att optimering för LLM skiljer sig från traditionell SEO på grund av några viktiga skillnader:
-
-* LLM-moduler använder variabler, inte index: Resultaten genereras från tränade data, inte indexerade webbsidor, men i LLM-program används sökmotorer för att förbättra svar via Retrievel-Augmented Generation (RAG).
-* Information i realtid via RAG: Sökmotorer använder data i realtid medan RAG gör det möjligt för LLM att hämta aktuell information, vilket minskar hallucinationer.
-* Begränsad JS-återgivning på klientsidan: För närvarande bearbetar inte LLM-program JavaScript på klientsidan, vilket påverkar vilket innehåll som är synligt.
-
-På grund av några av dessa grundläggande skillnader, med en strategi för livslångt lärande, måste ni tänka på följande:
-
-* Varumärkesomnämnanden betyder mer än bara länkar för LLM: LLM prioriterar innehållsrelevans och varumärkesidentitet framför bakåtkompatibilitet. Till skillnad från SEO använder LLM inte länkar för att avgöra behörighet.
-* Det viktiga är innehållets frihet: Hanterarna av livslångt lärande prioriterar nyligen uppdaterat innehåll. (Sökmotorer prioriterar även detta för tidskänsliga frågor, men förlitar sig mer på andra värden.)
-* Det är mycket viktigt att få intäkter (från tredje part) i form av omnämnanden och citat.
-
 ## Strategisk kampanjplanering
 
 Att bygga en lyckad kampanj för optimering av LLM innefattar att
 
-Identifiera ämnen med högt värde: Justera avsikten med att agera snabbt med affärsmål och kundbehov.
-Konkurrenterna pekar på följande: Fokusera på frågor där konkurrenterna anges, vilket ger möjlighet att inkludera varumärket.
-Gruppera uppmaningar efter avsikt: Använd ämnen och sökfält för att gruppera liknande användarmål för att testa synlighet.
-Utvärdera realistisk varumärkesintegration: Bedöm om varumärket kan nämnas på ett trovärdigt sätt, med tanke på faktorer som EEAT (Experience, Expertis, Authoritatitivity, Trustability) och YMYL (Your Money or Your Life).
+* Identifiera ämnen med högt värde: Justera avsikten med att agera snabbt med affärsmål och kundbehov.
+* Konkurrenterna pekar på följande: Fokusera på frågor där konkurrenterna anges, vilket ger möjlighet att inkludera varumärket.
+* Gruppera uppmaningar efter avsikt: Använd ämnen och sökfält för att gruppera liknande användarmål för att testa synlighet.
+* Utvärdera realistisk varumärkesintegration: Bedöm om varumärket kan nämnas på ett trovärdigt sätt, med tanke på faktorer som EEAT (Experience, Expertis, Authoritatitivity, Trustability) och YMYL (Your Money or Your Life).
 
 Denna strategiska strategi säkerställer målinriktade, datadrivna förbättringar av LLM-synligheten.
-
 
 ## Användbara optimeringssteg
 
@@ -76,33 +92,47 @@ Här följer några praktiska åtgärder som bör övervägas för att öka varu
 
 Ett konsekvent genomförande av dessa steg kan avsevärt förbättra ert varumärkes närvaro i AI-drivna sökresultat.
 
+## Optimering offline för att öka LLM-synligheten
 
+Optimering utomhus fokuserar på att förbättra varumärkets synlighet i AI-genererade svar genom att påverka innehållskällor från tredje part som LM ofta säger.
 
-## Vad är LLM:s synlighet?
+Nyckelkanaler utanför webbplatsen:
 
-LLM-synlighet handlar om hur ofta och hur väl ert varumärke visas i svar som genereras av verktyg som ChatGPT eller andra AI-modeller.
+* Wikipedia: Se till att sidorna är aktuella, välkällkodade och neutralt skrivna.
+* Reddit &amp; Quora: Delta i diskussioner med autentiska, praktiska bidrag.
+* Artiklar och recensioner på dotterbolag: Samarbeta med utgivare för högklassigt innehåll.
+* YouTube och sociala medier: Skapa videor och inlägg som besvarar vanliga frågor.
+* Nyheter och PR: Säker täckning i välrenommerade butiker.
 
-## Hur ni mäter er utveckling inom livslångt lärande
+God praxis:
 
-Om du vill testa webbplatsens synlighet och se hur väl arbetet fungerar kan du följa dessa viktiga mätvärden:
+* Förvandla det externa fotavtrycket.
+* Övervaka citat med Adobe LLM Optimizer.
+* Uppdatera inaktuellt innehåll och sök nya inkluderingsmöjligheter.
+* Samordna med PR och sociala team.
+* Se till att bidragen är opartiska och informativa.
+
+## Mäta LLM-synlighet
+
+Om du vill testa webbplatsens synlighet eller se förbättringar av synligheten håller du reda på följande viktiga mätvärden:
 
 * **Omnämns:** Hur många gånger ditt varumärke nämns i svaren.
 * **Citat:** Hur ofta LLM använder ditt innehåll eller dina källor för att svara på frågor.
 * **Känslighet:** Om omnämnandet av ditt varumärke är positivt, neutralt eller negativt.
 * **Position:** Där ditt varumärke nämns i svaret (t.ex. första, mellersta eller sista).
 
-Alla dessa faktorer kombineras i ett **visibility**-resultat, som anger hur stark varumärkets närvaro är i LLM-svar.
+Dessa mätvärden kombineras till ett **visibility**-resultat, som anger hur stark varumärkets närvaro är i LLM-svar. Se [Varumärkesnärvaro](/help/dashboards/brand-presence.md).
 
 ## Spåra synlighetsändringar
 
-Så här håller du ett öga på hur ert varumärke ser ut i LLM:er:
+Här följer några steg som du kan följa för att övervaka förloppet:
 
 1. Kontrollera din nuvarande synlighet
-   * Adobe LLM Optimizer visar hur ofta ert varumärke omnämns och citeras och vad känslan är i LLM-svaren. Se kontrollpanelen för varumärkesnärvaro.
-   * Titta på uppmaningarna (frågorna) där ert varumärke nämns och var det saknas.
-   * Jämför er synlighet med konkurrenterna och se hur ni lyckas.
-   * Se hur du ser ut i användargenererade plattformar som Reddit, Quora och Wikipedia eftersom dessa ofta citeras av LLM:er för att hitta information.
-   * Kolla hur ni visar er i agell trafik. Myndighetstrafiken går ofta inte till startsidan - det är värt att titta på vilka sidor agenterna besöker.
+   * Använd Adobe LLM Optimizer för att visa hur ofta ert varumärke omnämns och citeras och vad känslan är i LLM-svaren. Se kontrollpanelen [Varumärkesnärvaro](/help/dashboards/brand-presence.md).
+   * Analysera frågor om var varumärket finns och var det inte finns.
+   * Benchmark mot konkurrenter.
+   * Granska synligheten på användargenererade plattformar som Reddit, Quora och Wikipedia. Dessa UGC-plattformar citeras ofta av LLM:er för att hitta information.
+   * Övervaka autentisk trafik för att förstå vilka sidor LLM besöker. Byråtrafik går ofta **inte** till startsidan, men andra sidor nedanför i hierarkin. Se kontrollpanelen [Agentinsk trafik](/help/assets/overview/agentic-traffic-card.png).
    * Se till att innehållet är synligt och tillgängligt för LLM-medlemmar. Du kan använda plugin-programmet för Chrome för att se vad AI-agenter kan visa.
 
 1. Planera er strategi
@@ -120,6 +150,60 @@ Så här håller du ett öga på hur ert varumärke ser ut i LLM:er:
    * Använd Adobe LLM Optimizer för att spåra hur synligheten förändras över tid.
    * Om ni märker att konkurrenterna nämns oftare bör ni anpassa strategin så att den ligger steget före.
    * Fortsätt uppdatera innehållet så att det matchar det som andra söker efter och frågar om.
+
+## Understanding Agentic Traffic
+
+Agentinsk trafik avser besök från AI-agenter som ChatGPT, Google AI-läge/översikter, Copilot eller Perplexity. Dessa agenter crawlar webbplatsen för att samla in information för att generera svar.
+
+Myndighetstrafiken visas på två sätt: upplevelser med nollklick och synlighet utan klick.
+
+### Upplevelser med nollklick
+
+Vid traditionell sökning klickar man på webbplatserna för att förbruka innehåll. Men med LLM får användarna ofta fullständiga svar direkt i chattgränssnittet eller sökmotorresultaten utan att någonsin behöva besöka er webbplats. Detta kallas för en nollklicksupplevelse.
+
+Vad detta innebär för ert varumärke:
+
+1. Innehållet kan sammanfattas eller citeras av en AI-assistent.
+2. Användaren får den information han eller hon behöver utan att klicka på länken.
+3. Platsens synlighet och påverkan hänger inte ihop med trafiken.
+
+Så även om er analys visar färre besök kan ert varumärke fortfarande vara mycket synligt och inflytelserikt i AI-genererade svar.
+
+### Synlighet utan klick
+
+Agentinsk trafik syftar på AI-botar som besöker er webbplats för att samla in information för utbildning eller för att besvara frågor.
+
+De här robotarna gör följande:
+
+1. Crawla sidorna för att extrahera fakta, struktur och sammanhang.
+2. Använd dessa data för att generera svar för användarna.
+3. Kan citera ert varumärke eller ert innehåll - även om ingen människa någonsin klickar igenom det.
+
+Varför det här betyder något:
+
+* Innehållet kan påverka användarnas beslut indirekt.
+* Ni kan påverka köpbeteendet, varumärkesuppfattningen eller förtroendet utan traditionella interaktionsmått.
+
+Genom att spåra agens trafik kan ni förstå hur AI ser och använder ert innehåll.
+
+### Så här optimerar du för kontorstrafik:
+
+Så här optimerar du för AGAL-trafik:
+
+* Se till att det går att crawla genom att granska robots.txt och CDN-inställningar.
+* Använd [URL-kontrollen](/help/dashboards/url-inspector.md)för att analysera URL-prestanda.
+* Spåra robotbeteendet genom att gå till CDN-loggarna på [Kontrollpanelen för AGS-trafik](/help/dashboards/agentic-traffic.md).
+* Segmentera trafik för att förstå affärsresultatet. Se [Bästa tillvägagångssätt för kategorier, ämnen, uppmaningar och konkurrenter](/help/overview/best-practices-topics-prompts.md).
+
+Här är mätvärdena som ska övervakas:
+
+* Agentträffar per URL
+* Antal lyckade robotbegäranden
+* Citatfrekvens per sida
+* Mening och placering av varumärkesomnämnanden
+* Trender över tid med synlighet
+
+<!-- Add screenshot when available in demo environment>
 
 
 <!-- Use the "Share of Voice" feature to see which competitors are dominating specific topics and adjust your strategy accordingly.-->

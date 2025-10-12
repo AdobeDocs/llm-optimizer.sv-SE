@@ -1,9 +1,9 @@
 ---
 title: Adobe LLM Optimizer
 description: Lyft varumärket med Adobe LLM Optimizer. Spåra omnämnanden, identifiera insikter och dominera AI-driven sökning. Ta kontroll över din synlighet - börja optimera nu!
-source-git-commit: bb3e3e4ebc7499fb8c8dfc165eb87595b40a4b4c
+source-git-commit: 29e067086f9b6dd41c04b349c86ddc1c2baf8d2f
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,12 @@ Adobe LLM Optimizer är en generativ AI-program som sätter igång Generative En
   {title= Quickstart guide}
   {description= Learn how to quickly get up and running with the LLM Optimizer.}
   {image= /help/assets/overview/agentic-traffic-card.png}
+  {target=_blank}
+  {cta=Learn more}
+* ./overview/best-practices-topics-prompts.md
+  {title= Best practices for setting up categories, topics, prompts, and competitors}
+  {description= Learn how to configure LLM Optimizer for tailored brand monitoring and strategic content analysis.}
+  {image= /help/assets/overview/customer-configuration-card.png}
   {target=_blank}
   {cta=Learn more}
 * ./dashboards/dashboards-overview.md
@@ -52,6 +58,29 @@ Adobe LLM Optimizer är en generativ AI-program som sätter igång Generative En
                     <p class="is-size-6">Lär dig hur du snabbt kommer igång med LLM Optimizer.</p>
                 </div>
                 <a href="./overview/quick-start.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Best practices for setting up categories, topics, prompts, and competitors">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./overview/best-practices-topics-prompts.md" title="Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar och konkurrenter" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/customer-configuration-card.png" alt="Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar och konkurrenter"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" title="Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar och konkurrenter">Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar och konkurrenter</a>
+                    </p>
+                    <p class="is-size-6">Lär dig hur du konfigurerar LLM Optimizer för anpassad varumärkesövervakning och strategisk innehållsanalys.</p>
+                </div>
+                <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                 </a>
             </div>
