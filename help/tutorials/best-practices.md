@@ -1,9 +1,9 @@
 ---
 title: LLM Optimizer bästa praxis
 description: Upptäck bästa praxis för optimering av livslångt lärande som ökar varumärkets synlighet i AI-sökningar. Insikter för att testa och optimera innehåll.
-source-git-commit: c7c66566137ad1f5bda89f55748b9d81ddf36f76
+source-git-commit: a76d348a94495682d648ef0aad268e835e321017
 workflow-type: tm+mt
-source-wordcount: '1655'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ En stark SEO-grund har stöd för LLM-optimering, men det krävs nya strategier 
 
 >[!NOTE]
 >
->För närvarande är SEO-trafiken fortfarande den största drivkraften för trafik till de flesta webbplatser, vilket gör den mycket viktig för ert varumärkes synlighetsstrategi.
+>För närvarande är SEO-trafiken fortfarande den största drivkraften för trafiken till de flesta webben, vilket gör den mycket viktig för ert varumärkes synlighetsstrategi.
 
 
 | SEO | LLM |
@@ -147,7 +147,7 @@ Spåra dessa nyckeltal:
 * **Omnämns:** Hur många gånger ditt varumärke nämns i svaren.
 * **Citat:** Hur ofta LLM använder ditt innehåll eller dina källor för att svara på frågor.
 * **Känslighet:** Om omnämnandet av ditt varumärke är positivt, neutralt eller negativt.
-* **Position:** Där ditt varumärke nämns i svaret (t.ex. första, mellersta eller sista).
+* **Position:** Där ditt varumärke nämns i svaret (till exempel första, mellersta eller sista).
 
 Dessa mätvärden kombineras till ett **visibility**-resultat, som anger hur stark varumärkets närvaro är i LLM-svar. Se [Varumärkesnärvaro](/help/dashboards/brand-presence.md).
 
@@ -173,16 +173,16 @@ Här följer några steg som du kan följa för att övervaka förloppet:
    * Prioritera sidor som inte visas.
    * Uppdatera din webbplats och annat innehåll så att det blir mer relevant för de uppmaningar du vill rikta.
    * Lägg till vanliga frågor på sidorna som besvarar vanliga frågor som andra kan ställa.
-   * Se till att innehållet är enkelt för LLM att hitta och läsa. Åtgärda problem som blockerade sidor eller problem med webbplatsens kod.
+   * Se till att det är enkelt för LLM att hitta och läsa ditt innehåll. Åtgärda problem som blockerade sidor eller problem med webbplatsens kod.
    * Se till att bidrag till plattformar som Wikipedia och Reddit är opartiska, icke-kommersiella och ger mervärde.
    * Använd Adobe LLM Optimizer för att spåra hur synligheten förändras över tid.
    * Om ni märker att konkurrenterna nämns oftare bör ni anpassa strategin så att den ligger steget före.
    * Fortsätt uppdatera innehållet så att det matchar det som andra söker efter och frågar om.
-1. Justera strategier för [utanför &#x200B;](#offsite-optimization---expanding-your-brand-footprint) och [på plats](#onsite-optimization---strengthening-your-owned-content) baserat på insikter.
+1. Justera strategier för [utanför ](#offsite-optimization---expanding-your-brand-footprint) och [på plats](#onsite-optimization---strengthening-your-owned-content) baserat på insikter.
 
 >[!NOTE]
 >
->Se till att innehållet är synligt och tillgängligt för LLM-medlemmar. Du kan använda plugin-programmet för Chrome för att se vad AI-agenter kan visa.
+>Se till att ditt innehåll är synligt och tillgängligt för LLM:er. Du kan använda plugin-programmet för Chrome för att se vad AI-agenter kan visa.
 
 ## Förstå dynamisk trafik
 
@@ -192,12 +192,12 @@ Myndighetstrafiken visas på två sätt: upplevelser med nollklick och synlighet
 
 ### Upplevelser med nollklick
 
-Vid traditionell sökning klickar man på webbplatserna för att förbruka innehåll. Men med LLM får användarna ofta fullständiga svar direkt i chattgränssnittet eller sökmotorresultaten utan att någonsin behöva besöka er webbplats. Detta kallas för en nollklicksupplevelse.
+Vid traditionell sökning klickar man på webbplatserna för att förbruka innehåll. Men med LLM får användarna ofta fullständiga svar direkt i chattgränssnittet eller sökmotorns resultatlista utan att någonsin behöva besöka er webbplats. Detta kallas för en nollklicksupplevelse.
 
 Vad detta innebär för ert varumärke:
 
 1. Innehållet kan sammanfattas eller citeras av en AI-assistent.
-2. Användaren får den information han eller hon behöver utan att klicka på länken.
+2. Användaren får den information han/hon behöver utan att klicka på länken.
 3. Platsens synlighet och påverkan hänger inte ihop med trafiken.
 
 Så även om er analys visar färre besök kan ert varumärke fortfarande vara mycket synligt och inflytelserikt i AI-genererade svar.
@@ -224,7 +224,7 @@ Genom att spåra agens trafik kan ni förstå hur AI ser och använder ert inneh
 Så här optimerar du för AGAL-trafik:
 
 * Se till att det går att crawla genom att granska robots.txt och CDN-inställningar.
-* Använd [URL-kontrollen](/help/dashboards/url-inspector.md)för att analysera URL-prestanda.
+* Använd [URL-kontrollen](/help/dashboards/url-inspector.md) för att analysera URL-prestanda.
 * Spåra robotbeteendet genom att gå till CDN-loggarna på [Kontrollpanelen för AGS-trafik](/help/dashboards/agentic-traffic.md).
 * Segmentera trafik för att förstå affärsresultatet. Se [Bästa tillvägagångssätt för kategorier, ämnen, uppmaningar och konkurrenter](/help/overview/best-practices-topics-prompts.md).
 
