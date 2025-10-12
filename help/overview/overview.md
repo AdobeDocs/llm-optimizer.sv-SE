@@ -1,9 +1,9 @@
 ---
 title: LLM Optimizer - översikt
 description: Läs om hur Adobe LLM Optimizer ökar synligheten för varumärken i AI-driven sökning. Spåra omnämnanden, citat och insikter. Börja optimera idag för bättre engagemang och påverkan.
-source-git-commit: 29e067086f9b6dd41c04b349c86ddc1c2baf8d2f
+source-git-commit: c7c66566137ad1f5bda89f55748b9d81ddf36f76
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '604'
 ht-degree: 0%
 
 ---
@@ -54,12 +54,11 @@ Generative Engine Optimization är till sin natur korsfunktionell. LLM Optimizer
 
 Med Adobe LLM Optimizer kan man
 
-**Mät varumärkets synlighet** - spåra när, var och hur ofta ditt varumärke omnämns i AI-baserade sökresultat. Gå steget längre och arbeta med tydliga resultat som du kan testa över tid.
-**Benchmark-konkurrenter** - Se hur ert varumärke står sig mot konkurrenterna i generativa motorer. Identifiera andel av röstluckor och upptäck konkurrensfördelar.
-**Upptäck användbara möjligheter** - Hitta innehållsmöjligheter (t.ex. vanliga frågor och svar, abstrakt, schema) och tekniska möjligheter (crawlbarhet, indexeringsproblem) som direkt ökar omnämnanden och citat.
-**Spåra trafikpåverkan från AI** - Övervaka autentisk trafik (från AI-assistenter) och hänvisningstrafik (användarklickningar från citat) till dina ägda egenskaper. Ge GEO synlighet till verkligt engagemang.
-**Aktivera Team Collaboration** - Dela instrumentpaneler, tilldela ägare för frågor eller kategorier och se till att synlighetsmålen spåras för alla marknadsförings-, SEO- och kommunikationsfunktioner.
-
+**Mät varumärkets synlighet** - spåra när, var och hur ofta ditt varumärke omnämns i AI-baserade sökresultat. Gå steget längre och arbeta med tydliga resultat som du kan testa över tid. Se [Kontrollpanel för varumärkesnärvaro](/help/dashboards/brand-presence.md).
+**Benchmark-konkurrenter** - Se hur ert varumärke står sig mot konkurrenterna i generativa motorer. Identifiera andel av röstluckor och upptäck konkurrensfördelar. Se [Kontrollpanel för varumärkesnärvaro](/help/dashboards/brand-presence.md).
+**Upptäck användbara möjligheter** - Hitta innehållsmöjligheter (t.ex. vanliga frågor och svar, abstrakt, schema) och tekniska möjligheter (crawlbarhet, indexeringsproblem) som direkt ökar omnämnanden och citat. Se [Kontrollpanelen för affärsmöjligheter](/help/dashboards/opportunities.md).
+**Spåra trafikpåverkan från AI** - Övervaka autentisk trafik (från AI-assistenter) och hänvisningstrafik (användarklickningar från citat) till dina ägda egenskaper. Ge GEO synlighet till verkligt engagemang. Se [Kontrollpanelen för AGAL-trafik](/help/dashboards/agentic-traffic.md) och [kontrollpanelen för hänvisningstrafik](/help/dashboards/referral-traffic.md).
+**Aktivera Team Collaboration** - Dela instrumentpaneler, tilldela ägare för frågor eller kategorier och se till att synlighetsmålen spåras för alla marknadsförings-, sökmotoroptimerings- (SEO) och kommunikationsfunktioner. Se [Collaboration Dashboard](/help/dashboards/collaboration.md).
 
 ## Läs mer
 

@@ -1,9 +1,9 @@
 ---
 title: Bästa praxis för kategorier, ämnen och frågor
 description: Optimera insikterna om livslångt lärande genom att konfigurera kategorier, ämnen, uppmaningar och konkurrenter för anpassad varumärkesövervakning och strategisk innehållsanalys.
-source-git-commit: 29e067086f9b6dd41c04b349c86ddc1c2baf8d2f
+source-git-commit: c7c66566137ad1f5bda89f55748b9d81ddf36f76
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ Tänk på följande när du skapar listan:
 
 * Kan en redigerare förstå ämnet på 5 sekunder från prompttexten? Om inte, byt namn/förenkla.
 * Äger ett annat team lösningen för olika ämnen? Om ja, valde du användbara ämnen.
-  <!-- Last bullet point does not make sense. Clarification needed.-->
+  <!-- Last bullet point does not make sense. Clarification needed. Also not sure what is meant by "editor"?-->
 
 Ytterligare några praktiska tips:
 
@@ -94,14 +94,20 @@ Ytterligare några praktiska tips:
 >
 > * Behåll ämnen avsiktsbaserade, inte organisatoriska.
 > * Lägg inte till kategorier/filter för märke/icke-varumärke/geografisk eftersom du kan filtrera specifikt för detta på fliken **[!UICONTROL Brands]**.
-> * Ämnen är spridda över flera kategorier. Du kan **inte** ha olika ämnen per kategori.
-> * Det kan finnas en enda fråga i flera ämnen eller kategorier.
+> * Ämnen sprids ut över flera kategorier. Du **kan inte** definiera unika ämnen för varje kategori.
+> * En enda fråga **kan** finnas i flera ämnen eller kategorier.
 
 ## Bästa tillvägagångssätt för uppmaningar
 
 Frågar identifierar specifika frågor eller frågor som kunderna ställer, vilket kan påverka ert företag. Det är de faktiska frågor eller frågor som användarna anger i ett LLM-formulär.
 
 Se till att granska och uppdatera uppmaningarna regelbundet för att säkerställa att de är anpassade till kundernas behov och verksamhetsmål.
+
+Bästa tillvägagångssätt för uppmaningar:
+
+* Gruppera liknande uppmaningar baserat på vad andra frågar.
+* Fokusera på de frågor som är viktigast för era kunder.
+* Kontrollera om ert varumärke har goda möjligheter att omnämnas för vissa frågor.
 
 >[!TIP]
 >
