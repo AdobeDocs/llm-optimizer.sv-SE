@@ -1,9 +1,9 @@
 ---
 title: Kundkonfiguration
 description: Använd kundkonfigurationen för att definiera hur ert varumärke ska övervakas och analyseras inom plattformen för optimering av livslångt lärande.
-source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
+source-git-commit: 5e8efde82c10c9afa09d51ec9ef20fc006363210
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
@@ -11,25 +11,25 @@ ht-degree: 0%
 
 # Kundkonfiguration {#customer-configuration}
 
-Instrumentpanelen för kundkonfiguration är ett kraftfullt verktyg som ger insikter om hur ert varumärke är synligt för LLM-system. Genom att ställa in kategorier, ämnen, uppmaningar och konkurrenter på rätt sätt kan ni se till att ert varumärke är väl positionerat att visas i svar som genererats av LLM. Med den här konfigurationen kan plattformen skräddarsy insikter efter verksamhetens sammanhang, vilket möjliggör korrekt synlighet, trafik och analys av affärsmöjligheter.
+Instrumentpanelen för kundkonfiguration är ett kraftfullt verktyg som ger insikter om hur ert varumärke är synligt för LLM-system. Genom att ställa in kategorier, ämnen, uppmaningar på rätt sätt kan ni se till att ert varumärke är väl positionerat att visas i svar som genererats av LLM. Med den här konfigurationen kan plattformen skräddarsy insikter efter verksamhetens sammanhang, vilket möjliggör korrekt synlighet, trafik och analys av affärsmöjligheter.
 
 ![Kontrollpanel för kundkonfiguration](/help/dashboards/assets/customer-config.png)
 
 För att konfigurera hur LLM Optimizer övervakar och analyserar er varumärkesnärvaro på olika marknader och i olika konkurrenslandskap har du tillgång till följande flikar:
 
 * [Kategorier](#categories)
-* [Konkurrentspårning](#competitor-tracking)
+* [Övrig spårning](#others-tracking)
 * [Varumärkesalias](#brand-aliases)
 * [Datainsikter](#data-insights)
 * [CDN-konfiguration](#agentic-cdn)
 
 >[!IMPORTANT]
 >
-> Mer information om hur du konfigurerar kategorier, ämnen, uppmaningar och konkurrenter finns på sidan [Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar och konkurrenter](/help/overview/best-practices-topics-prompts.md).
+> Mer information om hur du konfigurerar dina kategorier, ämnen, uppmaningar finns på sidan [Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar](/help/overview/best-practices-topics-prompts.md).
 
 ## Kategorier {#categories}
 
-På fliken Kategorier kan du definiera affärskategorier eller produktrader som du vill spåra och associera dem med specifika regioner. På det hela taget gäller kategorifliken nästan alla andra anpassningar på den här sidan, eftersom kategorier visas i kategorifältet för de andra anpassningarna (konkurrentspårning, alias och så vidare). Så här lägger du till en ny kategori:
+På fliken Kategorier kan du definiera affärskategorier eller produktrader som du vill spåra och associera dem med specifika regioner. Fliken Kategorier avser nästan alla andra anpassningar på den här sidan, eftersom kategorier visas i kategorifältet för de andra anpassningarna (andra spårningar, alias och så vidare). Så här lägger du till en ny kategori:
 
 1. Klicka på knappen **Lägg till**.
 2. Lägg till **kategorinamn** i det nya konfigurationsfönstret.
@@ -38,19 +38,19 @@ På fliken Kategorier kan du definiera affärskategorier eller produktrader som 
 
 Om du lägger till nya kategorier genereras inte ämnen och uppmaningar automatiskt. Dessa måste läggas till manuellt från fliken [Data Insights](#data-insights) .
 
-Om du vill ta bort en kategori klickar du på ikonen Ta bort i kategorilistan. Var försiktig, eftersom **om du tar bort en kategori tas även tillhörande objekt** bort, precis som konkurrenter som du har konfigurerat eller varumärkesalias som är kopplade till den aktuella kategorin.
+Om du vill ta bort en kategori klickar du på ikonen Ta bort i kategorilistan. Var försiktig, eftersom **om du tar bort en kategori tas även tillhörande objekt** bort, som varumärkesalias som är länkade till den aktuella kategorin.
 
-## Konkurrentspårning {#competitor-tracking}
+## Övrig spårning {#others-tracking}
 
-Genom att använda konkurrentspårning kan ni spåra hur konkurrenterna nämns i förhållande till ert varumärke i olika kategorier och regioner. Övervaka deras närvaro och resultat i era marknadssegment. Så här anpassar du konkurrentspårning:
+På den här fliken kan du spåra hur andra nämns i relation till ert varumärke i olika kategorier och regioner. Övervaka deras närvaro och resultat i era marknadssegment. Så här anpassar du spårning:
 
-1. Klicka på knappen **Lägg till** om du vill lägga till en ny konkurrent.
+1. Klicka på knappen **Lägg till**.
 2. Välj **Kategori** i det nya konfigurationsfönstret. Tidigare skapade kategorier visas här.
-3. Lägg till konkurrentens namn.
-4. Anpassa konkurrentens alias och domäner om det behövs.
-5. Klicka på **Spara** så visas den nya konkurrenten i konkurrentlistan.
+3. Lägg till den andres namn.
+4. Anpassa övriga alias och domäner om det behövs.
+5. Klicka på **Spara**.
 
-Om du vill ta bort en konkurrent klickar du på ikonen Ta bort i konkurrentlistan.
+Klicka på ikonen Ta bort om du vill ta bort en post från listan.
 
 ## Varumärkesalias {#brand-aliases}
 

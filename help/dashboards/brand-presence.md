@@ -1,9 +1,9 @@
 ---
 title: Varumärkesnärvaro
 description: Lär dig använda kontrollpanelen för varumärkesnärvaro för att förstå hur ert varumärke uppfattas på nivån för AI-genererade svar.
-source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
+source-git-commit: 5e8efde82c10c9afa09d51ec9ef20fc006363210
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1215'
 ht-degree: 0%
 
 ---
@@ -11,15 +11,15 @@ ht-degree: 0%
 
 # Varumärkesnärvaro {#brand-presence}
 
-Instrumentpanelen Varumärkesnärvaro ger en detaljerad översikt över hur ert varumärke uppfattas på nivån för AI-genererade svar. Det visar var, hur ofta och i vilket sammanhang ert varumärke omnämns. Du kan använda kontrollpanelen för att mäta synlighet, spåra citat, jämföra konkurrenter och utforska attitydtrender. Instrumentpanelen är uppdelad i flera avsnitt, där alla innehåller olika insikter. Det finns också anpassningsbara filter som hjälper dig att förfina de data som visas.
+Instrumentpanelen Varumärkesnärvaro ger en detaljerad översikt över hur ert varumärke uppfattas på nivån för AI-genererade svar. Det visar var, hur ofta och i vilket sammanhang ert varumärke omnämns. Du kan använda kontrollpanelen för att mäta synlighet, spåra citat och utforska attitydtrender. Instrumentpanelen är uppdelad i flera avsnitt, där alla innehåller olika insikter. Det finns också anpassningsbara filter som hjälper dig att förfina de data som visas.
 
-![Varumärkesnärvaro](/help/dashboards/assets/brand-main.png)
+![Varumärkesnärvaro](/help/dashboards/assets/brand-main1.png)
 
 Den här sidan innehåller följande information:
 
 * [Filter](#filters)
 * [Översikt, mått](##key-metrics)
-* [Jämförelse av konkurrenter](##competitor-comparison)
+* [Jämförelse med andra](##others-comparison)
 * [Känslotrend](#sentiment-trend)
 * [Datainsikter](#data-insights)
 
@@ -56,13 +56,13 @@ Det här måttet anger hur många gånger platsen refererades som en källa.
 
 Trendindikatorer för varje nyckelmätvärde visar hur dessa värden ändras över tiden jämfört med föregående period.
 
-## Jämförelse av konkurrenter {#competitor-comparison}
+## Jämförelse med andra {#others-comparison}
 
-I jämförelseavsnittet kan du välja upp till fem konkurrenter och jämföra deras omnämnanden och citat med ert varumärke. På så sätt kan ni visa och testa hur ni presterar i förhållande till konkurrenterna.
+I det andra jämförelseavsnittet kan du välja upp till fem andra varumärken och jämföra deras omnämnanden och citat med ert varumärke. På så sätt kan ni visa och testa hur ni presterar i förhållande till andra varumärken.
 
-![Jämförelse av konkurrenter](/help/dashboards/assets/competitor-comparison.png)
+![Jämförelse mellan andra](/help/dashboards/assets/competitor-comparison1.png)
 
-Konkurrenterna väljs i listrutan och diagrammen uppdateras när du klickar på **Använd filter**. Diagrammen visar veckovisa omnämnanden och veckocitat sida vid sida. Du kan också hålla muspekaren längs diagrammet för att se datautvecklingen under veckotidsperioden.
+Övriga varumärken markeras i listrutan och diagrammen uppdateras när du klickar på **Använd filter**. Diagrammen visar veckovisa omnämnanden och veckocitat sida vid sida. Du kan också hålla muspekaren längs diagrammet för att se datautvecklingen under veckotidsperioden.
 
 ## Sentiment - trendanalys {#sentiment-trend}
 
@@ -74,7 +74,7 @@ I avsnittet för analys av attitydtrender kan du spåra hur ert varumärke uppfa
 
 Vi har två viktiga tabeller - datainsikter och delning av röst - som rundar upp kontrollpanelen. Den information som presenteras i dessa tabeller hjälper er att identifiera var ert varumärke är starkt och var optimering behövs.
 
-Genom att använda tabellen **datainsikter** kan du utforska ämnen och användarfrågor för att utvärdera och optimera innehållets effekt. Resultaten är detaljerade efter ämnen och uppmaningar. Samtidigt jämförs varumärkesuttrycket med andra konkurrenter i tabellen **andel av röst**, vilket hjälper dig att identifiera brister och prioritera framtida ämnen.
+Genom att använda tabellen **datainsikter** kan du utforska ämnen och användarfrågor för att utvärdera och optimera innehållets effekt. Resultaten är detaljerade efter ämnen och uppmaningar. Under tiden jämför tabellen **andel av röst** ert varumärke med andra varumärken i olika ämnen och hjälper er att identifiera luckor och prioritera framtida ämnen.
 
 ![Datainsikter](/help/dashboards/assets/data-insights.png)
 
@@ -105,9 +105,9 @@ Tabellen Share of Voice ger en jämförande bild av hur ert varumärke fungerar 
 * **Ämne** - Det analyserade ämnet.
 * **Popularitet** - Sökvolymen för ämnet i förhållande till alla andra ämnen i din analys.
 * **Omnämnanden** - Antal gånger ditt varumärke omnämns i AI-svar för ämnet eller för kombinationen ämne/fråga.
-* **Rankning** - rankningen av ert varumärkes Voice i förhållande till alla identifierade konkurrenter.
+* **Rankning** - rangordningen av ditt varumärkes Voice i förhållande till alla andra identifierade varumärken.
 * **Andel av röst** - Procentandel av det totala omnämnandet som ert varumärke har över AI-genererade svar.
-* **De fem främsta konkurrenterna** - de fem vanligaste varumärken som nämns för samma ämne. Konkurrenterna sorteras efter deras andel av rösten (högst upp till lägst).
+* **De fem viktigaste övriga** - de fem vanligaste varumärkena som nämns för samma ämne. Varumärken ordnas efter deras andel av röst (högsta till lägsta).
 
 >[!ENDTABS]
 
@@ -119,5 +119,5 @@ Viktiga sätt att använda tabellen:
 
 * Prioritera ämnen med stor popularitet och låg synlighet - fokusoptimering där målgruppens efterfrågan är stark men där varumärkets närvaro är svag.
 * Spåra känslomässig förändring - hitta ämnen där omnämnanden är negativa eller neutrala och koordinera ert svar.
-* Jämför citat mot egna citat - identifiera frågor där ert varumärke nämns, men där konkurrentens innehåll anges, vilket signalerar ett innehållslucka.
+* Jämför citat mot egna citat - identifiera frågor där ert varumärke omnämns, men där det hänvisas till det andra märkets innehåll, vilket signalerar ett innehållslucka.
 * Utvärdera positionsintervall - övervaka om ditt varumärke visas tidigt i AI-svar (position 1-3) eller längre ned (6-10).

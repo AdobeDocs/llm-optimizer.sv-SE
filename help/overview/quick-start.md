@@ -1,9 +1,9 @@
 ---
 title: Snabbstart
 description: Kom igång med Adobe LLM Optimizer - ta in ditt varumärke i datorn, lås upp insikter om AI-synlighet och utforska instrumentpaneler för att förbättra sökresultatet.
-source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
+source-git-commit: 5e8efde82c10c9afa09d51ec9ef20fc006363210
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Se avsnittet nedan för mer ingående information om hur du aktiverar den kostna
 
 ### AEM Cloud-kunder
 
-Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
+Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
 
 >[!NOTE]
 >Nyligen tillagda uppmaningar visas inte på kontrollpanelen [Varumärkesnärvaro](/help/dashboards/brand-presence.md) förrän bearbetningen är klar. AEM Cloud-kunder kan använda den kostnadsfria testversionen av LLM Optimizer. Användning av fler än 200 uppmaningar kräver ett separat licensavtal. Tillgång ges i befintligt skick och i befintligt skick och kan ändras, begränsas eller tas bort av Adobe när som helst. Kontakta din kontorepresentant om du vill ha mer information.
@@ -68,14 +68,14 @@ Från den här instrumentpanelen kan du:
 * Ange **anpassade ämnen** eller underämnen som du vill spåra. Ämnen kan vara specifika teman kopplade till nyckelord med stora volymer som inte är varumärkesprofilerade och som är kopplade till din domän.
 * Skapa **dina uppmaningar** om du vill övervaka synligheten i specifika frågor. Frågar är frågor (varumärkesprofilerade och icke-märkta) som ger en synlighet för baslinjen. Endast ett begränsat antal uppmaningar genereras automatiskt baserat på de kategorier och ämnen du har angett.
 * Definiera omnämnande av **alias** för att säkerställa att alla omnämnanden av ett varumärke hämtas och redovisas.
-* Definiera **konkurrentalias** för att spåra konkurrenter korrekt.
+* Definiera **andra alias** om du vill spåra andra varumärken korrekt.
 
 >[!NOTE]
 >De exakta uppmaningar ni frågar om livslångt lärande är inte tillgängliga för allmänheten eftersom de inte offentliggörs av de s.k. LLM.
 
 >[!NOTE]
 >
-> Mer information om hur du konfigurerar kategorier, ämnen, uppmaningar och konkurrenter finns på sidan [Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar och konkurrenter](/help/overview/best-practices-topics-prompts.md).
+> Mer information om hur du konfigurerar dina kategorier, ämnen, uppmaningar finns på sidan [Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar](/help/overview/best-practices-topics-prompts.md).
 
 ### Steg 3: Automatisk förifyllning av insikter
 
@@ -96,7 +96,7 @@ Om ingen CDN-leverantör har lagts till i förväg, som liknar exemplet ovan, up
 
 När du har angett information för CDN-loggvidarebefordran kan du:
 
-* Visa instrumentpanelen [Varumärkesnärvaro](/help/dashboards/brand-presence.md), visa din synlighetspoäng och spåra din prestanda i förhållande till dina konkurrenter.
+* Visa kontrollpanelen [Varumärkesnärvaro](/help/dashboards/brand-presence.md) och visa din synlighetspoäng och spåra din prestanda i förhållande till andra varumärken.
 * Utforska kontrollpanelerna [Agentic](/help/dashboards/agentic-traffic.md) och [Referral Traffic](/help/dashboards/referral-traffic.md) om CDN-loggöverföringen har konfigurerats.
 * Använd [säljprojekt](/help/dashboards/opportunities.md) för att identifiera innehåll och tekniska förbättringar.
 * Exportera data och samarbeta med teamet eller bjud in medarbetaren att använda produkten.

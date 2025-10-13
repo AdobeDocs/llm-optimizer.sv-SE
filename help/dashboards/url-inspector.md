@@ -1,7 +1,7 @@
 ---
 title: URL-kontroll
 description: Lär dig hur du använder URL-kontrollen för att analysera hur specifika sidor i din domän fungerar vid AI-sökningar.
-source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
+source-git-commit: 5e8efde82c10c9afa09d51ec9ef20fc006363210
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 0%
@@ -65,7 +65,7 @@ De trendwebbadresser som tävlar om citationsvyn visar externa webbadresser som 
 Följande mätvärden finns:
 
 * **URL** - den analyserade URL:en
-* **Innehållstyp** - Innehållstypen (ägd, social, upparbetad, konkurrent).
+* **Innehållstyp** - Innehållstypen (ägt, socialt, förtjänat, övrigt).
 * **Tider som anges** - Antalet gånger som URL:en har citerats i AI-genererade svar.
 * **Uppmaningar som citeras i** - Antalet unika AI-uppmaningar som refererade till URL:en.
 * **Kategorier** - De produktkategorier eller ämnen som är associerade med URL:en.
