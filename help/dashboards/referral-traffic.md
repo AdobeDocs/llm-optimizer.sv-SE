@@ -1,7 +1,7 @@
 ---
 title: Hänvisningstrafik
 description: Lär dig använda kontrollpanelen för hänvisningstrafik för att se hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar.
-source-git-commit: 4cbfbe420a8419a04c2d6c465b6a290ee00ff3d4
+source-git-commit: 4192fe32c9e7cea4218ea580a9300f1fceb0f909
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 0%
@@ -78,10 +78,10 @@ Med tabellerna Händelsekällsinformation och URL-prestandaanalys kan du utvärd
 
 Vyn Information om referenskällor delar upp trafik från olika plattformar som OpenAI, Microsoft, Google och Perplexity. Här visas viktiga mätvärden som besök, studsfrekvens och kanaltyp, vilket hjälper dig att förstå vilka AI och sökkällor som driver den mest engagerade trafiken till din webbplats.
 
-**Source** - källan för hänvisningstrafiken.
-**Besök** - Det totala antalet besök för varje källa.
-**Studsfrekvens** - Procentandel sessioner från hänvisningskällan som inte hade någon engagemangshändelse.
-**Kanal** - Källans kanal, antingen upparbetat, betalt eller både och.
+* **Source** - källan för hänvisningstrafiken.
+* **Besök** - Det totala antalet besök för varje källa.
+* **Studsfrekvens** - Procentandel sessioner från hänvisningskällan som inte hade någon engagemangshändelse.
+* **Kanal** - Källans kanal, antingen upparbetat, betalt eller både och.
 
 >[!TAB URL-prestandaanalys]
 

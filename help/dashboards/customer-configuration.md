@@ -1,9 +1,9 @@
 ---
 title: Kundkonfiguration
 description: Använd kundkonfigurationen för att definiera hur ert varumärke ska övervakas och analyseras inom plattformen för optimering av livslångt lärande.
-source-git-commit: 099d4387b6a5efd25e142db13e309a181fe67941
+source-git-commit: 4192fe32c9e7cea4218ea580a9300f1fceb0f909
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Dessutom kan du lägga till ämnen/uppmaningar i listan oberoende av en CSV-fil.
 
 I listan kan du klicka på varje ämne och tillhörande uppmaningar visas. Om du vill ta bort ämnet och tillhörande uppmaningar klickar du på ikonen Ta bort i listan.
 
-## Agence CDN {#agentic-cdn}
+<!--## Agentic CDN {#agentic-cdn}
 
-Inte tillgängligt (kommer det att vara tillgängligt för release?).
+Not available (will it be available for release?).-->
 
