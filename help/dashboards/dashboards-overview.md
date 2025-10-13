@@ -1,9 +1,9 @@
 ---
 title: Översikt över instrumentpaneler
 description: Det här är artikelöversikten.
-source-git-commit: 6b740ad00d9767598b6ec66f64e8d045b607dcd4
+source-git-commit: 1be26ad8f8e3abb87c5d897172c1ac5dcbf01f87
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '255'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Nyckelvyer är bland annat Varumärkesnärvaro, Agentinsk trafik och Hänvisning
 * ./brand-presence.md
   {title= Brand presence dashboard}
   {image= /help/assets/overview/brand-presence-card.png}
-  {description= Tracks how your brand appears across LLM search platforms, including sentiment analysis and competitor benchmarking.}
+  {description= Tracks how your brand appears across LLM search platforms, including sentiment analysis and benchmarking other brands.}
   {target=_blank}
   {cta=Learn more}
 * ./agentic-traffic.md
@@ -78,7 +78,7 @@ Nyckelvyer är bland annat Varumärkesnärvaro, Agentinsk trafik och Hänvisning
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./brand-presence.md" target="_blank" rel="referrer" title="Kontrollpanel för varumärkesnärvaro">Kontrollpanel för varumärkesnärvaro</a>
                     </p>
-                    <p class="is-size-6">Spåra hur ert varumärke ser ut på olika sökplattformar, inklusive känslomässig analys och jämförande tester.</p>
+                    <p class="is-size-6">Spåra hur ert varumärke ser ut på olika sökplattformar, inklusive känslomässig analys och riktmärkning av andra varumärken.</p>
                 </div>
                 <a href="./brand-presence.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
