@@ -1,9 +1,9 @@
 ---
 title: LLM Optimizer Basics
 description: Läs om hur Adobe LLM Optimizer ökar synligheten för varumärken i AI-driven sökning. Spåra omnämnanden, citat och insikter. Börja optimera idag för bättre engagemang och påverkan.
-source-git-commit: 29e067086f9b6dd41c04b349c86ddc1c2baf8d2f
+source-git-commit: 06c09c4690488d9b29d0626521fb53bf7d70d3a8
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe LLM Optimizer är en generativ AI-tillämpning först för optimering av g
 Adobe LLM Optimizer har en programsvit för generativ motoroptimering:
 
 * Mät varumärkets synlighet: Spåra när, var och hur ofta ert varumärke visas i AI-baserade sökresultat, med en tydlig synlighetspoäng för riktmärkning.
-* Jämför varumärkets andel av röst och närvaro med konkurrenterna i fråga om generativa motorer.
+* Anmärkning till: Jämför ert varumärkes andel av röst och närvaro med konkurrenter och andra i generativa motorer.
 * Upptäck användbara möjligheter: Identifiera innehåll och tekniska förbättringar (som vanliga frågor och svar, abstrakt, schema, crawlbarhet) för att lyfta fram omnämnanden och citat.
 * Spåra trafikpåverkan: Övervaka både agell (AI-assistent) och hänvisningstrafik till ägda egendomar, länka synlighet till engagemang.
 * Aktivera Team Collaboration: Dela instrumentpaneler, tilldela ägare och anpassa mål mellan marknadsförings-, SEO- och kommunikationsteam.
@@ -53,7 +53,7 @@ Generative Engine Optimization är till sin natur korsfunktionell. LLM Optimizer
 Med Adobe LLM Optimizer kan man
 
 **Mät varumärkets synlighet** - spåra när, var och hur ofta ditt varumärke omnämns i AI-baserade sökresultat. Gå steget längre och arbeta med tydliga resultat som du kan testa över tid.
-**Benchmark-konkurrenter** - Se hur ert varumärke står sig mot konkurrenterna i generativa motorer. Identifiera andel av röstluckor och upptäck konkurrensfördelar.
+**Benchmark Others** - Se hur ert varumärke står sig mot andra i generativa motorer. Identifiera andel av röstluckor och upptäck konkurrensfördelar.
 **Upptäck användbara möjligheter** - Hitta innehållsmöjligheter (t.ex. vanliga frågor och svar, abstrakt, schema) och tekniska möjligheter (crawlbarhet, indexeringsproblem) som direkt ökar omnämnanden och citat.
 **Spåra trafikpåverkan från AI** - Övervaka autentisk trafik (från AI-assistenter) och hänvisningstrafik (användarklickningar från citat) till dina ägda egenskaper. Ge GEO synlighet till verkligt engagemang.
 **Aktivera Team Collaboration** - Dela instrumentpaneler, tilldela ägare för frågor eller kategorier och se till att synlighetsmålen spåras för alla marknadsförings-, SEO- och kommunikationsfunktioner.

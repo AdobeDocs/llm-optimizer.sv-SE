@@ -1,9 +1,9 @@
 ---
 title: LLM Optimizer - översikt
 description: Läs om hur Adobe LLM Optimizer ökar synligheten för varumärken i AI-driven sökning. Spåra omnämnanden, citat och insikter. Börja optimera idag för bättre engagemang och påverkan.
-source-git-commit: c7c66566137ad1f5bda89f55748b9d81ddf36f76
+source-git-commit: 06c09c4690488d9b29d0626521fb53bf7d70d3a8
 workflow-type: tm+mt
-source-wordcount: '604'
+source-wordcount: '608'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe LLM Optimizer är en generativ AI-tillämpning först för optimering av g
 Adobe LLM Optimizer har en programsvit för generativ motoroptimering:
 
 * **Mät varumärkets synlighet**: Spåra när, var och hur ofta ditt varumärke visas i AI-baserade sökresultat, med en tydlig synlighetspoäng för riktmärkning.
-* **Jämför konkurrenterna**: Jämför ditt varumärkes andel av röst och närvaro med konkurrenterna i generativa motorer.
+* **Benchmark Övrigt**: Jämför ditt varumärkes andel av röst och närvaro med andra, inklusive konkurrenter i generativa motorer.
 * **Upptäck användbara möjligheter**: Identifiera innehåll och tekniska förbättringar (som vanliga frågor och svar, abstrakt, schema, crawlbarhet) för att förstärka omnämnanden och citat.
 * **Spåra trafikpåverkan**: Övervaka både agens (AI-assistent) och hänvisningstrafik till dina ägda egendomar, länka synlighet till engagemang.
 * **Aktivera Team Collaboration**: Dela instrumentpaneler, tilldela ägare och justera mål mellan marknadsförings-, SEO- och kommunikationsteam.
@@ -55,7 +55,7 @@ Generative Engine Optimization är till sin natur korsfunktionell. LLM Optimizer
 Med Adobe LLM Optimizer kan man
 
 **Mät varumärkets synlighet** - spåra när, var och hur ofta ditt varumärke omnämns i AI-baserade sökresultat. Gå steget längre och arbeta med tydliga resultat som du kan testa över tid. Se [Kontrollpanel för varumärkesnärvaro](/help/dashboards/brand-presence.md).
-**Benchmark-konkurrenter** - Se hur ert varumärke står sig mot konkurrenterna i generativa motorer. Identifiera andel av röstluckor och upptäck konkurrensfördelar. Se [Kontrollpanel för varumärkesnärvaro](/help/dashboards/brand-presence.md).
+**Benchmark Others** - Se hur ert varumärke står sig mot andra, inklusive konkurrenter i generativa motorer. Identifiera andel av röstluckor och upptäck konkurrensfördelar. Se [Kontrollpanel för varumärkesnärvaro](/help/dashboards/brand-presence.md).
 **Upptäck användbara möjligheter** - Hitta innehållsmöjligheter (t.ex. vanliga frågor och svar, abstrakt, schema) och tekniska möjligheter (crawlbarhet, indexeringsproblem) som direkt ökar omnämnanden och citat. Se [Kontrollpanelen för affärsmöjligheter](/help/dashboards/opportunities.md).
 **Spåra trafikpåverkan från AI** - Övervaka autentisk trafik (från AI-assistenter) och hänvisningstrafik (användarklickningar från citat) till dina ägda egenskaper. Ge GEO synlighet till verkligt engagemang. Se [Kontrollpanelen för AGAL-trafik](/help/dashboards/agentic-traffic.md) och [kontrollpanelen för hänvisningstrafik](/help/dashboards/referral-traffic.md).
 **Aktivera Team Collaboration** - Dela instrumentpaneler, tilldela ägare för frågor eller kategorier och se till att synlighetsmålen spåras för alla marknadsförings-, sökmotoroptimerings- (SEO) och kommunikationsfunktioner. Se [Collaboration Dashboard](/help/dashboards/collaboration.md).
@@ -66,7 +66,7 @@ Här är resurser som hjälper dig att få ut mesta möjliga av LLM Optimizer:
 
 * [Quickstart](/help/overview/quick-start.md) hjälper dig att komma igång snabbt.
 * [Kontrollpanelsöversikt](/help/dashboards/dashboards-overview.md) beskriver alla instrumentpaneler som är tillgängliga i LLM Optimizer.
-* [Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar och konkurrenter](/help/overview/best-practices-topics-prompts.md) innehåller viktig information för att konfigurera LLM Optimizer.
+* [Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar och annat](/help/overview/best-practices-topics-prompts.md) innehåller viktig information för att konfigurera LLM Optimizer.
 * Med [Bästa praxis](/help/tutorials/best-practices.md) kan du upptäcka bästa praxis för optimering av LLM för att öka varumärkets synlighet vid AI-sökning.
 
 

@@ -1,9 +1,9 @@
 ---
 title: LLM Optimizer bästa praxis
 description: Upptäck bästa praxis för optimering av livslångt lärande som ökar varumärkets synlighet i AI-sökningar. Insikter för att testa och optimera innehåll.
-source-git-commit: a76d348a94495682d648ef0aad268e835e321017
+source-git-commit: 06c09c4690488d9b29d0626521fb53bf7d70d3a8
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1675'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Andra aspekter att tänka på vid optimering av livslångt lärande:
 Att bygga en lyckad kampanj för optimering av LLM innefattar att
 
 * Identifiera värdefulla ämnen som är anpassade efter kundens avsikter. Justera avsikten med snabba insatser mot affärsmål och kundbehov.
-* Dekorkonkurrenterna talar om att hitta luckor och möjligheter. Fokusera på frågor där konkurrenter anges, vilket visar på möjligheten att inkludera varumärken.
+* Spot omnämns för andra, även konkurrenter, för att hitta luckor och möjligheter. Fokusera på frågor där andra anges, vilket visar på möjligheten att inkludera varumärket.
 * Gruppera uppmaningar efter avsikt med ämnesklustring: Använd ämnen och sökfält för att gruppera liknande användarmål för att testa synlighet.
 * Utvärdera varumärkets trovärdighet med hjälp av standarderna EEAT (Experience, Expertis, Authoritatitivity, Trustness) och YMYL (Your Money or Your Life).
 
@@ -109,7 +109,7 @@ Här är några optimeringsmetoder:
 
    * Använd kontrollpanelen [Affärsmöjligheter](/help/dashboards/opportunities.md) för att identifiera och agera utifrån rekommendationer.
    * Spåra synlighetspoäng, känslouttryck och citatfrekvens.
-   * Justera baserat på konkurrentaktivitet och visa trender.
+   * Justera baserat på andra aktiviteter (inklusive konkurrenter) och få till stånd trender.
 
 ## Optimering offline - expandera ert varumärke
 
@@ -158,11 +158,11 @@ Här följer några steg som du kan följa för att övervaka förloppet:
 1. Förstärk din nuvarande synlighet.
    * Identifiera hur ofta och var ert varumärke nämns och citeras och vad känslan är i Adobe LLM Optimizer. Se kontrollpanelen [Varumärkesnärvaro](/help/dashboards/brand-presence.md).
    * Analysera frågor om var varumärket finns och var det inte finns.
-   * Jämför synlighet med konkurrenterna.
+   * Jämför synlighet med andra, inklusive konkurrenter (i **Övrig spårning** på kontrollpanelen [Kundkonfiguration](/help/dashboards/customer-configuration.md)).
    * Granska synligheten på användargenererade plattformar som Reddit, Quora och Wikipedia. Segmentera efter plattform (ChatGPT, Google AI-läge och så vidare)
    * Övervaka autentisk trafik för att förstå vilka sidor LLM besöker. Byråtrafik går ofta **inte** till startsidan, men andra sidor nedanför i hierarkin. Se kontrollpanelen [Agentinsk trafik](/help/assets/overview/agentic-traffic-card.png).
 1. Övervaka ändringar över tid.
-   * Använd tidsfilter för att spåra ändringar varje vecka och månad
+   * Använd tidsfilter för att spåra ändringar varje vecka och månad.
    * Håll utkik efter spikar eller fall i synlighetspoäng.
    * Analysera känslouttrender för att förstå hur varumärket uppfattas.
 1. Korrelera synlighet med trafik, engagemang och konverteringar.
@@ -176,9 +176,9 @@ Här följer några steg som du kan följa för att övervaka förloppet:
    * Se till att det är enkelt för LLM att hitta och läsa ditt innehåll. Åtgärda problem som blockerade sidor eller problem med webbplatsens kod.
    * Se till att bidrag till plattformar som Wikipedia och Reddit är opartiska, icke-kommersiella och ger mervärde.
    * Använd Adobe LLM Optimizer för att spåra hur synligheten förändras över tid.
-   * Om ni märker att konkurrenterna nämns oftare bör ni anpassa strategin så att den ligger steget före.
+   * Om ni märker att andra, även konkurrenter, nämns oftare, kan ni anpassa er strategi så att den ligger steget före.
    * Fortsätt uppdatera innehållet så att det matchar det som andra söker efter och frågar om.
-1. Justera strategier för [utanför &#x200B;](#offsite-optimization---expanding-your-brand-footprint) och [på plats](#onsite-optimization---strengthening-your-owned-content) baserat på insikter.
+1. Justera strategier för [utanför ](#offsite-optimization---expanding-your-brand-footprint) och [på plats](#onsite-optimization---strengthening-your-owned-content) baserat på insikter.
 
 >[!NOTE]
 >
@@ -226,7 +226,7 @@ Så här optimerar du för AGAL-trafik:
 * Se till att det går att crawla genom att granska robots.txt och CDN-inställningar.
 * Använd [URL-kontrollen](/help/dashboards/url-inspector.md) för att analysera URL-prestanda.
 * Spåra robotbeteendet genom att gå till CDN-loggarna på [Kontrollpanelen för AGS-trafik](/help/dashboards/agentic-traffic.md).
-* Segmentera trafik för att förstå affärsresultatet. Se [Bästa tillvägagångssätt för kategorier, ämnen, uppmaningar och konkurrenter](/help/overview/best-practices-topics-prompts.md).
+* Segmentera trafik för att förstå affärsresultatet. Se [Bästa tillvägagångssätt för kategorier, ämnen och uppmaningar](/help/overview/best-practices-topics-prompts.md).
 
 Här är mätvärdena som ska övervakas:
 
