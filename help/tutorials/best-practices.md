@@ -178,7 +178,7 @@ Här följer några steg som du kan följa för att övervaka förloppet:
    * Använd Adobe LLM Optimizer för att spåra hur synligheten förändras över tid.
    * Om ni märker att andra, även konkurrenter, nämns oftare, kan ni anpassa er strategi så att den ligger steget före.
    * Fortsätt uppdatera innehållet så att det matchar det som andra söker efter och frågar om.
-1. Justera strategier för [utanför ](#offsite-optimization---expanding-your-brand-footprint) och [på plats](#onsite-optimization---strengthening-your-owned-content) baserat på insikter.
+1. Justera strategier för [utanför &#x200B;](#offsite-optimization---expanding-your-brand-footprint) och [på plats](#onsite-optimization---strengthening-your-owned-content) baserat på insikter.
 
 >[!NOTE]
 >
