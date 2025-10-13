@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Hänvisningstrafik
 
-Referenstrafik visar hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar. Den spårar och analyserar trafikkällor, referensmönster och konverteringsvärden från externa webbplatser och plattformar. Detta hjälper er att förstå vilka källor, regioner och sidor som driver den mest engagerade trafiken. Data hämtas antingen från CDN-loggarna eller från [AEM Operational Telemetry](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/operational-telemetry-for-aem-as-a-cloud-service). Båda dessa källor bevarar integriteten och samlar inte in personuppgifter. Det finns också anpassningsbara filter som hjälper dig att förfina de data som visas.
+Referenstrafik visar hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar. Den spårar och analyserar trafikkällor, referensmönster och konverteringsvärden från externa webbplatser och plattformar. Detta hjälper er att förstå vilka källor, regioner och sidor som driver den mest engagerade trafiken. Data hämtas antingen från CDN-loggarna eller från [AEM Operational Telemetry](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/sites/operational-telemetry-for-aem-as-a-cloud-service). Båda dessa källor bevarar integriteten och samlar inte in personuppgifter. Det finns också anpassningsbara filter som hjälper dig att förfina de data som visas.
 
 ![Referenssida](/help/dashboards/assets/referral-traffic.png)
 
