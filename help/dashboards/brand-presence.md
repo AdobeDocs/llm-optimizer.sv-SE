@@ -1,7 +1,7 @@
 ---
 title: Varumärkesnärvaro
 description: Lär dig använda kontrollpanelen för varumärkesnärvaro för att förstå hur ert varumärke uppfattas på nivån för AI-genererade svar.
-source-git-commit: 5e8efde82c10c9afa09d51ec9ef20fc006363210
+source-git-commit: a37c4e7d2e26f16dc10dc7bc39ba58ba1df77cd5
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Instrumentpanelen Varumärkesnärvaro ger en detaljerad översikt över hur ert varumärke uppfattas på nivån för AI-genererade svar. Det visar var, hur ofta och i vilket sammanhang ert varumärke omnämns. Du kan använda kontrollpanelen för att mäta synlighet, spåra citat och utforska attitydtrender. Instrumentpanelen är uppdelad i flera avsnitt, där alla innehåller olika insikter. Det finns också anpassningsbara filter som hjälper dig att förfina de data som visas.
 
-![Varumärkesnärvaro](/help/dashboards/assets/brand-main1.png)
+![Varumärkesnärvaro](/help/dashboards/assets/brand-main.png)
 
 Den här sidan innehåller följande information:
 
@@ -60,7 +60,7 @@ Trendindikatorer för varje nyckelmätvärde visar hur dessa värden ändras öv
 
 I det andra jämförelseavsnittet kan du välja upp till fem andra varumärken och jämföra deras omnämnanden och citat med ert varumärke. På så sätt kan ni visa och testa hur ni presterar i förhållande till andra varumärken.
 
-![Jämförelse mellan andra](/help/dashboards/assets/competitor-comparison1.png)
+![Jämförelse mellan andra](/help/dashboards/assets/other-comparison.png)
 
 Övriga varumärken markeras i listrutan och diagrammen uppdateras när du klickar på **Använd filter**. Diagrammen visar veckovisa omnämnanden och veckocitat sida vid sida. Du kan också hålla muspekaren längs diagrammet för att se datautvecklingen under veckotidsperioden.
 

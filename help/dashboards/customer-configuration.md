@@ -1,9 +1,9 @@
 ---
 title: Kundkonfiguration
 description: Använd kundkonfigurationen för att definiera hur ert varumärke ska övervakas och analyseras inom plattformen för optimering av livslångt lärande.
-source-git-commit: 5e8efde82c10c9afa09d51ec9ef20fc006363210
+source-git-commit: a37c4e7d2e26f16dc10dc7bc39ba58ba1df77cd5
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ På den här fliken kan du konfigurera CDN-strömmarna så att Adobe LLM Optimiz
 
 I fönstret **Onboard CDN Provider**:
 
-1. Välj din CDN-leverantör (till exempel Akamai, Adobe-hanterad Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare eller Annan).
+1. Välj CDN-leverantör.
 2. Klicka på **Anonboard** om du vill aktivera vidarebefordran av loggar.
 
 Om du väljer **Annan** måste du kontakta Adobe för att få hjälp.
