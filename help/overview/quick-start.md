@@ -1,9 +1,9 @@
 ---
 title: Snabbstart
 description: Kom igång med Adobe LLM Optimizer - ta in ditt varumärke i datorn, lås upp insikter om AI-synlighet och utforska instrumentpaneler för att förbättra sökresultatet.
-source-git-commit: 4cbfbe420a8419a04c2d6c465b6a290ee00ff3d4
+source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Startprocessen börjar med att du registrerar din domän. Processen skiljer sig 
 
 ### Testa innan du köper
 
-AEM Cloud-kunder (Cloud Service, Managed Services, Edge Delivery Service) kan välja att använda erbjudandet Prova före köp. Det är en kostnadsfri testversion av LLM Optimizer med upp till 200 kostnadsfria uppmaningar. Användning av fler än 200 uppmaningar kräver ett separat licensavtal. Tillgång ges i befintligt skick och i befintligt skick och kan ändras, begränsas eller tas bort av Adobe när som helst.
+AEM Cloud-kunder (Cloud Service, Managed Services, Edge Delivery Service) kan välja att använda erbjudandet **Testa innan du köper**. Det är en kostnadsfri testversion av LLM Optimizer med upp till 200 kostnadsfria uppmaningar. Användning av fler än 200 uppmaningar kräver ett separat licensavtal. Tillgång ges i befintligt skick och i befintligt skick och kan ändras, begränsas eller tas bort av Adobe när som helst.
 
 Det finns en del funktioner som inte finns i den kostnadsfria versionen:
 
@@ -32,10 +32,10 @@ Se avsnittet nedan för mer ingående information om hur du aktiverar den kostna
 
 ### AEM Cloud-kunder
 
-Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
+Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
 
 >[!NOTE]
->Nyligen tillagda uppmaningar visas inte på kontrollpanelen [Varumärkesnärvaro](/help/dashboards/brand-presence.md) förrän bearbetningen är klar. AEM Cloud-kunder (Cloud Service, Managed Services/Edge Delivery) kan använda den kostnadsfria testversionen av LLM Optimizer. Användning av fler än 200 uppmaningar kräver ett separat licensavtal. Tillgång ges i befintligt skick och i befintligt skick och kan ändras, begränsas eller tas bort av Adobe när som helst. Kontakta din kontorepresentant om du vill ha mer information.
+>Nyligen tillagda uppmaningar visas inte på kontrollpanelen [Varumärkesnärvaro](/help/dashboards/brand-presence.md) förrän bearbetningen är klar. AEM Cloud-kunder kan använda den kostnadsfria testversionen av LLM Optimizer. Användning av fler än 200 uppmaningar kräver ett separat licensavtal. Tillgång ges i befintligt skick och i befintligt skick och kan ändras, begränsas eller tas bort av Adobe när som helst. Kontakta din kontorepresentant om du vill ha mer information.
 
 ![Utvärderingsversion av LLM Optimizer](/help/overview/assets/llm-trial.png)
 
@@ -73,6 +73,10 @@ Från den här instrumentpanelen kan du:
 >[!NOTE]
 >De exakta uppmaningar ni frågar om livslångt lärande är inte tillgängliga för allmänheten eftersom de inte offentliggörs av de s.k. LLM.
 
+>[!NOTE]
+>
+> Mer information om hur du konfigurerar kategorier, ämnen, uppmaningar och konkurrenter finns på sidan [Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar och konkurrenter](/help/overview/best-practices-topics-prompts.md).
+
 ### Steg 3: Automatisk förifyllning av insikter
 
 När din domän har anslutits och du har angett kategorier och ämnen, kommer LLM Optimizer automatiskt att aktivera analysen av varumärkesnärvaro.
@@ -83,7 +87,7 @@ Om du vill låsa upp information om AGT- och REFERENSTRERINGSTRANSPLANER måste 
 
 ![CDN för kundkonfiguration](/help/overview/assets/cc-cdn.png)
 
-Om ingen CDN-leverantör har lagts till i förväg uppmanas du att lägga till CDN-loggvidarebefordran när du för första gången öppnar kontrollpanelerna för Agenting och Referenstrafik. Mer information finns i:
+Om ingen CDN-leverantör har lagts till i förväg, som liknar exemplet ovan, uppmanas du att lägga till vidarebefordran av CDN-loggar när du för första gången använder kontrollpanelerna för Agentic och Referral Traffic. Mer information finns i:
 
 * [Myndighetstrafik](/help/dashboards/agentic-traffic.md#cdn-setup)
 * [Hänvisningstrafik](/help/dashboards/referral-traffic.md#setup#setup)
@@ -97,4 +101,4 @@ När du har angett information för CDN-loggvidarebefordran kan du:
 * Använd [säljprojekt](/help/dashboards/opportunities.md) för att identifiera innehåll och tekniska förbättringar.
 * Exportera data och samarbeta med teamet eller bjud in medarbetaren att använda produkten.
 
-Slutligen, för att få en fullständig förståelse för funktionerna i LLM-optimering, bör du utforska alla tillgängliga [kontrollpaneler](/help/dashboards/dashboards-overview.md).
+Slutligen, för att få en fullständig förståelse för LLM Optimizer funktioner bör du utforska alla tillgängliga [dashboards](/help/dashboards/dashboards-overview.md).

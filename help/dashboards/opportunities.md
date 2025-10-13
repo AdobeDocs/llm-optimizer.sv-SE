@@ -1,9 +1,9 @@
 ---
 title: Optimeringsmöjligheter
 description: Lär dig hur du använder kontrollpanelen för affärsmöjligheter för att automatiskt upptäcka hur webbplatsen kan förbättras för att öka varumärkets synlighet.
-source-git-commit: e8ea9ae0d6592ea3d1e9945ec117f852112ba9d7
+source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,9 @@ ht-degree: 0%
 
 # Optimeringsmöjligheter
 
-Optimeringsmöjligheter upptäcks automatiskt insikter som visar var er webbplats och externa närvaro kan förbättras för att öka varumärkets synlighet i AI-sökningar. Optimeringarna omfattar korrigeringar på sidan (tillägg av strukturerat innehåll, kanonisaler eller sammanfattningar), tekniska justeringar (avblockerande AI-crawler eller lösta fel) och påverkan på innehåll på auktoritativa webbplatser från tredje part. Genom att ta itu med dessa optimeringsmöjligheter kan ert varumärke representeras på ett korrekt sätt och det är troligare att det citeras i generativa svar.
+Optimeringsmöjligheter upptäcks automatiskt insikter som visar var er webbplats och externa närvaro kan förbättras för att öka varumärkets synlighet i AI-sökningar.
+
+Optimeringarna omfattar korrigeringar på sidan (tillägg av strukturerat innehåll, kanonisaler eller sammanfattningar), tekniska justeringar (avblockerande AI-crawler eller lösta fel) och påverkan på innehåll på auktoritativa webbplatser från tredje part. Genom att ta itu med dessa optimeringsmöjligheter kan ert varumärke representeras på ett korrekt sätt och det är troligare att det citeras i generativa svar.
 
 ![Optimeringsmöjligheter](/help/dashboards/assets/oport.png)
 
@@ -35,10 +37,11 @@ Nedan finns en tabell över de affärsmöjligheter som stöds:
 | Identifiera duplicerade rubriker | Innehåll (på plats) | Söker igenom HTML rubriktaggar och flaggar upprepade rubriker. Visar URL:er som påverkas och duplicerade textfragment. | Ändra rubrikerna så att de blir unika och bibehåll hierarkin (H1 → H2 → H3). Sammanfoga eller byt namn på duplicerade avsnitt. |
 | Identifiera blockerad kontorstrafik | Teknisk GEO | Analyserar CDN-loggar för blockerade begäranden från kända AI-agenter (t.ex. GPTBot, PerplexityBot). Rapporterar URL:er och agenter som påverkas. | Uppdatera robots.txt eller serverkonfigurationer för att tillåta åtkomst för AI-crawler där det är lämpligt. |
 | Identifiera 404s/403s/5xx-problem | Teknisk GEO | Övervakar CDN-loggar för felsvar. Rapporteringsfrekvens, påverkade URL:er och beräknade antal förlorade träffar. | Åtgärda brutna länkar, uppdatera behörigheter och åtgärda problem på serversidan så att nyckelinnehållet returnerar 200 svar. |
+| Återskapa innehållets synlighet (tidig åtkomst) | Teknisk GEO | Flaggar sidor där kritiskt innehåll döljs för AI-agenter. Visar URL:er som påverkas och förväntat innehåll som kan återställas. | Återge sidorna i förväg så att mer innehåll är tillgängligt för AI-agenter utan att JavaScript exekveras. |
 
 ### Återskapa innehållssynlighet {#recover-contet}
 
-Som anges ovan flaggar innehållssynligheten sidor där nyckelinnehåll förloras för AI-agenter på grund av klientåtergivning. För varje identifierad sida visas exakt vilket innehåll som saknas i AI-agentvyn, vilket hjälper dig att identifiera luckor i synligheten. Det stöds också av en edge-baserad förrenderingsfunktion som kan leverera mer HTML-innehåll till agell trafik utan att CMS (Content Management System) behöver ändras. Den här funktionen är för närvarande i tidig åtkomst och kräver konfiguration från LLMO-teamet. Kontakta `llmo-at-edge@adobe.com` för att aktivera innehållssynlighetsmöjligheten.
+Som anges ovan flaggar innehållssynligheten sidor där nyckelinnehåll förloras för AI-agenter på grund av klientåtergivning. För varje identifierad sida visas exakt vilket innehåll som saknas i AI-agentvyn, vilket hjälper dig att identifiera luckor i synligheten. Det stöds också av en edge-baserad förrenderingsfunktion som kan leverera mer HTML-innehåll till agell trafik utan att CMS (Content Management System) behöver ändras. Den här funktionen är för närvarande i Tidig åtkomst och kräver installation från LLM Optimizer-teamet. Kontakta `llmo-at-edge@adobe.com` för att aktivera innehållssynlighetsmöjligheten.
 
 ### Ytterligare verktyg
 

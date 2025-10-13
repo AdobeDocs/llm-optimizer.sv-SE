@@ -1,9 +1,9 @@
 ---
 title: Myndighetstrafik
 description: Lär dig hur du använder kontrollpanelen för AI-trafik för att se hur AI-agenter interagerar med din webbplats.
-source-git-commit: 4cbfbe420a8419a04c2d6c465b6a290ee00ff3d4
+source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1100'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,9 @@ ht-degree: 0%
 
 # Myndighetstrafik {#agentic-traffic}
 
-På kontrollpanelen för AGATIVE Traffic visas hur AI-agenter (crawler och chatbots) interagerar med din webbplats. Genom att använda den här vyn kan du spåra det totala antalet förfrågningar och allmänna prestandarelaterade mått. Du kan också visa fördelningen av trafik mellan marknader, kategorier, sidor och agenter. De data som används av den här instrumentpanelen hämtas från CDN-loggarna, så du måste konfigurera **CDN-loggvidarebefordran** för att kunna visa mätvärden. Det finns också anpassningsbara filter som hjälper dig att förfina de data som visas.
+Kontrollpanelen för AGATIVE Traffic visar hur AI-agenter (crawler och chattbots) interagerar med din webbplats. Genom att använda den här vyn kan du spåra det totala antalet förfrågningar och allmänna prestandarelaterade mått. Du kan också visa fördelningen av trafik mellan marknader, kategorier, sidor och agenter. De data som används av den här instrumentpanelen hämtas från CDN-loggarna, så du måste konfigurera **CDN-loggvidarebefordran** för att kunna visa mätvärden. Det finns också anpassningsbara filter som hjälper dig att förfina de data som visas.
+
+![Trafikdistribution](/help/dashboards/assets/ag-main.png)
 
 Den här sidan innehåller följande information:
 
@@ -34,8 +36,7 @@ Välj **Gå till konfiguration** så navigerar du automatiskt till fliken **CDN-
 
 Välj **Inbyggt CDN** på den här fliken. CDN-providerfönstret visas.
 
-![CDN-provider](/help/dashboards/assets/ag-log-forward3.png)
-
+<!-- [CDN Provider](/help/dashboards/assets/ag-log-forward3.png)-->
 I fönstret **Onboard CDN Provider**:
 
 1. Välj din CDN-leverantör (till exempel Akamai, Adobe-hanterad Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare eller Annan).
@@ -80,13 +81,13 @@ Använd diagrammet&quot;Agentic Traffic Trends&quot; för att följa upp antalet
 
 ## Övre och nedre flyttningar {#top-bottom-movers}
 
-I vyn Top and Bottom Movers (Översta och understa flytten) markeras URL:er med de största vecko-över-vecka-förändringarna i autentisk trafik - besök eller träffar från AI-system som använder ditt innehåll. De vanligaste sätten visar sidor som ökar synligheten eller engagemanget, medan de nedersta förflyttningarna visar URL:er med de brantaste minskningarna. På så sätt kan ni snabbt identifiera vilket innehåll som trasar uppåt, vilket kan behöva åtgärdas och var de AI-drivna identifieringsmönstren förskjuts.
+I vyn Top and Bottom Movers (Översta och understa flytten) markeras URL:er med de största vecko-över-vecka-förändringarna i autentisk trafik - besök eller träffar från AI-system som använder ditt innehåll. De översta topparna visar vilka sidor som blir synliga eller engagerande, medan de nedersta flyttarna visar URL:er med de brantaste minskningarna. På så sätt kan ni snabbt identifiera vilket innehåll som trasar uppåt, vilket kan behöva åtgärdas och var de AI-drivna identifieringsmönstren förskjuts.
 
 ![Övre och nedre flyttningar](/help/dashboards/assets/movers.png)
 
 ## Prestandaanalys för användaragent och URL {#user-url-performance}
 
-Vyerna för användaragenten och URL-prestandaanalys ger ytterligare datauppdelningar om hur crawler och chattbots interagerar med webbplatsen. Klicka på flikarna nedan om du vill ha detaljerade beskrivningar.
+Vyerna för användaragenten och URL-prestandaanalys ger ytterligare datauppdelningar om hur crawler och chattbots interagerar med webbplatsen. Klicka på flikarna nedan för detaljerade beskrivningar.
 
 ![Prestandaanalys för användaragent och URL](/help/dashboards/assets/user-agent.png)
 
@@ -99,8 +100,6 @@ Tabellen för användaragentanalys innehåller en beskrivning av trafiken per si
 * **Sidtyp** - Sidtyp.
 * **Agenttyp** - AI-agenten crawlar sidan, antingen en crawler eller en chattbot.
 * **träffar** - Det totala antalet begäranden som AI-agenter har gjort för den specifika sidtypen.
-
-Du kan också använda alternativet **Exportera** för att hämta tabellen .csv och dela agentanalysen med ditt team eller inkludera den i chefsrapporter.
 
 >[!TAB URL-prestandaanalys]
 
@@ -122,4 +121,4 @@ Vyn URL-detaljer ger en helhetsbild av en sidas prestanda - som visar hur ofta d
 
 >[!ENDTABS]
 
-För båda tabellerna kan du använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellen i den verkställande rapporten.
+På båda tabellerna kan du använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellen i den verkställande rapporten.

@@ -1,23 +1,19 @@
 ---
 title: Kundkonfiguration
 description: Använd kundkonfigurationen för att definiera hur ert varumärke ska övervakas och analyseras inom plattformen för optimering av livslångt lärande.
-source-git-commit: 4192fe32c9e7cea4218ea580a9300f1fceb0f909
+source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
 
 
-# Kundkonfiguration
+# Kundkonfiguration {#customer-configuration}
 
-I kundkonfigurationen definieras hur ert varumärke ska övervakas och analyseras inom plattformen för optimering av livslångt lärande. Ni kan anpassa kategorier (t.ex. affärsenheter eller produktlinjer), spåra konkurrenter och lägga till alias för varumärket för att fånga upp alla variationer av ert varumärke i olika uppmaningar. Med den här konfigurationen kan plattformen skräddarsy insikter efter verksamhetens sammanhang, vilket möjliggör korrekt synlighet, trafik och analys av affärsmöjligheter.
+Instrumentpanelen för kundkonfiguration är ett kraftfullt verktyg som ger insikter om hur ert varumärke är synligt för LLM-system. Genom att ställa in kategorier, ämnen, uppmaningar och konkurrenter på rätt sätt kan ni se till att ert varumärke är väl positionerat att visas i svar som genererats av LLM. Med den här konfigurationen kan plattformen skräddarsy insikter efter verksamhetens sammanhang, vilket möjliggör korrekt synlighet, trafik och analys av affärsmöjligheter.
 
 ![Kontrollpanel för kundkonfiguration](/help/dashboards/assets/customer-config.png)
-
-## Kontrollpanel för kundkonfiguration
-
-Instrumentpanelen för kundkonfiguration är ett kraftfullt verktyg som ger insikter om hur ert varumärke är synligt för LLM-system. Genom att ställa in kategorier, ämnen, uppmaningar och konkurrenter på rätt sätt kan ni se till att ert varumärke är väl positionerat för att visas i svar som genererats av LLM. Regelbunden granskning av insikter som Share of Voice, innehållssynlighet och möjligheter hjälper er att anpassa er strategi och ligga steget före konkurrenterna.
 
 För att konfigurera hur LLM Optimizer övervakar och analyserar er varumärkesnärvaro på olika marknader och i olika konkurrenslandskap har du tillgång till följande flikar:
 
@@ -25,11 +21,15 @@ För att konfigurera hur LLM Optimizer övervakar och analyserar er varumärkesn
 * [Konkurrentspårning](#competitor-tracking)
 * [Varumärkesalias](#brand-aliases)
 * [Datainsikter](#data-insights)
-* [Agence CDN](#agentic-cdn)
+* [CDN-konfiguration](#agentic-cdn)
+
+>[!IMPORTANT]
+>
+> Mer information om hur du konfigurerar kategorier, ämnen, uppmaningar och konkurrenter finns på sidan [Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar och konkurrenter](/help/overview/best-practices-topics-prompts.md).
 
 ## Kategorier {#categories}
 
-På fliken Kategorier kan du definiera affärskategorier eller produktrader som du vill spåra och associera dem med specifika regioner. På det hela taget gäller kategorifliken för alla andra anpassningar på den här sidan, eftersom kategorier visas i kategorifältet för de andra anpassningarna (konkurrentspårning, alias och så vidare). Så här lägger du till en ny kategori:
+På fliken Kategorier kan du definiera affärskategorier eller produktrader som du vill spåra och associera dem med specifika regioner. På det hela taget gäller kategorifliken nästan alla andra anpassningar på den här sidan, eftersom kategorier visas i kategorifältet för de andra anpassningarna (konkurrentspårning, alias och så vidare). Så här lägger du till en ny kategori:
 
 1. Klicka på knappen **Lägg till**.
 2. Lägg till **kategorinamn** i det nya konfigurationsfönstret.
@@ -90,7 +90,15 @@ Dessutom kan du lägga till ämnen/uppmaningar i listan oberoende av en CSV-fil.
 
 I listan kan du klicka på varje ämne och tillhörande uppmaningar visas. Om du vill ta bort ämnet och tillhörande uppmaningar klickar du på ikonen Ta bort i listan.
 
-<!--## Agentic CDN {#agentic-cdn}
+## CDN-konfiguration {#cdn-configuration}
 
-Not available (will it be available for release?).-->
+På den här fliken kan du konfigurera CDN-strömmarna så att Adobe LLM Optimizer kan analysera CDN-data. Dessa data kommer att användas för att driva instrumentpaneler (som AGT-trafik) och ge insikter i trafikmönster, prestandamätningar och optimeringsmöjligheter. Klicka på **Inbyggt CDN** om du vill ta med din CDN-leverantör.
 
+![CDN för kundkonfiguration](/help/overview/assets/cc-cdn.png)
+
+I fönstret **Onboard CDN Provider**:
+
+1. Välj din CDN-leverantör (till exempel Akamai, Adobe-hanterad Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare eller Annan).
+2. Klicka på **Anonboard** om du vill aktivera vidarebefordran av loggar.
+
+Om du väljer **Annan** måste du kontakta Adobe för att få hjälp.

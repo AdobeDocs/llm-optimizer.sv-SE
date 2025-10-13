@@ -1,9 +1,9 @@
 ---
 title: URL-kontroll
 description: Lär dig hur du använder URL-kontrollen för att analysera hur specifika sidor i din domän fungerar vid AI-sökningar.
-source-git-commit: 6d845628264885fd40fc6e14dff89b8aa80f9ca5
+source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -42,9 +42,13 @@ Trendindikatorer för varje översiktsmått visar hur dessa värden ändras öve
 
 ## Dina beställda URL:er
 
-Den URL-vy som citeras listar alla URL-adresser från ert varumärke som har citerats i AI-genererade svar, med stödjande mått. Datatabellen har också ett sökfält för snabb åtkomst till specifika URL:er. Du kan också använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellen i den verkställande rapporten. Följande mätvärden finns:
+De citerade URL:erna visar alla URL:er från ert varumärke som har citerats i AI-genererade svar, med stödjande mått. Datatabellen har också ett sökfält för snabb åtkomst till specifika URL:er. Du kan också använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellen i den verkställande rapporten.
 
-* **URL** - den analyserade URL:en
+![Citerade URL:er](/help/dashboards/assets/cited-urls.png)
+
+Följande mätvärden finns:
+
+* **URL** - den analyserade URL:en.
 * **Tider som anges** - Antalet gånger som URL:en har citerats i AI-genererade svar.
 * **Uppmaningar som citeras i** - Antalet unika AI-uppmaningar som refererade till URL:en.
 * **Kategorier** - De produktkategorier eller ämnen som är associerade med URL:en.
@@ -54,7 +58,7 @@ Den URL-vy som citeras listar alla URL-adresser från ert varumärke som har cit
 
 ## Trending URLs Competition for CCitations
 
-De trender-URL:er som tävlar om citationsvyn visar externa URL:er som för närvarande anges i svar som är relevanta för ditt varumärke och som mäter vilka som vinner citat i ditt space. Datatabellen har ett sökfält som ger snabb åtkomst till specifika URL:er. Du kan också använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellen i den verkställande rapporten.
+De trendwebbadresser som tävlar om citationsvyn visar externa webbadresser som för närvarande anges i svar som är relevanta för ditt varumärke, och som mäter vilka som vinner citat i ditt space. Datatabellen har ett sökfält som ger snabb åtkomst till specifika URL:er. Du kan också använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellen i den verkställande rapporten.
 
 ![Trendar-URL:er som tävlar om källhänvisningar](/help/dashboards/assets/trend-url.png)
 
@@ -69,6 +73,6 @@ Följande mätvärden finns:
 
 ### Informationsfönstret
 
-För både den citerade vyn och trendvyn har URL-adresserna en **Detaljer** -knapp när du håller muspekaren över en viss URL-adress. Om du klickar på knappen visas ett separat fönster med mer information. I informationsfönstret visas hur ofta URL:en citeras, känslan av AI-svar där den nämns, ämnen och uppmaningar som den visas i samt trender för agens- och hänvisningstrafik över tid (för ägda URL:er).
+För både den citerade vyn och trendvyn har URL-adresserna en **Detaljer** -knapp när du håller muspekaren över en viss URL-adress. Om du klickar på knappen visas ett separat fönster med ytterligare information. I informationsfönstret visas hur ofta URL:en citeras, känslan av AI-svar där den nämns, ämnen och uppmaningar som den visas i samt trender för agens- och hänvisningstrafik över tid (för ägda URL:er).
 
 ![Informationsfönstret](/help/dashboards/assets/details-url.png)

@@ -1,9 +1,9 @@
 ---
 title: Hänvisningstrafik
 description: Lär dig använda kontrollpanelen för hänvisningstrafik för att se hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar.
-source-git-commit: 4192fe32c9e7cea4218ea580a9300f1fceb0f909
+source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # Hänvisningstrafik
 
-Referenstrafik visar hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar. Den spårar och analyserar trafikkällor, referensmönster och konverteringsvärden från externa webbplatser och plattformar. Detta hjälper er att förstå vilka källor, regioner och sidor som driver den mest engagerade trafiken. Data hämtas antingen från CDN-loggarna eller från AEM Operational Telemetry. Båda dessa källor bevarar integriteten och samlar inte in personuppgifter.
+Referenstrafik visar hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar. Den spårar och analyserar trafikkällor, referensmönster och konverteringsvärden från externa webbplatser och plattformar. Detta hjälper er att förstå vilka källor, regioner och sidor som driver den mest engagerade trafiken. Data hämtas antingen från CDN-loggarna eller från [AEM Operational Telemetry](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/operational-telemetry-for-aem-as-a-cloud-service). Båda dessa källor bevarar integriteten och samlar inte in personuppgifter. Det finns också anpassningsbara filter som hjälper dig att förfina de data som visas.
 
-Det finns också anpassningsbara filter som hjälper dig att förfina de data som visas.
+![Referenssida](/help/dashboards/assets/referral-traffic.png)
 
 Den här sidan innehåller följande information:
 
@@ -89,4 +89,4 @@ Vyn för URL-prestandaanalys rangordnar sidor som presterar bäst baserat på h�
 
 >[!ENDTABS]
 
-På båda tabellerna kan du använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera hänvisningstrafiktabellen i den verkställande rapporteringen.
+På båda tabellerna kan du använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera hänvisningstrafiken i den verkställande rapporten.

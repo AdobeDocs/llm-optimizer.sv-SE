@@ -1,9 +1,9 @@
 ---
 title: Varumärkesnärvaro
 description: Lär dig använda kontrollpanelen för varumärkesnärvaro för att förstå hur ert varumärke uppfattas på nivån för AI-genererade svar.
-source-git-commit: 4cbfbe420a8419a04c2d6c465b6a290ee00ff3d4
+source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1212'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Varumärkesnärvaro {#brand-presence}
 
-Instrumentpanelen Varumärkesnärvaro ger en översikt över hur ert varumärke uppfattas på nivån för AI-genererade svar. Det visar var, hur ofta och i vilket sammanhang ert varumärke omnämns. Du kan använda kontrollpanelen för att mäta synlighet, spåra citat, jämföra konkurrenter och utforska attitydtrender. Instrumentpanelen är uppdelad i flera avsnitt, där alla innehåller olika insikter. Det finns också anpassningsbara filter som hjälper dig att förfina de data som visas.
+Instrumentpanelen Varumärkesnärvaro ger en detaljerad översikt över hur ert varumärke uppfattas på nivån för AI-genererade svar. Det visar var, hur ofta och i vilket sammanhang ert varumärke omnämns. Du kan använda kontrollpanelen för att mäta synlighet, spåra citat, jämföra konkurrenter och utforska attitydtrender. Instrumentpanelen är uppdelad i flera avsnitt, där alla innehåller olika insikter. Det finns också anpassningsbara filter som hjälper dig att förfina de data som visas.
 
 ![Varumärkesnärvaro](/help/dashboards/assets/brand-main.png)
 
@@ -44,7 +44,7 @@ Kontrollpanelen markerar tre viktiga mätvärden högst upp på sidan: synlighet
 
 ### Synlighetspoäng {#visibility-score}
 
-Synlighetspoängen består av faktorer som omnämnanden, citat, känslouttryck och rangordning. Varje faktor har en viss &quot;vikt&quot; som läggs till i den slutliga poängen. Exempel: omnämnande av&quot;vikt more&quot; eftersom synlighet bara spelar roll om varumärket anges.
+Synlighetspoängen består av faktorer som omnämnanden, citat, känslouttryck och rangordning. Varje faktor har en viss &quot;vikt&quot; som läggs till i den slutliga poängen.
 
 ### Omnämnanden {#mentions}
 
@@ -72,7 +72,9 @@ I avsnittet för analys av attitydtrender kan du spåra hur ert varumärke uppfa
 
 ## Data Insights and Share of Voice {#data-insights}
 
-Vi har två viktiga tabeller - datainsikter och delning av röst - som rundar upp kontrollpanelen. Den information som presenteras i dessa tabeller hjälper er att identifiera var ert varumärke är starkt och var optimering behövs.  Genom att använda tabellen **datainsikter** kan du utforska ämnen och användarfrågor för att utvärdera och optimera innehållets effekt. Resultaten är detaljerade efter ämnen och uppmaningar. Samtidigt jämförs varumärkesuttrycket med andra konkurrenter i tabellen **andel av röst**, vilket hjälper dig att identifiera brister och prioritera framtida ämnen.
+Vi har två viktiga tabeller - datainsikter och delning av röst - som rundar upp kontrollpanelen. Den information som presenteras i dessa tabeller hjälper er att identifiera var ert varumärke är starkt och var optimering behövs.
+
+Genom att använda tabellen **datainsikter** kan du utforska ämnen och användarfrågor för att utvärdera och optimera innehållets effekt. Resultaten är detaljerade efter ämnen och uppmaningar. Samtidigt jämförs varumärkesuttrycket med andra konkurrenter i tabellen **andel av röst**, vilket hjälper dig att identifiera brister och prioritera framtida ämnen.
 
 ![Datainsikter](/help/dashboards/assets/data-insights.png)
 
@@ -86,12 +88,12 @@ Klicka på flikarna nedan om du vill ha mer information om varje tabell och till
 
 Tabellen med datainsikter hjälper dig att utforska ämnen och användaruppmaningar för att utvärdera och optimera innehållets effekt. Här visas följande mått:
 
-* **Ämne** - Ämneskategorin representerar SEO-nyckelord och användarfrågor som rör ditt varumärke. Du kan klicka för att expandera varje ämne och se enskilda frågor analyserade för att se om det finns ett varumärke. Varje ämne och knapp har en **Detaljer** -knapp när du håller muspekaren över det. Om du klickar på knappen visas ett separat fönster med mer information.
+* **Ämne** - Ämneskategorin representerar SEO-nyckelord och användarfrågor som rör ditt varumärke. Du kan klicka för att expandera varje ämne och se enskilda frågor analyserade för att se om det finns ett varumärke. Varje avsnitt har en **informationsknapp** när du håller muspekaren över det. Om du klickar på knappen visas ett separat fönster med mer information.
 * **Region** - visar regionen för uppmaningarna.
 * **Popularitet** - popularitetskategorin representerar sökvolymen för det här ämnet i förhållande till alla andra ämnen i analysen. Värdet kan vara antingen Hög, Medium eller Låg.
 * **Synlighetspoäng** - Synlighetspoängen för det ämnet. Den återspeglar viktade faktorer som omnämnanden, citat, känslor och rankning.
 * **Omnämnanden** - Det antal gånger ditt varumärke omnämns i AI-svar för det här ämnet eller den här kombinationen av ämne och fråga.
-* **Sentiment** - Varumärkesuppfattningen i AI-svar som den relaterar till varje ämne som beräknas som ett genomsnitt för alla veckor. Endast populerat när ert varumärke faktiskt omnämns
+* **Sentiment** - Varumärkesuppfattningen i AI-svar som den relaterar till varje ämne som beräknas som ett genomsnitt för alla veckor. Endast populerat när ert varumärke faktiskt omnämns.
 * **Position** - Varumärkets relativa framträdande i AI-svar, beräknat som ett genomsnitt för alla veckor.
 * **Alla källhänvisningar** - Antalet unika källor som anges i AI-svar för det här ämnet eller den här kombinationen av ämne och kommando (inklusive egna citat).
 * **Ägda citat** - Det antal gånger ditt varumärke citerades i AI-svar för det här nyckelordet eller den här nyckelords-/frågekombinationen.
