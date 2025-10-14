@@ -1,7 +1,8 @@
 ---
 title: Collaboration
 description: Lär dig hur du använder kontrollpanelen för samarbete för att bjuda in teammedlemmar till din organisations LLM Optimizer-arbetsyta.
-source-git-commit: 29e067086f9b6dd41c04b349c86ddc1c2baf8d2f
+feature: Collaboration
+source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%

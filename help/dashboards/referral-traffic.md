@@ -1,7 +1,8 @@
 ---
 title: Hänvisningstrafik
-description: Lär dig använda kontrollpanelen för hänvisningstrafik för att se hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar.
-source-git-commit: a6d050516e681094d97b25fcdc59e9ed4e60e104
+description: Lär dig hur du använder kontrollpanelen för hänvisningstrafik för att se hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar.
+feature: Referral Traffic
+source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
 workflow-type: tm+mt
 source-wordcount: '599'
 ht-degree: 0%
@@ -62,7 +63,7 @@ Förutom de övergripande prestandamätningarna ovan, delar panelen **De överst
 
 <!--## Top Referral URLs {#top-referrals}
 
-The Top Referral URLs list surfaces your site’s most visited pages from referrals.
+The Top Referral URLs list surfaces your site's most visited pages from referrals.
 
 ![Top Referral URLs](/help/dashboards/assets/top-url.png)-->
 
