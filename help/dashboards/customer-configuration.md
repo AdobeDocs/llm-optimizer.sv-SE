@@ -1,9 +1,9 @@
 ---
 title: Kundkonfiguration
 description: Använd kundkonfigurationen för att definiera hur ert varumärke ska övervakas och analyseras inom plattformen för optimering av livslångt lärande.
-source-git-commit: a37c4e7d2e26f16dc10dc7bc39ba58ba1df77cd5
+source-git-commit: a6d050516e681094d97b25fcdc59e9ed4e60e104
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ I listan kan du klicka på varje ämne och tillhörande uppmaningar visas. Om du
 
 ## CDN-konfiguration {#cdn-configuration}
 
-På den här fliken kan du konfigurera CDN-strömmarna så att Adobe LLM Optimizer kan analysera CDN-data. Dessa data kommer att användas för att driva instrumentpaneler (som AGT-trafik) och ge insikter i trafikmönster, prestandamätningar och optimeringsmöjligheter. Klicka på **Inbyggt CDN** om du vill ta med din CDN-leverantör.
+På den här fliken kan du konfigurera CDN-strömmarna så att Adobe LLM Optimizer kan analysera CDN-data. Dessa data kommer att användas som stöd för instrumentpaneler (som Agentinsk trafik och hänskjutningstrafik), vilket ger insikter i trafikmönster, prestandamätningar och optimeringsmöjligheter. Klicka på **Inbyggt CDN** om du vill ta med din CDN-leverantör.
 
 ![CDN för kundkonfiguration](/help/overview/assets/cc-cdn.png)
 
@@ -101,4 +101,4 @@ I fönstret **Onboard CDN Provider**:
 1. Välj CDN-leverantör.
 2. Klicka på **Anonboard** om du vill aktivera vidarebefordran av loggar.
 
-Om du väljer **Annan** måste du kontakta Adobe för att få hjälp.
+Om du väljer **Annan** måste du kontakta llmo-now@adobe.com för att få hjälp.

@@ -1,7 +1,7 @@
 ---
 title: Myndighetstrafik
 description: Lär dig hur du använder kontrollpanelen för AI-trafik för att se hur AI-agenter interagerar med din webbplats.
-source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
+source-git-commit: a6d050516e681094d97b25fcdc59e9ed4e60e104
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 0%
@@ -42,7 +42,7 @@ I fönstret **Onboard CDN Provider**:
 1. Välj din CDN-leverantör (till exempel Akamai, Adobe-hanterad Fastly, Fastly, AWS Cloudfront, Azure CDN, Cloudflare eller Annan).
 2. Klicka på **Anonboard** om du vill aktivera vidarebefordran av loggar.
 
-Om du väljer **Annan** måste du kontakta Adobe för att få hjälp.
+Om du väljer **Annan** måste du kontakta llmo-now@adobe.com för att få hjälp.
 
 När loggarna har aktiverats hämtas de in och kontrollpanelen fylls i med mätvärden som total agentinteraktion, framgångsgrad, träffar per marknad, användaragentanalys och URL-nivåprestanda.
 

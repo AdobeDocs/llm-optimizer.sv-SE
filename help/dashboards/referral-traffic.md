@@ -1,9 +1,9 @@
 ---
 title: Hänvisningstrafik
 description: Lär dig använda kontrollpanelen för hänvisningstrafik för att se hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar.
-source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
+source-git-commit: a6d050516e681094d97b25fcdc59e9ed4e60e104
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Hänvisningstrafik
 
-Referenstrafik visar hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar. Den spårar och analyserar trafikkällor, referensmönster och konverteringsvärden från externa webbplatser och plattformar. Detta hjälper er att förstå vilka källor, regioner och sidor som driver den mest engagerade trafiken. Data hämtas antingen från CDN-loggarna eller från [AEM Operational Telemetry](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/sites/operational-telemetry-for-aem-as-a-cloud-service). Båda dessa källor bevarar integriteten och samlar inte in personuppgifter. Det finns också anpassningsbara filter som hjälper dig att förfina de data som visas.
+Referenstrafik visar hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar. Den spårar och analyserar trafikkällor, referensmönster och konverteringsvärden från externa webbplatser och plattformar. Detta hjälper er att förstå vilka källor, regioner och sidor som driver den mest engagerade trafiken. <!--Data is sourced from the CDN logs, a privacy-preserving source that does not capture personal user data.--> Det finns också anpassningsbara filter som hjälper dig att förfina de data som visas.
 
 ![Referenssida](/help/dashboards/assets/referral-traffic.png)
 
@@ -25,7 +25,7 @@ Den här sidan innehåller följande information:
 
 ## Inställningar {#setup}
 
-Vid den första inloggningen kan kontrollpanelen för hänvisningstrafik visas tom. Om du vill visa dina data måste du konfigurera en hänvisningstrafikleverantör genom att välja **Gå till konfiguration**.
+Vid den första inloggningen kan kontrollpanelen för hänvisningstrafik visas tom. Om du vill visa dina data måste du konfigurera [CDN-loggvidarebefordran](/help/dashboards/customer-configuration.md#cdn-configuration) genom att välja **Gå till konfiguration**.
 
 ![Inställningar för hänskjutning](/help/dashboards/assets/referral-setup1.png)
 
@@ -33,7 +33,7 @@ Vid den första inloggningen kan kontrollpanelen för hänvisningstrafik visas t
 2. Enter a primary contact email.
 3. Click **Request activation** to enable data ingestion. Hiding this until confirmation from PM-->
 
-När en hänvisningstrafikleverantör har valts fylls instrumentpanelen i med hänvisningstrafikstatistik.
+När kontrollpanelen har aktiverats fylls den i med referensvärden för trafik.
 
 ## Filter {#filters}
 
