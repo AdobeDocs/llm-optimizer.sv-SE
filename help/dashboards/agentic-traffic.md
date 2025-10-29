@@ -2,9 +2,9 @@
 title: Myndighetstrafik
 description: Lär dig hur du använder kontrollpanelen för AI-trafik för att se hur AI-agenter interagerar med din webbplats.
 feature: Agentic Traffic
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1217'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Trafikdistributionsvyn visar hur agenttrafiken sprids mellan marknader, kategori
 
 * **Agentinsk interaktion** - Det här måttet representerar det totala antalet förfrågningar från AI-agenter till din webbplats. Detta omfattar all trafik från sökmotorer, chattbottar och annan icke-mänsklig trafik.
 * **Slutförandefrekvens** - Det här måttet representerar procentandelen lyckade HTTP-begäranden, både direkta lyckade svar och omdirigeringar.
-* **Genomsnittlig TTFB** - Tid till första byte (TTFB) mäter den tid det tar för den första byten data att tas emot från servern. Lägre värden innebär snabbare svarstider på servern.
+* **Genomsnittlig TTFB** - Tid till första byte (TTFB) mäter den tid det tar för den första byten data att tas emot från servern. Det genomsnittliga värdet viktas baserat på antalet begäranden som returnerar varje kod och utelämnar begäranden som resulterade i 5xx svar. Lägre värden innebär snabbare svarstider på servern.
 
 Trendindikatorer för varje nyckelmätvärde visar hur dessa värden ändras över tiden jämfört med föregående period.
 
@@ -82,7 +82,7 @@ Använd diagrammet&quot;Agentic Traffic Trends&quot; för att följa upp antalet
 
 ## Övre och nedre flyttningar {#top-bottom-movers}
 
-I vyn Top and Bottom Movers (Översta och understa flytten) markeras URL:er med de största vecko-över-vecka-förändringarna i autentisk trafik - besök eller träffar från AI-system som använder ditt innehåll. De översta topparna visar vilka sidor som blir synliga eller engagerande, medan de nedersta flyttarna visar URL:er med de brantaste minskningarna. På så sätt kan ni snabbt identifiera vilket innehåll som trasar uppåt, vilket kan behöva åtgärdas och var de AI-drivna identifieringsmönstren förskjuts.
+I vyn Top and Bottom Movers (Översta och understa flytten) markeras URL:er med de största vecko-över-vecka-förändringarna i autentisk trafik - besök eller träffar från AI-system som använder ditt innehåll. **De översta topparna** visar sidor som får synlighet eller engagemang, medan **De nedersta topparna** visar URL:erna med de största minskningarna. På så sätt kan ni snabbt identifiera vilket innehåll som trasar uppåt, vilket kan behöva åtgärdas och var de AI-drivna identifieringsmönstren förskjuts.
 
 ![Övre och nedre flyttningar](/help/dashboards/assets/movers.png)
 
@@ -102,6 +102,8 @@ Tabellen för användaragentanalys innehåller en beskrivning av trafiken per si
 * **Agenttyp** - AI-agenten crawlar sidan, antingen en crawler eller en chattbot.
 * **träffar** - Det totala antalet begäranden som AI-agenter har gjort för den specifika sidtypen.
 
+Du kan anpassa vilka mätvärden som visas genom att klicka på knappen **Konfigurera kolumner** .
+
 >[!TAB URL-prestandaanalys]
 
 Tabellen URL-prestandaanalys visar en detaljerad vy över enskilda URL:er. Detta inkluderar träffar, unika agenter, toppmedarbetare, antal lyckade inköp och kategorier. På så sätt kan du identifiera värdefulla sidor, upptäcka kryphål och optimera innehåll för AI-motorer. URL:erna rangordnas efter trafikvolym. Tabellen innehåller följande kategorier:
@@ -113,13 +115,15 @@ Tabellen URL-prestandaanalys visar en detaljerad vy över enskilda URL:er. Detta
 * **Agenttyp** - Den typ av AI-agent som genererade mest trafik till den här URL:en.
 * **Slutförandefrekvens** - Procentandel lyckade HTTP-begäranden, inklusive både direkta lyckade svar och omdirigeringar.
 * **Kategori** - Den kategori som bäst matchar sidans innehåll.
+* **Genomsnittlig TTFB (ms)** - Tid till första byte (TTFB) mäter hur lång tid det tar för den första byten data att tas emot från servern (i millisekunder). Det genomsnittliga värdet viktas baserat på antalet begäranden som returnerar varje kod och utelämnar begäranden som resulterade i 5xx svar. Lägre värden innebär snabbare svarstider på servern.
+* **Svarskoder** - HTTP-statuskoderna som har observerats för URL:en.
 
-I URL-prestandatabellen finns ett sökfält som ger snabb åtkomst till URL:er. Du kan också visa ytterligare information för varje URL genom att klicka på informationsikonen i slutet av varje rad.
+URL-prestandatabellen har ett sökfält för snabb åtkomst till URL-adresser och du kan anpassa vilka mått som visas genom att klicka på knappen **Konfigurera kolumner** . Du kan också visa ytterligare information för varje URL genom att klicka på ikonen **Detaljer** i slutet av varje rad.
 
 ![URL-information](/help/dashboards/assets/details.png)
 
-Vyn URL-detaljer ger en helhetsbild av en sidas prestanda - som visar hur ofta den anges, känslan av AI-svar där den nämns, ämnen och uppmaningar som den visas i samt trender för faktisk och hänvisningstrafik över tid.
+Vyn URL-detaljer ger en helhetsbild av en sidas prestanda, som visar hur ofta den anges, känslan av AI-svar där den nämns, ämnen och uppmaningar som den visas i samt trender för faktisk och hänvisningstrafik över tid.
 
 >[!ENDTABS]
 
-På båda tabellerna kan du använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellen i den verkställande rapporten.
+På båda tabellerna kan du använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellerna i den verkställande rapporten.

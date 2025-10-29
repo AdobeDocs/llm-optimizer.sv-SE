@@ -2,9 +2,9 @@
 title: Varumärkesnärvaro
 description: Lär dig använda kontrollpanelen för varumärkesnärvaro för att förstå hur ert varumärke uppfattas på nivån för AI-genererade svar.
 feature: Brand Presence
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1275'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,7 @@ Den här sidan innehåller följande information:
 
 * **Datumintervall** - Välj tidsram för visade data. De senaste fyra veckorna, till exempel. Du kan också anpassa tidsperioden genom att välja alternativet **Anpassade veckor**.
 * **Kategori** - Filtrera de resultat som visas med antingen fördefinierade kategorier eller anpassade kategorier.
+* **Ämne** - Filtrera efter ämne för att analysera innehållsteman och ämnesområden där ditt varumärke förekommer i AI-svar.
 * **Plattform** - Välj vilken AI-motor som ska analyseras.
 * **Frågar om ursprung** - Välj källa för uppmaningarna. Ursprunget kan antingen vara användarinmatat eller AI-genererat.
 * **Prompt Branding** - Filtrera resultat antingen efter profilerade uppmaningar eller uppmaningar utan varumärke.
@@ -47,9 +48,9 @@ Kontrollpanelen markerar tre viktiga mätvärden högst upp på sidan: synlighet
 
 Synlighetspoängen består av faktorer som omnämnanden, citat, känslouttryck och rangordning. Varje faktor har en viss &quot;vikt&quot; som läggs till i den slutliga poängen.
 
-### Omnämnanden {#mentions}
+### Märkesomnämnanden {#mentions}
 
-Detta mått visar det totala antalet gånger som ert varumärke eller era kategorier omnämns i alla AI-prompter i urvalet. Du har till exempel varumärket&quot;Kaffe B&quot;, med kategorierna&quot;Maskiner&quot; och&quot;Tillbehör&quot;, och det här måttet räknar det totala antalet gånger som de visas i de AI-svar som du tar prov på.
+Detta mått visar det totala antalet gånger som ert varumärke eller era kategorier omnämns i alla AI-prompter i urvalet. Om du till exempel har varumärket&quot;Kaffe B&quot;, med kategorierna&quot;Maskiner&quot; och&quot;Tillbehör&quot;, räknar det här måttet det totala antalet gånger som de visas i de AI-svar som ingår i urvalet.
 
 ### Citat {#citations}
 
@@ -63,11 +64,11 @@ I det andra jämförelseavsnittet kan du välja upp till fem andra varumärken o
 
 ![Jämförelse mellan andra](/help/dashboards/assets/other-comparison.png)
 
-Övriga varumärken markeras i listrutan och diagrammen uppdateras när du klickar på **Använd filter**. Diagrammen visar veckovisa omnämnanden och veckocitat sida vid sida. Du kan också hålla muspekaren längs diagrammet för att se datautvecklingen under veckotidsperioden.
+Övriga varumärken markeras i listrutan och diagrammen uppdateras när du klickar på **Använd filter**. I diagrammen visas varje vecka hur varumärket omnämns och varje vecka citeras de av olika varumärken. Du kan också hålla muspekaren längs diagrammet för att se datautvecklingen under veckotidsperioden.
 
 ## Sentiment - trendanalys {#sentiment-trend}
 
-I avsnittet för analys av attitydtrender kan du spåra hur ert varumärke uppfattas i de AI-svar som ingår i urvalet. Måttet för senhetstrend kan vara antingen positivt, neutralt eller negativt. Det kan till exempel vara positivt om svaren lyfter fram produktkvaliteten eller negativt om de talar om dålig service. Trenddiagrammet visar förändringarna i vecka för varumärkesuppfattning över vecka. Avsnittet fylls bara i efter att ert varumärke har omnämnts.
+I avsnittet för analys av attitydtrender kan du spåra hur ert varumärke uppfattas i de AI-svar som ingår i urvalet. Måttet för senhetstrend kan vara antingen positivt, neutralt eller negativt. Det kan till exempel vara positivt om svaren lyfter fram produktkvaliteten eller negativt om de talar om dålig service. Trenddiagrammet visar förändringarna i vecka för varumärkesuppfattning över vecka. Det här avsnittet fylls i först efter att ert varumärke har omnämnts.
 
 ![Känslotrend](/help/dashboards/assets/sentiment-trend.png)
 
@@ -79,7 +80,7 @@ Genom att använda tabellen **datainsikter** kan du utforska ämnen och använda
 
 ![Datainsikter](/help/dashboards/assets/data-insights.png)
 
-Båda tabellerna har ett sökfält som ger snabb åtkomst till ämnen. Du kan också använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellen i den verkställande rapporten.
+Båda tabellerna har ett sökfält för snabb åtkomst till ämnen och du kan anpassa vilka mätvärden som visas genom att klicka på knappen **Konfigurera kolumner** . Du kan också använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellerna i den verkställande rapporten.
 
 Klicka på flikarna nedan om du vill ha mer information om varje tabell och tillhörande mått.
 
@@ -98,6 +99,9 @@ Tabellen med datainsikter hjälper dig att utforska ämnen och användaruppmanin
 * **Position** - Varumärkets relativa framträdande i AI-svar, beräknat som ett genomsnitt för alla veckor.
 * **Alla källhänvisningar** - Antalet unika källor som anges i AI-svar för det här ämnet eller den här kombinationen av ämne och kommando (inklusive egna citat).
 * **Ägda citat** - Det antal gånger ditt varumärke citerades i AI-svar för det här nyckelordet eller den här nyckelords-/frågekombinationen.
+  <!--* **Executions**-->
+
+Du kan också visa ytterligare information för varje ämne genom att klicka på ikonen **Detaljer** i slutet av varje rad.
 
 >[!TAB Delning av röst]
 
@@ -119,6 +123,6 @@ Tabellen Data Insights hjälper er att gå från mått till åtgärder genom att
 Viktiga sätt att använda tabellen:
 
 * Prioritera ämnen med stor popularitet och låg synlighet - fokusoptimering där målgruppens efterfrågan är stark men där varumärkets närvaro är svag.
-* Spåra känslomässig förändring - hitta ämnen där omnämnanden är negativa eller neutrala och koordinera ert svar.
+* Spåra känslomässig förändring - hitta ämnen där omnämnanden trender i negativ eller neutral riktning och koordinera ert svar.
 * Jämför citat mot egna citat - identifiera frågor där ert varumärke omnämns, men där det hänvisas till det andra märkets innehåll, vilket signalerar ett innehållslucka.
 * Utvärdera positionsintervall - övervaka om ditt varumärke visas tidigt i AI-svar (position 1-3) eller längre ned (6-10).

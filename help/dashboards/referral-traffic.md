@@ -2,9 +2,9 @@
 title: Hänvisningstrafik
 description: Lär dig hur du använder kontrollpanelen för hänvisningstrafik för att se hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar.
 feature: Referral Traffic
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -54,12 +54,13 @@ När du har valt önskat filter klickar du på **Använd filter** för att anvä
 Kontrollpanelen markerar hänvisningens övergripande prestanda genom att visa viktiga värden, bland annat:
 
 * **Total hänvisningstrafik** - den totala hänvisningstrafiken från alla källor.
+* **Referenstrafik från LLM:s** - den totala hänvisningstrafiken från LLM:er.
 * **Medgivandefrekvens** - Procentandel besökare som accepterar en fråga om medgivande.
 * **Studsfrekvens** - Procentandel sessioner från hänvisningskällor som inte hade någon engagemangshändelse.
 
 ![Referenssida](/help/dashboards/assets/referral-traffic.png)
 
-Förutom de övergripande prestandamätningarna ovan, delar panelen **De översta regionerna** upp trafiken per land. Under tiden visar panelen **De viktigaste referenskällorna** de plattformar som leder flest besök. Trendindikatorer för mätvärdena visar hur dessa värden ändras över tiden jämfört med föregående period.
+Förutom de övergripande prestandamätningarna ovan finns det ytterligare tre paneler som visar trafikfördelningen mellan olika marknader, hänvisningskällor och kategorier för sidavsikt <!-- the **Top Regions** panel breaks down traffic by geography. Meanwhile, the **Top Referral Sources** panel shows the platforms driving the most visits. Trend indicators for the metrics show how these values are changing over time compared to the previous period.-->
 
 <!--## Top Referral URLs {#top-referrals}
 
@@ -90,4 +91,4 @@ Vyn för URL-prestandaanalys rangordnar sidor som presterar bäst baserat på h�
 
 >[!ENDTABS]
 
-På båda tabellerna kan du använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera hänvisningstrafiken i den verkställande rapporten.
+På båda tabellerna kan du använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellerna i den verkställande rapporten. För båda tabellerna kan du dessutom anpassa vilka mätvärden som visas genom att klicka på knappen **Konfigurera kolumner** .

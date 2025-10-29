@@ -2,9 +2,9 @@
 title: URL-kontroll
 description: Lär dig hur du använder URL-kontrollen för att analysera hur specifika sidor i din domän fungerar vid AI-sökningar.
 feature: URL Inspector
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '681'
 ht-degree: 0%
 
 ---
@@ -36,14 +36,14 @@ URL-kontrollen innehåller flera översiktsmått, så att du snabbt kan bedöma 
 * **Totalt antal unika uppmaningar** - Totalt antal unika AI-uppmaningar.
 * **Unika citerade URL:er** - Antalet unika ägda URL:er som har angetts.
 * **Antal angivna gånger** - Totalt antal gånger en ägd URL har angetts i AI-genererade svar.
-<!-- * **Total agentic hits** - The total number of hits from AI agents on your URLs.
-* **Referral hits from LLMs** - The total number of hits directed from AI-generated answers to your URLs.-->
+* **Totalt antal autentiska träffar** - det totala antalet träffar från AI-agenter på dina URL:er.
+* **Referensträffar från LLM:er** - Det totala antalet träffar som dirigeras från AI-genererade svar till dina URL:er.
 
 Trendindikatorer för varje översiktsmått visar hur dessa värden ändras över tiden jämfört med föregående period.
 
 ## Dina beställda URL:er
 
-De citerade URL:erna visar alla URL:er från ert varumärke som har citerats i AI-genererade svar, med stödjande mått. Datatabellen har också ett sökfält för snabb åtkomst till specifika URL:er. Du kan också använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellen i den verkställande rapporten.
+De citerade URL:erna visar alla URL:er från ert varumärke som har citerats i AI-genererade svar, med stödjande mått. Båda tabellerna har ett sökfält för snabb åtkomst till ämnen och du kan anpassa vilka mätvärden som visas genom att klicka på knappen **Konfigurera kolumner** . Du kan också använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellen i den verkställande rapporten.
 
 ![Citerade URL:er](/help/dashboards/assets/cited-urls.png)
 
@@ -74,6 +74,6 @@ Följande mätvärden finns:
 
 ### Informationsfönstret
 
-För både den citerade vyn och trendvyn har URL-adresserna en **Detaljer** -knapp när du håller muspekaren över en viss URL-adress. Om du klickar på knappen visas ett separat fönster med ytterligare information. I informationsfönstret visas hur ofta URL:en citeras, känslan av AI-svar där den nämns, ämnen och uppmaningar som den visas i samt trender för agens- och hänvisningstrafik över tid (för ägda URL:er).
+För både den citerade vyn och trendvyn har URL-adresserna en **informationsknapp** i slutet av varje rad. Om du klickar på knappen visas ett separat fönster med ytterligare information. I informationsfönstret visas hur ofta URL:en citeras, <!--the sentiment of AI responses where it is mentioned,--> ämnen och uppmaningar visas i den och trender för aginal och hänvisningstrafik över tid (för ägda URL:er).
 
 ![Informationsfönstret](/help/dashboards/assets/details-url.png)

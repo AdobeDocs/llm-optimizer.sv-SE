@@ -2,9 +2,9 @@
 title: Kundkonfiguration
 description: Använd kundkonfigurationen för att definiera hur ert varumärke ska övervakas och analyseras inom plattformen för optimering av livslångt lärande.
 feature: Customer Configuration
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ I listan kan du klicka på varje ämne och tillhörande uppmaningar visas. Om du
 
 ## CDN-konfiguration {#cdn-configuration}
 
-På den här fliken kan du konfigurera CDN-strömmarna så att Adobe LLM Optimizer kan analysera CDN-data. Dessa data kommer att användas som stöd för instrumentpaneler (som Agentinsk trafik och hänskjutningstrafik), vilket ger insikter i trafikmönster, prestandamätningar och optimeringsmöjligheter. Klicka på **Inbyggt CDN** om du vill ta med din CDN-leverantör.
+På den här fliken kan du konfigurera CDN-strömmarna så att Adobe LLM Optimizer kan analysera CDN-data. Dessa data kommer att användas för att driva instrumentpaneler (som AGT-trafik) och ge insikter i trafikmönster, prestandamätningar och optimeringsmöjligheter. Klicka på **Inbyggt CDN** om du vill ta med din CDN-leverantör.
 
 ![CDN för kundkonfiguration](/help/overview/assets/cc-cdn.png)
 
