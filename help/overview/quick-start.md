@@ -2,9 +2,9 @@
 title: Snabbstart
 description: Kom igång med Adobe LLM Optimizer - ta in ditt varumärke i datorn, lås upp insikter om AI-synlighet och utforska instrumentpaneler för att förbättra sökresultatet.
 feature: Quickstart, Onboarding
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: 48f7f64cd68c442f4a6837c5f4b7b29c3b175d1b
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Se avsnittet nedan för mer ingående information om hur du aktiverar den kostna
 
 ### AEM Cloud-kunder
 
-Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
+Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
 
 >[!NOTE]
 >Nyligen tillagda uppmaningar visas inte på kontrollpanelen [Varumärkesnärvaro](/help/dashboards/brand-presence.md) förrän bearbetningen är klar. AEM Cloud-kunder kan använda den kostnadsfria testversionen av LLM Optimizer. Användning av fler än 200 uppmaningar kräver ett separat licensavtal. Tillgång ges i befintligt skick och i befintligt skick och kan ändras, begränsas eller tas bort av Adobe när som helst. Kontakta din kontorepresentant om du vill ha mer information.
@@ -47,7 +47,7 @@ När du klickar på knappen **Testa LLM Optimizer** omdirigeras du till [https:/
 >[!NOTE]
 >Domänen du angav används av alla i din organisation och kan inte ändras.
 
-För att aktivera analysen av närvaro av varumärke måste du ange kategorier, ämnen och uppmaningar.
+En liten uppsättning kategorier, ämnen och uppmaningar genereras under introduktionsfasen. Analys av närvaro av varumärken i dessa meddelanden kommer att vara tillgänglig kort efter att webbplatsen har lanserats.
 
 ![Analys av varumärkesnärvaro](/help/overview/assets/bp-analysis.png)
 
@@ -59,7 +59,7 @@ När affärsavtalet är klart kommer du att vara registrerad på den domän du v
 
 ### Steg 2: Anpassa kategorier, ämnen och frågor
 
-För att aktivera analysen av varumärkesnärvaro och fylla i kontrollpanelen med insikter om hur ert varumärke är synligt måste ni anpassa kategorier, ämnen och frågor. Den här konfigurationen skapas på [kundkonfigurationspanelen](/help/dashboards/customer-configuration.md).
+När sajten väl har anslutits kan du visa analysen för varumärkesnärvaro baserat på den lilla uppsättning uppmaningar som automatiskt genererades under introduktionsfasen. I framtiden kan ni anpassa kategorier, ämnen och uppmaningar för ert varumärke. Den här konfigurationen skapas på [kundkonfigurationspanelen](/help/dashboards/customer-configuration.md).
 
 ![Kontrollpanel för kundkonfiguration](/help/overview/assets/prompt-creation.png)
 
@@ -78,9 +78,9 @@ Från den här instrumentpanelen kan du:
 >
 > Mer information om hur du konfigurerar dina kategorier, ämnen, uppmaningar finns på sidan [Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar](/help/overview/best-practices-topics-prompts.md).
 
-### Steg 3: Automatisk förifyllning av insikter
+### Steg 3: Insikter om varumärkesnärvaro
 
-När din domän har anslutits och du har angett kategorier och ämnen, kommer LLM Optimizer automatiskt att aktivera analysen av varumärkesnärvaro.
+När din domän har introducerats ser du inledande insikter i vyn Varumärkesnärvaro baserat på de uppmaningar som automatiskt genererades under introduktionen. När du har anpassat dina kategorier, ämnen och uppmaningar kommer LLM Optimizer automatiskt att aktivera analysen av närvaro i varumärke på de uppmaningar du har angett och resultaten blir tillgängliga inom 24 timmar.
 
 ### Steg 4: Ange information för vidarebefordran av CDN-loggar {#step-4}
 
