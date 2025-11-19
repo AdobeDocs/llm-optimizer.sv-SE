@@ -2,9 +2,9 @@
 title: Snabbstart
 description: Kom igång med Adobe LLM Optimizer - ta in ditt varumärke i datorn, lås upp insikter om AI-synlighet och utforska instrumentpaneler för att förbättra sökresultatet.
 feature: Quickstart, Onboarding
-source-git-commit: 48f7f64cd68c442f4a6837c5f4b7b29c3b175d1b
+source-git-commit: 3068247d9d13d0c3cd22e2077daa06fd1680d6b3
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '1102'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,17 @@ För att komma igång med LLM-optimering måste du slutföra introduktionsproces
 ## Översikt över introduktion
 
 Startprocessen börjar med att du registrerar din domän. Processen skiljer sig åt beroende på om du är en AEM Cloud-kund eller inte. När du är klar med processen måste du ange information för CDN-loggvidarebefordran och slutligen anpassa kategorier, ämnen och uppmaningar. Varje del av processen beskrivs nedan tillsammans med praktiska tips om hur du kommer igång med LLM Optimizer så snart som möjligt.
+
+### Tillåta Adobe LLM Optimizer åtkomst till offentliga sidor
+
+För att kunna leverera korrekt innehåll och tekniska rekommendationer måste Adobe LLM Optimizer ha tillgång till era offentliga sidor. Detta uppnås genom en säker intern crawler (Spacecat/1.0-användaragent).
+
+Konfigurationskrav:
+
+* Lägg till användaragenten Spacecat/1.0 till Tillåtelselista i webbplatsens robots.txt-fil eller Robottrafikhanteringsregler
+* Kontrollera att sidorna inte blockeras på domän- eller CDN-nivå. Blockerade sidor kan inte indexeras, vilket innebär att optimeringsuppgifter och insikter inte kan genereras för dem.
+
+Om synligheten för innehållet verkar vara låg på kontrollpanelen kontrollerar du att crawlern har åtkomst till dina domäner. Begränsad åtkomst är en vanlig orsak till ofullständig indexering.
 
 ## Steg 1: Anlita din domän
 
@@ -33,7 +44,7 @@ Se avsnittet nedan för mer ingående information om hur du aktiverar den kostna
 
 ### AEM Cloud-kunder
 
-Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
+Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
 
 >[!NOTE]
 >Nyligen tillagda uppmaningar visas inte på kontrollpanelen [Varumärkesnärvaro](/help/dashboards/brand-presence.md) förrän bearbetningen är klar. AEM Cloud-kunder kan använda den kostnadsfria testversionen av LLM Optimizer. Användning av fler än 200 uppmaningar kräver ett separat licensavtal. Tillgång ges i befintligt skick och i befintligt skick och kan ändras, begränsas eller tas bort av Adobe när som helst. Kontakta din kontorepresentant om du vill ha mer information.
