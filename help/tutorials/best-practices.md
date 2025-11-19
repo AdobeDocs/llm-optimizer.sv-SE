@@ -2,9 +2,9 @@
 title: LLM Optimizer bästa praxis
 description: Upptäck bästa praxis för optimering av livslångt lärande som ökar varumärkets synlighet i AI-sökningar. Insikter för att testa och optimera innehåll.
 feature: Best Practices, Agentic Traffic, Brand Presence
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: 31c36f9959993171de4bec384a361d38e6e01dad
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1685'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ Optimering på plats förbättrar det ägda innehållet för att ge en ökad LLM
 
 >[!TIP]
 >
->LLM Optimizer föreslår optimeringsmöjligheter på plats och utanför webbplatsen i kontrollpanelen [Affärsmöjligheter](/help/dashboards/opportunities.md) åt dig. Dessa möjligheter är specifika för er webbplats. Det kan ofta driftsätta optimeringar direkt på er webbplats.
+>LLM Optimizer föreslår optimeringsmöjligheter på plats och utanför webbplatsen i kontrollpanelen [Affärsmöjligheter](/help/dashboards/opportunities.md) åt dig. Dessa möjligheter är specifika för er webbplats. Många av dessa förslag kan direkt distribueras till din webbplats med LLM Optimizer.
 
 Här är några optimeringsmetoder:
 
@@ -118,7 +118,7 @@ Optimering utomhus fokuserar på att förbättra varumärkets synlighet i AI-gen
 
 >[!TIP]
 >
->LLM Optimizer föreslår optimeringsmöjligheter på plats och utanför webbplatsen i kontrollpanelen [Affärsmöjligheter](/help/dashboards/opportunities.md) åt dig. Dessa möjligheter är specifika för er webbplats. Det kan ofta driftsätta optimeringar direkt på er webbplats.
+>LLM Optimizer föreslår optimeringsmöjligheter på plats och utanför webbplatsen i kontrollpanelen [Affärsmöjligheter](/help/dashboards/opportunities.md) åt dig. Dessa möjligheter är specifika för er webbplats. Många av dessa förslag kan direkt distribueras till din webbplats med LLM Optimizer.
 
 
 Nyckelkanaler utanför webbplatsen:
@@ -179,7 +179,7 @@ Här följer några steg som du kan följa för att övervaka förloppet:
    * Använd Adobe LLM Optimizer för att spåra hur synligheten förändras över tid.
    * Om ni märker att andra, även konkurrenter, nämns oftare, kan ni anpassa er strategi så att den ligger steget före.
    * Fortsätt uppdatera innehållet så att det matchar det som andra söker efter och frågar om.
-1. Justera strategier för [utanför &#x200B;](#offsite-optimization---expanding-your-brand-footprint) och [på plats](#onsite-optimization---strengthening-your-owned-content) baserat på insikter.
+1. Justera strategier för [utanför ](#offsite-optimization---expanding-your-brand-footprint) och [på plats](#onsite-optimization---strengthening-your-owned-content) baserat på insikter.
 
 >[!NOTE]
 >
