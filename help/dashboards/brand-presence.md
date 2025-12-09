@@ -2,9 +2,9 @@
 title: Varumärkesnärvaro
 description: Lär dig använda kontrollpanelen för varumärkesnärvaro för att förstå hur ert varumärke uppfattas på nivån för AI-genererade svar.
 feature: Brand Presence
-source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
+source-git-commit: 24183fbe2577bb9402f8b6aaaf1e46c75403383d
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1292'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Den här sidan innehåller följande information:
 * **Datumintervall** - Välj tidsram för visade data. De senaste fyra veckorna, till exempel. Du kan också anpassa tidsperioden genom att välja alternativet **Anpassade veckor**.
 * **Kategori** - Filtrera de resultat som visas med antingen fördefinierade kategorier eller anpassade kategorier.
 * **Ämne** - Filtrera efter ämne för att analysera innehållsteman och ämnesområden där ditt varumärke förekommer i AI-svar.
-* **Plattform** - Välj vilken AI-motor som ska analyseras.
+* **Plattform** - Välj vilken AI-motor som ska analyseras. LLM Optimizer har för närvarande stöd för ChatGPT, Google AI Overviews, Google AI Mode, Microsoft Co-pilot, Google Gemini och Perplexity.
 * **Frågar om ursprung** - Välj källa för uppmaningarna. Ursprunget kan antingen vara användarinmatat eller AI-genererat.
 * **Prompt Branding** - Filtrera resultat antingen efter profilerade uppmaningar eller uppmaningar utan varumärke.
 * **Region** - Filtrera resultaten efter geografi. Alla regioner är inte tillgängliga vid lanseringen.

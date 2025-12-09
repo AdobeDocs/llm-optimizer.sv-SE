@@ -2,9 +2,9 @@
 title: Snabbstart
 description: Kom igång med Adobe LLM Optimizer - ta in ditt varumärke i datorn, lås upp insikter om AI-synlighet och utforska instrumentpaneler för att förbättra sökresultatet.
 feature: Quickstart, Onboarding
-source-git-commit: 3068247d9d13d0c3cd22e2077daa06fd1680d6b3
+source-git-commit: 24183fbe2577bb9402f8b6aaaf1e46c75403383d
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1099'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Se avsnittet nedan för mer ingående information om hur du aktiverar den kostna
 
 ### AEM Cloud-kunder
 
-Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
+Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
 
 >[!NOTE]
 >Nyligen tillagda uppmaningar visas inte på kontrollpanelen [Varumärkesnärvaro](/help/dashboards/brand-presence.md) förrän bearbetningen är klar. AEM Cloud-kunder kan använda den kostnadsfria testversionen av LLM Optimizer. Användning av fler än 200 uppmaningar kräver ett separat licensavtal. Tillgång ges i befintligt skick och i befintligt skick och kan ändras, begränsas eller tas bort av Adobe när som helst. Kontakta din kontorepresentant om du vill ha mer information.
@@ -60,7 +60,7 @@ När du klickar på knappen **Testa LLM Optimizer** omdirigeras du till [https:/
 
 En liten uppsättning kategorier, ämnen och uppmaningar genereras under introduktionsfasen. Analys av närvaro av varumärken i dessa meddelanden kommer att vara tillgänglig kort efter att webbplatsen har lanserats.
 
-![Analys av varumärkesnärvaro](/help/overview/assets/bp-analysis.png)
+<!--![Brand Presence Analysis](/help/overview/assets/bp-analysis.png)-->
 
 Dessutom måste du konfigurera [CDN-loggvidarebefordran](#step-4) för trafikanalys. LLM Optimizer kräver att varumärkets närvarodata och insikter från agens- och hänvisningstrafik ska identifiera möjligheter och tillhandahålla prediktiva rekommendationer för att öka AI-synligheten.
 
