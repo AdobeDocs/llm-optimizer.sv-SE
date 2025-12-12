@@ -457,7 +457,7 @@ Den här affärsmöjligheten flaggar sidor där nyckelinnehåll döljs för AI-a
 
 #### Ytterligare verktyg
 
-Kan din webbsida redigeras? [Adobe LLM Optimizer: Kan din webbsida redigeras?Med Chrome-tillägget ](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) kan du se exakt hur mycket av webbsidans innehåll som LLM kan komma åt och vad som inte kan döljas. Det är utformat som ett kostnadsfritt, fristående diagnosverktyg och kräver ingen produktlicens eller konfiguration.
+Kan din webbsida redigeras? [Adobe LLM Optimizer: Kan din webbsida redigeras?Med Chrome-tillägget &#x200B;](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) kan du se exakt hur mycket av webbsidans innehåll som LLM kan komma åt och vad som inte kan döljas. Det är utformat som ett kostnadsfritt, fristående diagnosverktyg och kräver ingen produktlicens eller konfiguration.
 
 Med ett enda klick kan du utvärdera en webbplats maskinläsbarhet, visa en jämförelse sida vid sida av vad AI-agenter ser jämfört med vad människor ser och uppskatta hur mycket innehåll som kan återställas med LLM Optimizer. Se [Kan AI läsa din webbplats?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) om du vill ha mer information.
 
