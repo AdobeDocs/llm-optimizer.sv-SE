@@ -74,7 +74,7 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 < x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-Cirkulationskonfigurationen görs med en [originSelector CDN-regel](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). Förutsättningarna är följande:
+Cirkulationskonfigurationen görs med en [originSelector CDN-regel](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). Förutsättningarna är följande:
 
 * bestämma vilken domän som ska dirigeras
 * bestämma vilka banor som ska dirigeras
@@ -83,9 +83,9 @@ Cirkulationskonfigurationen görs med en [originSelector CDN-regel](https://expe
 
 För att kunna distribuera regeln måste du:
 
-* skapa en [konfigurationspipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline)
+* skapa en [konfigurationspipeline](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/config-pipeline)
 * implementera konfigurationsfilen `cdn.yaml` i din databas
-* distribuera API-nyckeln som [hemlig miljövariabel](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
+* distribuera API-nyckeln som [hemlig miljövariabel](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
 * köra konfigurationsflödet
 
 
