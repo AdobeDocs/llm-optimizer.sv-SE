@@ -2,9 +2,9 @@
 title: Optimera på Edge
 description: Lär dig leverera optimeringar i LLM Optimizer i CDN-kanten utan att behöva göra några redigeringsändringar.
 feature: Opportunities
-source-git-commit: 3c6f287b3c3787cee95f99b7031412f26692a88b
+source-git-commit: 522abddcabaf02ce86fb4d7978ef7fa4d6eb0358
 workflow-type: tm+mt
-source-wordcount: '2291'
+source-wordcount: '2218'
 ht-degree: 0%
 
 ---
@@ -12,68 +12,82 @@ ht-degree: 0%
 
 # Optimera på Edge
 
-Det här avsnittet ...
+På den här sidan finns en detaljerad översikt över hur du kan leverera optimeringar vid CDN-kanten utan att behöva göra några redigeringsändringar. Det handlar om introduktionsprocessen, tillgängliga optimeringsmöjligheter och hur ni kan optimera automatiskt vid behov.
+
+>[!NOTE]
+>Den här funktionen är för närvarande i tidig åtkomst.
 
 ## Vad är Optimize på Edge?
 
-Optimize at Edge är en edge-baserad driftsättningsfunktion i LLM Optimizer som kan hantera AI-vänliga ändringar av användaragenter för livslångt lärande. Eftersom det ger optimeringar i CDN-kanten behövs inga redigeringsändringar i Content Management System (CMS). Den riktar sig också endast mot den agentiska trafiken och påverkar inte mänskliga användare eller SEO-robotar.
+Optimize at Edge är en edge-baserad driftsättningsfunktion i LLM Optimizer som ger AI-vänliga ändringar av användaragenter för livslångt lärande. I det aktuella sammanhanget innebär&quot;Edge&quot; att optimeringen används i CDN-lagret. Eftersom det levererar optimeringar i CDN-lagret behövs inga redigeringsändringar i Content Management System (CMS), vilket innebär att CMS inte ändras. Tack vare den här separationen kan du förbättra LLM-synligheten utan att ändra befintliga publiceringsarbetsflöden. Den riktar sig endast till agell trafik och påverkar varken mänskliga användare eller SEO-robotar. När LLM Optimizer upptäcker möjligheter att optimera en sida kan man driftsätta korrigeringar direkt vid CDN-kanten.
 
-När LLM Optimizer upptäcker möjligheter att optimera en sida kan man driftsätta korrigeringar direkt utan plattformsändringar.
+Optimera på Edge är ett snabbare och smidigare alternativ till traditionella korrigeringar som kräver komplexa konstruktionssatsningar. När du har slutfört en engångskonfiguration behöver du som sagt inte göra några plattformsändringar eller längre utvecklingscykler för att ändringarna ska börja gälla. Ni kan publicera förbättringar på några minuter, utan att behöva utveckla något engagemang. Det är ett lågrisksätt att optimera webbplatsen för AI-agenter utan kodning.
 
-Den här funktionen är för närvarande i tidig åtkomst.
+Optimera på Edge är utformat för företagsanvändare i team som arbetar med marknadsföring, sökmotoroptimering, innehåll och digital strategi. Det kan göra det möjligt för företagsanvändare att slutföra hela kundresan i LLM Optimizer: identifiera möjligheter, förstå förslag och enkelt implementera korrigeringarna. Med Optimize på Edge kan man förhandsgranska ändringarna, snabbt driftsätta dem vid CDN-kanten och validera att optimeringarna är aktiva. Prestanda kan spåras i LLM Optimizer ekosystem.
 
-## Varför ska en kund vara intresserad?
+### Viktiga fördelar
 
-Optimera på Edge är ett snabbare och smidigare alternativ till traditionella korrigeringar som kräver komplexa konstruktionssatsningar. När kunderna har slutfört en engångskonfiguration krävs inga plattformsändringar eller långa utvecklingscykler för att ändringarna ska kunna tillämpas på webbsidorna. Användaren kan publicera förbättringar på några minuter, inte veckor, utan att det krävs något engagemang från utvecklaren. Detta är ett lågrisksätt att optimera webbplatsen för AI-agenter utan kod.
-
-### Viktiga fördelar och värdeförslag
-
-* **Leverans endast för AI:** Fungerar optimerade HTML till AI-agenter utan att påverka mänskliga besökare eller SEO-robotar.
+* **Leverans endast för AI:** Serverar optimerade HTML endast för AI-agenter utan påverkan på vare sig besökare eller SEO-robotar.
 * **Snabbare cykler:** Publicera ändringar på några minuter, inte veckor. Inga plattformsändringar eller långa konstruktionscykler krävs.
 * **Lågrisk och reversibel:** Stöds med en enklicksåterställning som kan återställa sidan på några minuter.
 * **Ingen prestandapåverkan:** Edge-baserade optimeringar och cachning påverkar inte webbplatsens latens.
-* **CDN och CMS-agnostiker:** Fungerar med alla CDN-konfigurationer och frontendkonfigurationer oavsett CMS.
+* **CDN och CMS-agnostiker:** Fungerar med alla CDN-konfigurationer och frontendkonfigurationer oavsett Content Management System.
 
-## Vem ska använda den?
+### Vilka möjligheter stöds av Optimize på Edge?
 
-Optimera på Edge är utformat för företagsanvändare i team som arbetar med marknadsföring, sökmotoroptimering, innehåll och digital strategi. Det kan göra det möjligt för företagsanvändare att slutföra hela kundresan i LLM Optimizer: identifiera möjligheter, förstå förslag och enkelt implementera korrigeringarna. Med Optimera på Edge kan man förhandsgranska ändringarna, snabbt driftsätta dem och validera att optimeringarna är aktiva. Prestanda kan spåras i LLM Optimizer ekosystem.
-
-## Vilka möjligheter har Optimize på Edge?
-
-Möjligheter som kan förbättra den autentiska webbupplevelsen stöds av Optimize på Edge. Läs mer om varje affärsmöjlighet i avsnittet [Affärsmöjligheter](/help/dashboards/opportunities.md).
+Möjligheter som kan förbättra den autentiska webbupplevelsen stöds av Optimize på Edge. Läs mer om varje affärsmöjlighet både på sidan [Affärsmöjligheter](/help/dashboards/opportunities.md) och i avsnittet om affärsmöjligheter på den aktuella sidan.
 
 ## Onboarding
 
-Du kan aktivera Optimera på Edge när du har registrerat dig på LLM Optimizer och har vidarebefordrat dina CDN-loggar.
+Kontakta antingen ditt Adobe-kontoteam eller FDE-team för att starta introduktionsprocessen. IT- eller CDN-teamet måste också slutföra installationen. Du kan även kontakta vårt team på `llmo-at-edge@adobe.com` för att få hjälp med introduktionen.
 
-En CDN-tekniker krävs för att slutföra den första konfigurationen och aktivera Optimera på Edge.
+Krav för att kunna utnyttja Optimera på Edge:
 
-Krav för installationen:
+* Slutför introduktionsprocessen till LLM Optimizer.
+* Slutför vidarebefordringsprocessen för CDN-loggarna.
+
+Krav för IT-avdelningen:
 
 * Generera en API-nyckel.
 * Lägg till Optimize på Edge routningsregler i CDN.
 * Tillåtslista användardefinierade sökvägar för hela domänen.
 * Lägg till en användardefinierad lista med användaragenter för LLM i målgruppen.
-* Kontrollera att robots.txt inte blockerar några användaragenter som är avsedda att rikta sig till.
-* Bekräfta att Optimera vid Edge-routning finns i LLM Optimizer användargränssnitt.
+* Kontrollera att `robots.txt` inte blockerar några användaragenter som är avsedda att vara målanvändare.
+* Bekräfta Optimera vid Edge-routning i LLM Optimizer gränssnitt.
 
-Adobe tillhandahåller exempelkonfigurationskisser för de flesta vanliga CDN:er som kan vägleda installationsprocessen. De kodfragment som ingår i våra riktlinjer måste anpassas till den faktiska konfigurationen. Adobe rekommenderar att du implementerar ändringar i de lägre miljöerna först.
+Som vägledning för konfigurationsprocessen, som presenteras nedan, är exempelkonfiguration för ett antal CDN-inställningar. De här exemplen bör anpassas till den aktuella livekonfigurationen. Vi rekommenderar att du gör ändringar i de lägre miljöerna först.
+
+>[!NOTE]
+>I kodexemplen nedan kan du se referenser till &quot;tokowaka&quot;, som är arbetsprojektets namn för Optimera på Edge. Dessa identifierare finns kvar i koden av kompatibilitetsskäl och hänvisar till samma funktioner som beskrivs i den här dokumentationen.
 
 >[!BEGINTABS]
 
->[!TAB Hanterad CDN för tjänsten AEM Cloud (snabbt)]
+>[!TAB Hanterad CDN för Adobe]
 
-**Tokowaka BYOCDN - Adobe hanterat CDN**
+**Hanterad CDN för Adobe**
 
-Använder bara originSelectors för att välja Tokowakorigo.
+Syftet med den här konfigurationen är att konfigurera begäranden med agentiska användaragenter som dirigeras till optimeringstjänsten (`edge.tokowaka.now` backend). Testa konfigurationen genom att söka efter rubriken `x-tokowaka-request-id` i svaret när konfigurationen är klar.
 
-I följande exempel dirigeras LLM-agentbegäranden på en viss domän som matchar mönstret &quot;/es/*&quot; eller exakta sökvägar (endast HTML-sidor dirigeras). Exemplet ska ge en startpunkt och om du har flera originSelectors i konfigurationen bör du placera det här först.
+```
+curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatgpt-user"
+< HTTP/2 200
+< x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+```
 
-Viktigt:
+Cirkulationskonfigurationen görs med en [originSelector CDN-regel](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). Förutsättningarna är följande:
 
-* x-tokowaka-request måste kontrolleras innan routning till Tokowaka backend. Endast begäranden som inte har den här rubriken ska dirigeras till Tokowaka-serverdelen.
-* originSelector-regeln som dirigerar till Tokowaka-serverdelen ska vara först i listan om det finns flera regler.
-* TOKOWAKA_API_KEY-hemligheten måste distribueras innan cdn.yaml distribueras
+* bestämma vilken domän som ska dirigeras
+* bestämma vilka banor som ska dirigeras
+* bestämma vilka användaragenter som ska dirigeras (rekommenderad regex)
+* hämta en API-nyckel från Adobe för backend-objektet `edge.tokowaka.now`
+
+För att kunna distribuera regeln måste du:
+
+* skapa en [konfigurationspipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline)
+* implementera konfigurationsfilen `cdn.yaml` i din databas
+* distribuera API-nyckeln som [hemlig miljövariabel](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
+* köra konfigurationsflödet
+
 
 ```
 kind: "CDN"
@@ -106,7 +120,15 @@ data:
         domain: "edge.tokowaka.now"
 ```
 
->[!TAB Akamai (BYOCDN)]
+Testa installationen genom att köra en vändning och förvänta dig följande:
+
+```
+curl -svo page.html https://www.example.com/page.html --header "user-agent: chatgpt-user"
+< HTTP/2 200
+< x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+```
+
+<!-- >>[!TAB Akamai (BYOCDN)]
 
 **Tokowaka BYOCDN - Akamai**
 
@@ -371,16 +393,16 @@ data:
 }
 ```
 
-Viktigt att tänka på:
+Important considerations:
 
-* Tokowaka-regeln aktiveras baserat på variabeln User-Agent + Path + x-tokowaka-request (om sådan inte finns) + TOKOWAKA_DISABLE (för att tillåta avstängning med en variabelväxel)
-* Ställ in regler på regeln **Ändra inkommande begäranrubriker** för att ange anpassade rubriker
-* Ange cache-key i Akamai med hjälp av användardefinierad variabel via Cache-ID-ändringsmekanismen. Endast en användardefinierad variabel tillåts, så skapa en separat variabel för cache_key och ställ in den därefter.
-* Språk: har extraherats från sidhuvudet Accept-Language med regex: &quot;^([a-zA-Z]{2}).*&quot;
-* Med cache-ID-ändring i en matchning på en användaragent kan innehållet inte rensas av URL (bara FYI)
-* Platsfel: Med matchningen i regeln för användaragent tillåter inte Akamai redundans baserat på hälsokontroll, utan bara baserar på ursprungligt svar/anslutning per begäran. Ange **x-tokowaka-fo:true**-resp-huvudet om ett redundanssvar skulle inträffa.
-* SWR stöds inte av Akamai. Det är alltså bara TTL-baserad cachelagring som finns. Konfigurera en regel i Akamai för att ta bort sidhuvudet från ursprungssvaret, annars fungerar inte TTL-baserad cachelagring.
-* Se till att Tokowaka-regeln är den understa regeln i regelhierarkin (så att den åsidosätter alla andra regler).
+* Tokowaka Rule will be ON based on User-Agent + Path + x-tokowaka-request (if not present) + TOKOWAKA_DISABLE variable (to allow switch off using a single variable toggle)
+* Set up rules to **Modify Incoming Request Headers** rule to set custom headers
+* Set cache-key in Akamai using user defined variable through Cache-ID modification mechanism. Only a single user defined variable is allowed, so create a separate variable for cache_key and set it accordingly.
+* Lang: extracted from Accept-Language header using "regex": "^([a-zA-Z]{2}).*"
+* With Cache ID Modification within a match on User Agent, the content can't be purged by URL (just FYI)
+* Site failover mechanism: With the match on User-Agent rule, Akamai does not allows to failover based on health check, but only only basis of origin response/connectivity per request. Set **x-tokowaka-fo:true**  resp header in case of failover response.
+* SWR is not supported by Akamai. So, only TTL based caching is there. So, configure a rule in Akamai to strip Age header from origin response else TTL based caching would not work.
+* Ensure that the Tokowaka rule is the bottom most rule in the rule hierarchy (so that it overrides all other rules).-->
 
 >[!TAB Snabbt (BYOCDN)]
 
@@ -432,82 +454,86 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 >[!ENDTABS]
 
-
-För andra CDN-leverantörer kan du kontakta llmo-at-edge@adobe.com för att hjälpa dina IT-/CDN-team med introduktionen.
-
-<!--This should probably be included Opportunities dashboard content. Content also needs serious editing - lots of "customer needs"and business user" etc.-->
-
-När konfigurationerna är klara kan företagsanvändare distribuera förslag på Optimera för Edge i LLM Optimizer.
+>[!NOTE]
+>Kontakta `llmo-at-edge@adobe.com` om du vill hjälpa dina IT-/CDN-team med att komma igång för andra CDN-leverantörer. När konfigurationerna är klara kan du driftsätta förslag för Optimera på Edge i LLM Optimizer.
 
 ## Möjligheter
+
+I följande tabell visas möjligheter som kan förbättra den agentiska webbupplevelsen och stöds av Optimize på Edge.
 
 | Möjligheter | Typ | Identifiera automatiskt | Föreslå automatiskt | Automatisk optimering |
 |---------|----------|----------|----------|----------|
 | Återskapa innehållets synlighet | Teknisk GEO | Identifierar sidor där kritiskt innehåll är dolt för AI-agenter. Visar URL:er som påverkas och förväntat innehåll som kan återställas. | Markerar innehåll som kan göras tillgängligt för AI-agenter och rekommenderar att förrendering aktiveras för dessa sidor. | Skapar en helåtergiven, AI-vänlig HTML-ögonblicksbild av den autentiska trafik som återställer det tidigare dolda innehållet. |
-| Optimera rubriker för AI | Optimering av innehåll | Söker igenom rubriker för att identifiera tomma, duplicerade, saknade eller tvetydiga rubriker som kan minska maskinläsbarheten. | Föreslår en renare rubrikhierarki och förbättrade etiketter och visar en förhandsvisning av den uppdaterade strukturen för varje sida. | Infogar den förbättrade rubrikstrukturen för AI-agenter och bevarar den visuella designen samtidigt som sidan blir mer lättförståelig för LLM-program. |
-| Lägg till AI-vänliga sammanfattningar | Optimering av innehåll | Identifierar långa eller komplexa sidor som saknar koncisa sammanfattningar på sid- eller avsnittsnivå, vilket gör dem svårare för AI att snabbt skanna och förstå. | Rekommenderar korta, AI-genererade sammanfattningar på sid- och avsnittsnivå som hämtar nyckelinnehåll. | Infogar sammanfattningarna i de relevanta HTML-avsnitten, vilket förbättrar hur modellerna tolkar och beskriver sidinnehållet. |
-| Lägg till relevanta frågor | Optimering av innehåll | Identifierar mellanrum i det befintliga sidinnehållet som skulle kunna dra nytta av vanliga frågor. | Föreslår AI-genererat FAQ-innehåll anpassat till användaravsikt och befintliga ämnen. | Inför innehåll med vanliga frågor i HTML, vilket gör sidorna mer identifierbara och relevanta i AI-drivna svar. |
-| Förenkla komplext innehåll | Optimering av innehåll | Flaggar sidor med komplex text som kan förhindra AI-förståelsen. | Innehåller AI-genererade förenklade versioner av komplexa tester samtidigt som den ursprungliga innebörden bevaras. | Skriver om komplexa avsnitt på sidan, vilket förbättrar AI-läsbarheten. |
+| Optimera rubriker för budskap om livslångt lärande | Optimering av innehåll | Söker igenom rubriker för att upptäcka tomma, duplicerade, saknade eller tvetydiga rubriker som kan minska maskinläsbarheten. | Föreslår en renare rubrikhierarki och förbättrade etiketter och visar en förhandsvisning av den uppdaterade strukturen för varje sida. | Infogar den förbättrade rubrikstrukturen för AI-agenter och bevarar den visuella designen samtidigt som sidan blir mer läsbar för LLM-program. |
+| Lägg till LLM-vänliga sammanfattningar | Optimering av innehåll | Identifierar långa eller komplexa sidor som saknar koncisa sammanfattningar på sid- eller avsnittsnivå, vilket gör dem svårare för AI att snabbt skanna och förstå. | Rekommenderar korta, AI-genererade sammanfattningar på sid- och avsnittsnivå som hämtar nyckelinnehåll. | Infogar sammanfattningarna i de relevanta HTML-avsnitten, vilket förbättrar hur modellerna tolkar och beskriver sidinnehållet. |
+| Lägg till relevanta frågor | Optimering av innehåll | Identifierar mellanrum i det befintliga sidinnehållet som skulle kunna dra nytta av vanliga frågor. | Föreslår AI-genererat FAQ-innehåll som är anpassat till användaravsikten och befintliga ämnen. | Inför innehåll med vanliga frågor i HTML, vilket gör sidorna mer identifierbara och relevanta i AI-drivna svar. |
+| Förenkla komplext innehåll | Optimering av innehåll | Flaggar sidor med komplex text som kan förhindra AI-förståelsen. | Innehåller AI-genererade förenklade versioner av komplex text samtidigt som den ursprungliga innebörden bevaras. | Skriver om komplexa avsnitt på sidan, vilket förbättrar AI-läsbarheten. |
+
+### Ytterligare verktyg
+
+[Adobe LLM Optimizer: Kan din webbsida redigeras?Med Chrome-tillägget ](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) kan du se exakt hur mycket av webbsidans innehåll som LLM kan komma åt och vad som inte kan döljas. Det är utformat som ett kostnadsfritt, fristående diagnosverktyg och kräver ingen produktlicens eller konfiguration.
+
+Med ett enda klick kan du utvärdera vilken dator som kan läsas på en webbplats. Du kan visa en jämförelse sida vid sida av vad AI-agenter ser jämfört med vad människor ser och uppskatta hur mycket innehåll som kan återställas med hjälp av LLM Optimizer. Se [Kan AI läsa din webbplats?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) sida för mer information.
+
+## Detaljerade affärsmöjligheter
+
+I följande avsnitt kan du visa ytterligare information för varje affärsmöjlighet som stöds av Optimize på Edge.
 
 ### Återskapa innehållets synlighet
 
 Den här affärsmöjligheten flaggar sidor där nyckelinnehåll döljs för AI-agenter på grund av klientåtergivning. För varje identifierad sida visar den exakt vilket innehåll som saknas i AI-agentvyn, markerar luckor i synligheten och gör det möjligt att direkt tillämpa ändringar för att återskapa det dolda innehållet. När du distribuerar denna möjlighet med Optimize på Edge får LLM-användaragenterna en förrenderad, AI-optimerad version av sidan så att de kan komma åt den fullständiga kontexten utan att köra Javascript.
+Detta garanterar att sidan är helt synlig för AI-agenter först. Ytterligare förbättringar tillämpas ovanpå den förrenderade HTML.
 
-**Den här förrenderingsfunktionen gäller automatiskt alla möjligheter som följer när den distribueras med Optimera på Edge.** Detta garanterar att sidan är helt synlig för AI-agenter först. Ytterligare förbättringar tillämpas ovanpå den förrenderade HTML.
-
-#### Ytterligare verktyg
-
-Kan din webbsida redigeras? [Adobe LLM Optimizer: Kan din webbsida redigeras?Med Chrome-tillägget &#x200B;](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) kan du se exakt hur mycket av webbsidans innehåll som LLM kan komma åt och vad som inte kan döljas. Det är utformat som ett kostnadsfritt, fristående diagnosverktyg och kräver ingen produktlicens eller konfiguration.
-
-Med ett enda klick kan du utvärdera en webbplats maskinläsbarhet, visa en jämförelse sida vid sida av vad AI-agenter ser jämfört med vad människor ser och uppskatta hur mycket innehåll som kan återställas med LLM Optimizer. Se [Kan AI läsa din webbplats?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) om du vill ha mer information.
+>[!IMPORTANT]
+>Denna förrenderingsfunktion gäller automatiskt alla möjligheter som presenteras nedan när den används med Optimera på Edge.
 
 ### Optimera rubriker för budskap om livslångt lärande
 
-Denna möjlighet identifierar sidor där rubrikstrukturen gör det svårt för AI-agenter att förstå sidan på grund av tomma, duplicerade, saknade eller tvetydiga rubriker. För varje berörd sida kommer affärsmöjligheten att visa de underoptimala rubrikerna och rekommenderar en tydligare hierarki. När de används med Optimize på Edge används de förbättrade rubrikerna i HTML för agell trafik, vilket kan förbättra maskinläsbarheten samtidigt som du låter din mänskliga layout vara densamma.
+Denna möjlighet identifierar sidor där rubrikstrukturen gör det svårt för AI-agenter att förstå sidan på grund av tomma, duplicerade, saknade eller tvetydiga rubriker. För varje berörd sida kommer affärsmöjligheten att visa de underoptimala rubrikerna och rekommenderar en tydligare hierarki. När de används med Optimera i Edge används de förbättrade rubrikerna i HTML för agell trafik. Detta gör att datorn blir läsbar samtidigt som den mänskliga motstående layouten förblir densamma.
 
 ### Lägg till LLM-vänliga sammanfattningar
 
-Denna möjlighet identifierar sidor som kan dra nytta av koncisa sammanfattningar för att snabbt förstå vad sidan handlar om. För varje sida identifierar affärsmöjligheten var en sammanfattning behövs och skapar AI-genererade sammanfattningar på sidnivå och/eller avsnittsnivå. När du distribuerar med Optimera på Edge infogas dessa sammanfattningar i HTML som AI-agenter hämtar, vilket förbättrar chanserna att ditt innehåll beskrivs mer korrekt.
+Denna möjlighet identifierar sidor som kan dra nytta av koncisa sammanfattningar för att hjälpa webbdesigners att snabbt förstå vad sidinnehållet handlar om. För varje sida identifierar affärsmöjligheten var en sammanfattning behövs och skapar AI-genererade sammanfattningar på sidnivå eller avsnittsnivå. När du distribuerar med Optimera på Edge infogas dessa sammanfattningar i HTML som AI-agenter hämtar, vilket förbättrar chanserna att ditt innehåll beskrivs mer korrekt.
 
 ### Lägg till relevanta frågor
 
-Den här affärsmöjligheten flaggar sidor där ytterligare frågor och svar-innehåll bättre kan matcha användaravsikten och uppmaningar i AI-driven identifiering. För varje sida föreslås AI-genererade FAQ-block kopplade till användaravsikt och innehåll på sidan. Med Optimize på Edge injiceras dessa frågor och svar i HTML, vilket gör sidan mer AI-vänlig och ökar sannolikheten för att AI-svaren direkt speglar din vägledning.
+Den här affärsmöjligheten flaggar sidor där ytterligare frågor och svar-innehåll bättre kan matcha användaravsikten och frågar vid AI-driven identifiering. För varje sida föreslås AI-genererade FAQ-block kopplade till användaravsikt och innehåll på sidan. Med Optimize på Edge injiceras dessa frågor och svar i HTML, vilket gör sidan mer AI-vänlig och ökar sannolikheten för att AI-svaren direkt speglar din vägledning.
 
 ### Förenkla komplext innehåll
 
-Här hittar du sidor med långa, komplexa stycken som kan minska förståelsen av AI. För varje sida som överskrider läsbarhetströskeln skapas AI-genererat innehåll som är enklare och mer skannerbart samtidigt som den ursprungliga innebörden bevaras. När innehållet distribueras i framkant hjälper det förenklade innehållet i den autentiska trafiken att tolka och sammanfatta innehållet på ett trognare sätt.
+Här hittar du sidor med långa, komplexa stycken som kan minska förståelsen av AI. För varje sida som överskrider läsbarhetströskeln skapas AI-genererat innehåll som är enklare och enklare att läsa in samtidigt som den ursprungliga innebörden bevaras. När innehållet distribueras i framkant hjälper det förenklade innehållet i den autentiska trafiken att tolka och sammanfatta innehållet på ett trognare sätt.
 
-## Förslag
+## Optimera automatiskt på Edge
 
 För varje affärsmöjlighet kan du förhandsgranska, redigera, driftsätta, förhandsgranska och återställa optimeringarna vid en kant.
 
 ### Förhandsgranska
 
-Med Förhandsgranska kan användarna se effekten av ett förslag på sidan innan något publiceras. Den visar på en skillnad sida vid sida mellan den aktuella sidan och den AI-optimerade versionen som förväntas när förslaget har tillämpats. I den här vyn används samma Optimera-funktion på Edge som används för direkttrafik, men i ett säkert, isolerat förhandsvisningsläge. Detta påverkar inte Live-trafik eftersom det är en skrivskyddad simulering för granskning.
+Med **Förhandsgranska** kan du se effekten av ett förslag innan det publiceras. Den visar på en skillnad sida vid sida mellan den aktuella sidan och den AI-optimerade versionen som förväntas när förslaget har tillämpats. I den här vyn används samma Optimera-funktion på Edge som i direkttrafiken, men i ett isolerat förhandsvisningsläge. Detta påverkar inte Live-trafik eftersom det är en skrivskyddad simulering för granskning.
 
 ![Förhandsgranska](/help/assets/optimize-at-edge/preview.png)
 
 ### Redigera
 
-Med Redigera kan användare förfina eller skriva om det automatiskt genererade förslaget helt innan det distribueras. Istället för att passivt acceptera förslaget behåller man full kontroll genom det här arbetsflödet. Vyn visar föreslagna ändringar i ett strukturerat redigeringsprogram, där användarna kan ändra texten så att den bättre matchar deras avsikter. Den redigerade versionen skickas sedan till AI-agenter när de har distribuerats.
+Med **Redigera** kan du förfina eller skriva om det automatiskt genererade förslaget helt innan du distribuerar det. Istället för att godkänna förslaget behåller du full kontroll genom redigeringsarbetsflödet. Vyn visar föreslagna ändringar i en strukturerad redigerare, där du kan ändra texten så att den bättre matchar den ursprungliga metoden. Den redigerade versionen skickas sedan till AI-agenter när de har distribuerats.
 
 ![Redigera](/help/assets/optimize-at-edge/edit.png)
 
 ### Distribuera
 
-Distribuera publicerar de valda förslagen så att de optimerade upplevelserna kan hanteras från kant till AI-agenter. Om CDN är helt dirigerad kommer alla sidor i domänen att publiceras med de nya ändringarna, vanligtvis inom några minuter. Om routning har konfigurerats för enbart valda sökvägar, är det bara de tillåtslista sidorna som får publiceras med optimeringarna.
+**Distribuera** publicerar de valda förslagen så att de optimerade upplevelserna kan hanteras från kanten till AI-agenter. Om CDN är helt dirigerad visas vanligtvis alla sidor i domänen med de nya ändringarna inom några minuter. Om routning har konfigurerats för enbart valda sökvägar, är det bara de tillåtslista sidorna som får publiceras med optimeringarna.
 
 ![Distribuera](/help/assets/optimize-at-edge/deploy.png)
 
 ### Visa Live
 
-Med Visa Live kan användarna verifiera att optimeringen är aktiv och fungerar som förväntat för autentisk trafik, vilket annars skulle vara svårt att komma åt. Användare kan visa den aktiva sidan under Fasta förslag, som återger sidan så som den visas för AI-agenter.
+Med **Visa Live** kan du verifiera att optimeringen är aktiv och fungerar som förväntat för autentisk trafik, en vy som annars skulle vara svår att komma åt. Du kan visa den aktiva sidan under Fasta förslag, som återger sidan så som den visas för AI-agenter.
 
 ![Visa Live](/help/assets/optimize-at-edge/view-live.png)
 
 ### Återställning
 
-Återställning återställer säkert en tidigare distribuerad optimering. Sidans AI-version återgår vanligtvis till det tidigare läget inom några minuter, vilket gör det säkert för användarna att experimentera med optimeringar om det behövs.
+Återställning återställer säkert en tidigare distribuerad optimering. Sidans AI-version återgår vanligtvis till det tidigare läget inom några minuter, vilket gör det enkelt att experimentera med optimeringar när det behövs.
 
 ![Återställning](/help/assets/optimize-at-edge/rollback.png)
 
@@ -515,46 +541,29 @@ Med Visa Live kan användarna verifiera att optimeringen är aktiv och fungerar 
 
 F. Vilken typ av LLM riktar du dig till med Optimize på Edge?
 
-Listan över användaragenter som ska användas är fullständigt definierad av kunden vid introduktionen.
+Listan med användaragenter som ska användas som mål definieras av dig under introduktionsprocessen.
 
-F. Vad betyder&quot;Edge&quot; i Optimera på Edge?
+<!--Q. What does "Edge" in Optimize at Edge mean?
 
-I vårt sammanhang betyder&quot;Edge&quot; att optimeringen tillämpas i CDN-lagret och inte i din CMS.
+In our context, "Edge" means that the optimization is applied at the CDN layer and not inside your CMS.
 
-F. Varför kräver denna optimering ett CDN?
+Q. Why does this optimization require a CDN?
 
-CDN är den plats där den optimerade versionen av sidan monteras och levereras till AI-agenter. Vi utnyttjar CDN för att säkerställa att din ursprungliga CMS förblir oförändrad. Tack vare den här separationen kan du förbättra LLM-synligheten utan att ändra befintliga publiceringsarbetsflöden.
+The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.-->
 
 F. Vad händer om jag inte har börjat optimera på Edge än?
 
-Om du klickar på **Distribuera optimeringar** innan du slutför den nödvändiga konfigurationen kommer ingenting att tillämpas på din plats. I stället visas en popup-dialogruta där du uppmanas att kontakta vårt team på llmo-at-edge@adobe.com för att få hjälp med introduktionen. Tills introduktionen är klar kan du fortfarande utforska de identifierade möjligheterna och förslagen, men arbetsflödet för distribution med ett klick förblir inaktivt.
+Om du klickar på **Distribuera optimeringar** innan du slutför den nödvändiga konfigurationen kommer ingenting att tillämpas på din plats. I stället visas en popup-dialogruta där du uppmanas att kontakta vårt team på `llmo-at-edge@adobe.com` för att få hjälp med introduktionen. Tills introduktionen är klar kan du fortfarande utforska de identifierade möjligheterna och förslagen, men arbetsflödet för distribution med ett klick förblir inaktivt.
 
 F: Vad händer när innehållet uppdateras vid källan?
 
-Vi levererar den optimerade versionen av sidan från cache så länge som den underliggande källsidan inte har ändrats. Men när källan ändras uppdateras vårt system automatiskt så att AI-agenter alltid får det senaste innehållet. Detta beror på att vi använder låga TTL-värden för cache i minuten så att alla innehållsuppdateringar på din webbplats utlöser en ny optimering i det fönstret. Eftersom det inte finns någon universell TTL som passar alla webbplatser kan vi konfigurera denna TTL baserat på dina cacheminnesogiltighetsregler för att säkerställa att båda systemen hålls synkroniserade.
+Vi levererar den optimerade versionen av sidan från cache så länge som den underliggande källsidan inte har ändrats. Men när källan ändras uppdateras vårt system automatiskt så att AI-agenter alltid får det senaste innehållet. Det beror på att vi använder låg cachetid för att göra inställningar (i minutordning) så att alla innehållsuppdateringar på webbplatsen utlöser en ny optimering i det fönstret. Eftersom det inte finns någon universell TTL som passar alla webbplatser kan vi konfigurera denna TTL baserat på dina cacheminnesogiltighetsregler för att säkerställa att båda systemen hålls synkroniserade.
 
 F. Optimerar Edge endast för webbplatser som använder Adobe Edge Delivery Service (EDS)?
 
-Nej. Optimera på Edge är CDN-agnostiker och fungerar med alla frontendarkitekturer, inte bara sådana som används i Adobe EDS Stack.
+Nej. Optimera på Edge är CDN-agnostiker och fungerar med alla frontendarkitekturer, inte bara de som används i Adobe EDS Stack.
 
 F. Hur skiljer sig Optimera vid Edge-förrendering från traditionell SSR-rendering (server-side rendering)?
 
-De två löser olika problem och kan fungera tillsammans. Traditionell SSR återger innehåll på serversidan, men inkluderar inte innehåll som läses in senare i webbläsaren. Optimera vid Edge-förrendering fångar upp sidan när data från JavaScript och klientsidan har lästs in, vilket skapar den fullständiga versionen vid CDN-kanten. SSR fokuserar på att förbättra människors upplevelse och på Optimera på Edge förbättrar webbupplevelsen för LLM.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Båda problemen kan lösas och fungera tillsammans. Traditionell SSR återger innehåll på serversidan, men inkluderar inte innehåll som läses in senare i webbläsaren. Optimera vid Edge-förrendering fångar upp sidan när data från JavaScript och klientsidan har lästs in, vilket skapar den fullständigt monterade versionen vid CDN-kanten. SSR fokuserar på att förbättra människors upplevelse och på Optimera på Edge förbättrar webbupplevelsen för LLM.
 

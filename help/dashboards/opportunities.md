@@ -2,9 +2,9 @@
 title: Optimeringsmöjligheter
 description: Lär dig hur du använder kontrollpanelen för affärsmöjligheter för att automatiskt upptäcka hur webbplatsen kan förbättras för att öka varumärkets synlighet.
 feature: Opportunities
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: 533565d089076d651bb633ea7e426b0a4282de97
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '718'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,10 @@ Nedan finns en tabell över de affärsmöjligheter som stöds:
 | Identifiera blockerad kontorstrafik | Teknisk GEO | Analyserar CDN-loggar för blockerade begäranden från kända AI-agenter (t.ex. GPTBot, PerplexityBot). Rapporterar URL:er och agenter som påverkas. | Uppdatera robots.txt eller serverkonfigurationer för att tillåta åtkomst för AI-crawler där det är lämpligt. |
 | Identifiera 404s/403s/5xx-problem | Teknisk GEO | Övervakar CDN-loggar för felsvar. Rapporteringsfrekvens, påverkade URL:er och beräknade antal förlorade träffar. | Åtgärda brutna länkar, uppdatera behörigheter och åtgärda problem på serversidan så att nyckelinnehållet returnerar 200 svar. |
 | Återskapa innehållets synlighet (tidig åtkomst) | Teknisk GEO | Flaggar sidor där kritiskt innehåll döljs för AI-agenter. Visar URL:er som påverkas och förväntat innehåll som kan återställas. | Återge sidorna i förväg så att mer innehåll är tillgängligt för AI-agenter utan att JavaScript exekveras. |
+
+## Automatisk optimering {#auto-optimization}
+
+Automatisk optimering gör det möjligt att med ett enda klick driftsätta rekommenderade optimeringar, vilket minskar den manuella ansträngningen och den tid det tar att utvärdera. Optimeringar kan användas antingen i innehållskällan eller vid CDN-kanten. Edge-baserad automatisk optimering är för närvarande tillgänglig i tidig åtkomst för utvalda möjligheter. Mer information finns på sidan [Optimera på Edge](/help/dashboards/optimize-at-edge.md).
 
 ### Återskapa innehållssynlighet {#recover-contet}
 

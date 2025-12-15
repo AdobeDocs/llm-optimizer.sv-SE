@@ -2,9 +2,9 @@
 user-guide-title: LLM Optimizer
 breadcrumb-title: LLM Optimizer
 user-guide-description: Lyft varumärket med Adobe LLM Optimizer. Spåra omnämnanden, identifiera insikter och dominera AI-driven sökning. Ta kontroll över din synlighet - börja optimera nu!
-source-git-commit: 1be26ad8f8e3abb87c5d897172c1ac5dcbf01f87
+source-git-commit: 8f914fb60036058870b63addae690c945127f349
 workflow-type: tm+mt
-source-wordcount: '65'
+source-wordcount: '70'
 ht-degree: 0%
 
 ---
@@ -27,3 +27,5 @@ ht-degree: 0%
    + [Möjligheter](/help/dashboards/opportunities.md)
    + [Kundkonfiguration](/help/dashboards/customer-configuration.md)
    + [Collaboration](/help/dashboards/collaboration.md)
++ Ytterligare resurser{#resources}
+   + [Optimera på Edge](/help/dashboards/optimize-at-edge.md)
