@@ -2,9 +2,9 @@
 title: Optimeringsmöjligheter
 description: Lär dig hur du använder kontrollpanelen för affärsmöjligheter för att automatiskt upptäcka hur webbplatsen kan förbättras för att öka varumärkets synlighet.
 feature: Opportunities
-source-git-commit: 533565d089076d651bb633ea7e426b0a4282de97
+source-git-commit: 39658a057fd4d67f74dc286e1687e384133ac653
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '624'
 ht-degree: 0%
 
 ---
@@ -44,9 +44,9 @@ Nedan finns en tabell över de affärsmöjligheter som stöds:
 
 Automatisk optimering gör det möjligt att med ett enda klick driftsätta rekommenderade optimeringar, vilket minskar den manuella ansträngningen och den tid det tar att utvärdera. Optimeringar kan användas antingen i innehållskällan eller vid CDN-kanten. Edge-baserad automatisk optimering är för närvarande tillgänglig i tidig åtkomst för utvalda möjligheter. Mer information finns på sidan [Optimera på Edge](/help/dashboards/optimize-at-edge.md).
 
-### Återskapa innehållssynlighet {#recover-contet}
+<!--### Recover Content Visibility Opportunity {#recover-contet}
 
-Som anges ovan flaggar innehållssynligheten sidor där nyckelinnehåll förloras för AI-agenter på grund av klientåtergivning. För varje identifierad sida visas exakt vilket innehåll som saknas i AI-agentvyn, vilket hjälper dig att identifiera luckor i synligheten. Det stöds också av en edge-baserad förrenderingsfunktion som kan leverera mer HTML-innehåll till agell trafik utan att CMS (Content Management System) behöver ändras. Den här funktionen är för närvarande i Tidig åtkomst och kräver installation från LLM Optimizer-teamet. Kontakta `llmo-at-edge@adobe.com` för att aktivera innehållssynlighetsmöjligheten.
+As stated above, the content visibility opportunity, flags pages where key content is lost for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, helping you pinpoint visibility gaps. It's also supported by an edge-based pre-rendering capability that can serve more HTML content to agentic traffic without requiring Content Management System (CMS) changes. This functionality is currently in Early Access and requires setup from the LLM Optimizer team. Please contact `llmo-at-edge@adobe.com` to activate the content visibility opportunity.-->
 
 ### Ytterligare verktyg
 
