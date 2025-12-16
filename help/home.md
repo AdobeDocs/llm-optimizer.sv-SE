@@ -1,9 +1,9 @@
 ---
 title: Adobe LLM Optimizer
 description: Lyft varumärket med Adobe LLM Optimizer. Spåra omnämnanden, identifiera insikter och dominera AI-driven sökning. Ta kontroll över din synlighet - börja optimera nu!
-source-git-commit: eb10adbfa7c3091a84b9e5891ba5ac2ebee167c5
+source-git-commit: 37dcc663240c3466437c6c5b17e01b4e56e1306b
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -112,8 +112,6 @@ Adobe LLM Optimizer är en generativ AI-program som sätter igång Generative En
 
 ## Läs mer om LLM Optimizer
 
-<!-- Add cards -->
-
 <!-- CARDS
 
 * ./overview/best-practices-topics-prompts.md
@@ -126,11 +124,15 @@ Adobe LLM Optimizer är en generativ AI-program som sätter igång Generative En
   {title= Best practices for LLM optimization using Adobe LLM Optimizer}
   {image= /help/assets/overview/best-practices-card.png}
   {description= Learn how LLM Optimizer can help you drive brand authority in AI search and discovery.}
-* https://business.adobe.com/se/products/llm-optimizer.html
+* https://business.adobe.com/products/llm-optimizer.html
   {title = Explore the capabilities of the Adobe LLM Optimizer}
   {image = /help/assets/overview/business-adobe.png}
   {target=_blank}
   {cta=Learn more}
+* ./dashboards/optimize-at-edge.md
+  {title= Optimize at Edge}
+  {image= /help/assets/overview/optimize-on-edge-card.png}
+  {description= Learn how to deliver optimizations in LLM Optimizer without any authoring changes required.}
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -185,7 +187,7 @@ Adobe LLM Optimizer är en generativ AI-program som sätter igång Generative En
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://business.adobe.com/se/products/llm-optimizer.html" title="Utforska Adobe LLM Optimizer funktioner" target="_blank" rel="referrer">
+                    <a href="https://business.adobe.com/products/llm-optimizer.html" title="Utforska Adobe LLM Optimizer funktioner" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="/help/assets/overview/business-adobe.png" alt="Utforska Adobe LLM Optimizer funktioner"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -194,11 +196,34 @@ Adobe LLM Optimizer är en generativ AI-program som sätter igång Generative En
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://business.adobe.com/se/products/llm-optimizer.html" target="_blank" rel="referrer" title="Utforska Adobe LLM Optimizer funktioner">Utforska funktionerna i Adobe LLM Optimizer</a>
+                        <a href="https://business.adobe.com/products/llm-optimizer.html" target="_blank" rel="referrer" title="Utforska Adobe LLM Optimizer funktioner">Utforska funktionerna i Adobe LLM Optimizer</a>
                     </p>
-                    <p class="is-size-6">Öka synligheten i AI-baserad sökning med Adobe LLM Optimizer. Optimera innehållet för generativ sökning och identifiering av stora språkmodeller för att få bättre resultat.</p>
+                    <p class="is-size-6">Forma varumärkets närvaro i AI-sökresultat med Adobe LLM Optimizer. Få GEO-insikter, öka insynen i olika LLM:er och få mätbar trafiktillväxt.</p>
                 </div>
-                <a href="https://business.adobe.com/se/products/llm-optimizer.html" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://business.adobe.com/products/llm-optimizer.html" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Optimize at Edge">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./dashboards/optimize-at-edge.md" title="Optimera på Edge" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/optimize-on-edge-card.png" alt="Optimera på Edge"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./dashboards/optimize-at-edge.md" target="_blank" rel="referrer" title="Optimera på Edge">Optimera på Edge</a>
+                    </p>
+                    <p class="is-size-6">Lär dig leverera optimeringar i LLM Optimizer utan redigeringsändringar.</p>
+                </div>
+                <a href="./dashboards/optimize-at-edge.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                 </a>
             </div>
