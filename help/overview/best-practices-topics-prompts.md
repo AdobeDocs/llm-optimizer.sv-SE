@@ -2,9 +2,9 @@
 title: Bästa praxis för kategorier, ämnen, frågor och annat
 description: Optimera insikterna om det livslånga lärandet genom att konfigurera kategorier, ämnen, uppmaningar och andra varumärken för att spåra även konkurrenter för anpassad varumärkesövervakning och strategisk innehållsanalys.
 feature: Best Practices, Customer Configuration
-source-git-commit: a4dd9b1aece2936fb95a2e831ec8b41946bc5f46
+source-git-commit: f6d33387337ca097747407099891cbc6b586b9bb
 workflow-type: tm+mt
-source-wordcount: '1399'
+source-wordcount: '1410'
 ht-degree: 0%
 
 ---
@@ -28,16 +28,18 @@ För att komma igång med frågor och svar har Adobe skapat ett branschfrågebib
 
 Så här använder du branschfrågebiblioteket:
 
-1. Hämta filen för frågebiblioteket från LLM Optimizer genom att gå till kontrollpanelen **Kundkonfiguration**.
-2. Granska föreslagna **ämnen** och **Fråga** om ert varumärkes bransch på respektive flik och välj de alternativ som är mest relevanta.
-3. Granska kolumnen **Kundresa** om du vill visa uppmaningsalternativ under kundens livscykel (till exempel identifiering för konvertering till kvarhållande). Tidiga steg/toppen av funnel-ärenden har hög prioritet, men du bör också överväga alternativ för senare steg för att öka kundlojaliteten, aktivera kundsupport osv.
-4. Ändra ämnen eller uppmaningar efter behov för att på bästa sätt stödja dina mål och mål innan du överför till Adobe LLM Optimizer (t.ex. lägg till ditt varumärke/produktnamn, lägg till varumärkesterminologi). Uppmaningar kan läggas till i LLMO manuellt eller gruppvis med hjälp av den tillhandahållna mallen *.csv*.
+1. Navigera till instrumentpanelen **Kundkonfiguration**.
+1. Välj **Hämta uppslagsbibliotek** om du vill hämta biblioteksfilen från LLM Optimizer.
+   ![Bibliotek för Branschprompt laddas ned](/help/assets/best-practices/customer-configuration-prompts-library.png)
+1. Granska föreslagna **ämnen** och **Fråga** om ert varumärkes bransch på respektive flik och välj de alternativ som är mest relevanta.
+1. Granska kolumnen **Kundresa** om du vill visa uppmaningsalternativ under kundens livscykel (till exempel identifiering för konvertering till kvarhållande). Tidiga steg/toppen av funnel-ärenden har hög prioritet, men du bör också överväga alternativ för senare steg för att öka kundlojaliteten, aktivera kundsupport osv.
+1. Ändra ämnen eller uppmaningar efter behov för att på bästa sätt stödja dina mål och mål innan du överför ämnen och uppmaningar till Adobe LLM Optimizer (t.ex. lägg till ditt varumärke/produktnamn, lägg till varumärkesterminologi). Du kan lägga till frågor i LLM Optimizer manuellt eller via massöverföring med hjälp av den tillhandahållna mallen *.csv*.
 
 >[!TIP]
 >
 > Använd en kombination av domänspecifika frågor som rekommenderas av LLM Optimizer vid den första konfigurationen och branschens promptbibliotek för att strukturera er strategi.
 
-### Fråga Library Research Foundation
+### Prompt Library Research Foundation
 
 The Industry Prompt Library genomgick ett omfattande forskningsprojekt som kombinerade:
 
