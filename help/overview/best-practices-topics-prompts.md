@@ -2,9 +2,9 @@
 title: Bästa praxis för kategorier, ämnen, frågor och annat
 description: Optimera insikterna om det livslånga lärandet genom att konfigurera kategorier, ämnen, uppmaningar och andra varumärken för att spåra även konkurrenter för anpassad varumärkesövervakning och strategisk innehållsanalys.
 feature: Best Practices, Customer Configuration
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: a4dd9b1aece2936fb95a2e831ec8b41946bc5f46
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1399'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar och annat att spåra
 
-I det här avsnittet beskrivs de effektivaste strategierna för att bestämma hur du vill konfigurera kategorier, ämnen, uppmaningar och andra för att spåra.
+I det här avsnittet beskrivs de effektivaste strategierna för att bestämma hur du vill konfigurera kategorier, ämnen, uppmaningar och andra för att spåra. Dessutom innehåller det information om branschens promptbibliotek, som Adobe har utvecklat med omfattande forskning med branschexperter.
 
 Detta är ett viktigt första steg. Det ni bestämmer er för avgör nu hur informationen är anpassad efter ert företagskontext. Eventuella ändringar av kategorier i den framtida återställningen av historiska data.
 
@@ -21,6 +21,43 @@ På kontrollpanelen [[!UICONTROL Customer Configuration]](/help/dashboards/custo
 ![Kundkonfigurationsfönstret](/help/assets/best-practices/customer-configuration-best-practices.png)
 
 På [!UICONTROL Customer Configuration]-kontrollpanelen kan du anpassa kategorier (till exempel affärsenheter eller produktlinjer), spåra andra varumärken och lägga till varumärkeskommentarer för att fånga upp alla varianter av ditt varumärke i olika uppmaningar. Med den här konfigurationen kan plattformen skräddarsy insikter efter verksamhetens sammanhang, vilket möjliggör korrekt synlighet, trafik och analys av affärsmöjligheter.
+
+## Branschpromptbibliotek
+
+För att komma igång med frågor och svar har Adobe skapat ett branschfrågebibliotek som utvecklats genom omfattande forskning med branschexperter och analys av AI-sökbeteenden för över 6 000 kunder. Det här biblioteket identifierar de mest relevanta ämnena och uppmaningarna baserat på branschspecifika trender, validerade affärsmål och verkliga kundsökningsmönster.
+
+Så här använder du branschfrågebiblioteket:
+
+1. Hämta filen för frågebiblioteket från LLM Optimizer genom att gå till kontrollpanelen **Kundkonfiguration**.
+2. Granska föreslagna **ämnen** och **Fråga** om ert varumärkes bransch på respektive flik och välj de alternativ som är mest relevanta.
+3. Granska kolumnen **Kundresa** om du vill visa uppmaningsalternativ under kundens livscykel (till exempel identifiering för konvertering till kvarhållande). Tidiga steg/toppen av funnel-ärenden har hög prioritet, men du bör också överväga alternativ för senare steg för att öka kundlojaliteten, aktivera kundsupport osv.
+4. Ändra ämnen eller uppmaningar efter behov för att på bästa sätt stödja dina mål och mål innan du överför till Adobe LLM Optimizer (t.ex. lägg till ditt varumärke/produktnamn, lägg till varumärkesterminologi). Uppmaningar kan läggas till i LLMO manuellt eller gruppvis med hjälp av den tillhandahållna mallen *.csv*.
+
+>[!TIP]
+>
+> Använd en kombination av domänspecifika frågor som rekommenderas av LLM Optimizer vid den första konfigurationen och branschens promptbibliotek för att strukturera er strategi.
+
+### Fråga Library Research Foundation
+
+The Industry Prompt Library genomgick ett omfattande forskningsprojekt som kombinerade:
+
+* **Kundanalys:** Analys av AI-sökbeteenden och -inställningar för över 6 000 kunder
+* **Branschexpertis:** Perspektiv från experter inom kategorierna Auto, Financial Services, Healthcare, Telecom och Travel.
+* **Datadrivna insikter:** Identifiering av viktiga ämnen och frågemönster som driver kundengagemang och konvertering.
+
+De vanligaste ämnen som kunder inom olika branscher genomsöker:
+
+* **Auto:** Felsökning av automatiska problem, jämförelse av fordon och finansiering/leasing
+* **Finanssektorn:** Utforska finansiella produkter
+* **Hälsovård:** Letar efter symtom eller hälsoproblem, jämför behandlingsalternativ, Lär dig labbresultat eller medicinska termer
+* **Telekom:** Jämföra planer, avtalsvillkor och kampanjer, Kontrollera tjänsten i det lokala området
+* **Resa:** Förbereder en resa, Utforska och boka resor
+
+Kundtrender när det gäller AI-sökning och -uppmaningar i verktygen för livslångt lärande:
+
+* Kunderna föredrar att ställa frågor istället för att använda nyckelord när de använder sökverktygen i LLM.
+* De använder främst sökverktyg för att söka i tidiga stadier av forskning och upptäckt.
+* Kunderna tenderar att nämna ett visst varumärke eller produktnamn i sina uppmaningar.
 
 ## Bästa tillvägagångssätt för kategorier
 
@@ -52,7 +89,7 @@ Hur du avgör hur du ställer in kategorier baseras på en fråga: **Vem behöve
 >
 > * Välj ett tillvägagångssätt och håll dig till det.
 > * Du kan bara ha **en** kategorimodell per konto/varumärke. Blanda inte **SBU** och **URL_DIR** samtidigt.
->   <!--Can you mix Product/Service with these?-->
+<!--Can you mix Product/Service with these?-->
 
 Exempel:
 
