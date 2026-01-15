@@ -2,9 +2,9 @@
 title: Kundkonfiguration
 description: Använd kundkonfigurationen för att definiera hur ert varumärke ska övervakas och analyseras inom plattformen för optimering av livslångt lärande.
 feature: Customer Configuration
-source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
+source-git-commit: 5d8b59ea4281c88bb42dc48096c07a3faaeb2e88
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
@@ -18,15 +18,43 @@ Instrumentpanelen för kundkonfiguration är ett kraftfullt verktyg som ger insi
 
 För att konfigurera hur LLM Optimizer övervakar och analyserar er varumärkesnärvaro på olika marknader och i olika konkurrenslandskap har du tillgång till följande flikar:
 
+* [Fråga](#prompts-brand)
 * [Kategorier](#categories)
-* [Övrig spårning](#others-tracking)
+* [Övriga varumärken](#other-brands)
 * [Varumärkesalias](#brand-aliases)
-* [Datainsikter](#data-insights)
 * [CDN-konfiguration](#agentic-cdn)
 
 >[!IMPORTANT]
 >
 > Mer information om hur du konfigurerar dina kategorier, ämnen, uppmaningar finns på sidan [Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar](/help/overview/best-practices-topics-prompts.md).
+
+## Fråga {#prompts-brand}
+
+På den här fliken kan du granska, hantera och anpassa uppmaningar. Du kan överföra en [varumärkesnärvaroanalys](/help/dashboards/brand-presence.md) .csv och listan fylls i med uppmaningar och ämnen från den analysen eller [Hämta ett frågebibliotek](/help/overview/best-practices-topics-prompts.md) som skapats av Adobe. Du kan även ta bort, ändra och lägga till ämnen och tillhörande frågor efter behov.
+
+Om du vill importera en CSV-fil med datainsikter måste du först exportera en fil från kontrollpanelen för varumärkesnärvaro. Mer information om hur du gör det finns i avsnittet [datainsikter](/help/dashboards/brand-presence.md#data-insights). När du har fått filen:
+
+1. Klicka på **Överför CSV** på kontrollpanelen.
+2. Dra och släpp eller välj filen manuellt i fönstret Importera datainsikter.
+3. Klicka på **Överför data**.
+
+Du kan också skapa en ny CSV-fil genom att hämta mallen från fönstret **Importera datainsikter**. När du har skapat mallen kan du öppna den och ange dina ämnen tillsammans med tillhörande instruktioner, kategorier och regioner på en ny rad.
+
+Mer information om hur du hämtar och använder branschfrågebiblioteket som skapats av Adobe finns i avsnittet Branschpromptbibliotek på [den här sidan](/help/overview/best-practices-topics-prompts.md)
+
+Dessutom kan du lägga till ämnen/uppmaningar i listan oberoende av en CSV-fil eller ett frågebibliotek. För att uppnå detta måste du göra följande på kontrollpanelen:
+
+1. Klicka på knappen **Lägg till ämne** .
+2. Välj **Kategori** i det nya konfigurationsfönstret. Tidigare skapade kategorier visas här.
+3. Ange ämnesnamnet.
+4. Lägg till uppmaningstexten.
+5. Markera området.
+6. Klicka på **Lägg till fråga** så visas ämnet med frågan i listan.
+
+>[!NOTE]
+>Nyligen tillagda uppmaningar visas inte i Varumärkesnärvaro förrän bearbetningen är klar.
+
+I listan kan du klicka på varje ämne och tillhörande uppmaningar visas. Om du vill ta bort ämnet och tillhörande uppmaningar klickar du på ikonen Ta bort i listan.
 
 ## Kategorier {#categories}
 
@@ -41,7 +69,7 @@ Om du lägger till nya kategorier genereras inte ämnen och uppmaningar automati
 
 Om du vill ta bort en kategori klickar du på ikonen Ta bort i kategorilistan. Var försiktig, eftersom **om du tar bort en kategori tas även tillhörande objekt** bort, som varumärkesalias som är länkade till den aktuella kategorin.
 
-## Övrig spårning {#others-tracking}
+## Övriga varumärken {#others-tracking}
 
 På den här fliken kan du spåra hur andra nämns i relation till ert varumärke i olika kategorier och regioner. Övervaka deras närvaro och resultat i era marknadssegment. Så här anpassar du spårning:
 
@@ -64,32 +92,6 @@ Genom att använda varumärkesalias kan ni konfigurera alternativa namn och vari
 5. Klicka på **Spara** så visas varumärkesaliaset i listan.
 
 Om du vill ta bort ett varumärkesalias klickar du på ikonen Ta bort i aliaslistan.
-
-## Datainsikter {#data-insights}
-
-På den här fliken kan du granska, hantera och anpassa uppmaningar. Du kan överföra en [varumärkesidentifierare](/help/dashboards/brand-presence.md#data-insights) .csv och listan fylls med uppmaningar och ämnen från den analysen. Du kan även ta bort, ändra och lägga till ämnen och tillhörande frågor efter behov.
-
-Om du vill importera en CSV-fil med datainsikter måste du först exportera en fil från kontrollpanelen för varumärkesnärvaro. Mer information om hur du gör det finns i avsnittet [datainsikter](/help/dashboards/brand-presence.md#data-insights). När du har fått filen:
-
-1. Klicka på **Överför CSV** på kontrollpanelen.
-2. Dra och släpp eller välj filen manuellt i fönstret Importera datainsikter.
-3. Klicka på **Överför data**.
-
-Du kan också skapa en ny CSV-fil genom att hämta mallen från fönstret **Importera datainsikter**. När du har skapat mallen kan du öppna den och ange dina ämnen tillsammans med tillhörande instruktioner, kategorier och regioner på en ny rad.
-
-Dessutom kan du lägga till ämnen/uppmaningar i listan oberoende av en CSV-fil. För att uppnå detta måste du göra följande på kontrollpanelen:
-
-1. Klicka på knappen **Lägg till ämne** .
-2. Välj **Kategori** i det nya konfigurationsfönstret. Tidigare skapade kategorier visas här.
-3. Ange ämnesnamnet.
-4. Lägg till uppmaningstexten.
-5. Markera området.
-6. Klicka på **Lägg till fråga** så visas ämnet med frågan i listan.
-
->[!NOTE]
->Nyligen tillagda uppmaningar visas inte i Varumärkesnärvaro förrän bearbetningen är klar.
-
-I listan kan du klicka på varje ämne och tillhörande uppmaningar visas. Om du vill ta bort ämnet och tillhörande uppmaningar klickar du på ikonen Ta bort i listan.
 
 ## CDN-konfiguration {#cdn-configuration}
 
