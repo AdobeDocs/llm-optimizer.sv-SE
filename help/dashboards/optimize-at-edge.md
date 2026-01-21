@@ -2,9 +2,9 @@
 title: Optimera på Edge
 description: Lär dig leverera optimeringar i LLM Optimizer i CDN-kanten utan att behöva göra några redigeringsändringar.
 feature: Opportunities
-source-git-commit: 2311bd2990c6ff7ecee22ca82b25987df10e7e1c
+source-git-commit: 09fa235f39d61daa343a8c9cc043574a6ea2a1cc
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2149'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 På den här sidan finns en detaljerad översikt över hur du kan leverera optimeringar vid CDN-kanten utan att behöva göra några redigeringsändringar. Det handlar om introduktionsprocessen, tillgängliga optimeringsmöjligheter och hur ni kan optimera automatiskt vid behov.
 
 >[!NOTE]
->Den här funktionen är för närvarande i tidig åtkomst. Du kan läsa mer om Tidig åtkomst-program [här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs).
+>Den här funktionen är för närvarande i tidig åtkomst. Du kan läsa mer om Tidig åtkomst-program [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs).
 
 ## Vad är Optimize på Edge?
 
@@ -57,24 +57,21 @@ Krav för IT-avdelningen:
 
 Som vägledning för konfigurationsprocessen, som presenteras nedan, är exempelkonfigurationer för ett antal CDN-inställningar. Tänk på att dessa exempel bör anpassas till den aktuella livekonfigurationen. Vi rekommenderar att du gör ändringar i de lägre miljöerna först.
 
->[!NOTE]
->I kodexemplen nedan kan du se referenser till &quot;tokowaka&quot;, som är arbetsprojektets namn för Optimera på Edge. Dessa identifierare finns kvar i koden av kompatibilitetsskäl och hänvisar till samma funktioner som beskrivs i den här dokumentationen.
-
 >[!BEGINTABS]
 
 >[!TAB Hanterad CDN för Adobe]
 
 **Hanterad CDN för Adobe**
 
-Syftet med den här konfigurationen är att konfigurera begäranden med agentiska användaragenter som dirigeras till optimeringstjänsten (`edge.tokowaka.now` backend). Testa konfigurationen genom att söka efter rubriken `x-tokowaka-request-id` i svaret när konfigurationen är klar.
+Syftet med den här konfigurationen är att konfigurera begäranden med agentiska användaragenter som dirigeras till optimeringstjänsten (`live.edgeoptimize.net` backend). Testa konfigurationen genom att söka efter rubriken `x-edge-optimize-request-id` i svaret när konfigurationen är klar.
 
 ```
 curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatgpt-user"
 < HTTP/2 200
-< x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+< x-edge-optimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-Cirkulationskonfigurationen görs med en [originSelector CDN-regel](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). Förutsättningarna är följande:
+Cirkulationskonfigurationen görs med en [originSelector CDN-regel](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). Förutsättningarna är följande:
 
 * bestämma vilken domän som ska dirigeras
 * bestämma vilka banor som ska dirigeras
@@ -82,7 +79,7 @@ Cirkulationskonfigurationen görs med en [originSelector CDN-regel](https://expe
 
 För att kunna distribuera regeln måste du:
 
-* skapa en [konfigurationspipeline](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/config-pipeline)
+* skapa en [konfigurationspipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline)
 * implementera konfigurationsfilen `cdn.yaml` i din databas
 * köra konfigurationsflödet
 
@@ -91,16 +88,16 @@ För att kunna distribuera regeln måste du:
 kind: "CDN"
 version: "1"
 data:
-  # Origin selectors to route to Tokowaka backend
+  # Origin selectors to route to Edge Optimize backend
   originSelectors:
     rules:
-      - name: route-to-tokowaka-backend
+      - name: route-to-edge-optimize-backend
         when:
           allOf:
-            - reqHeader: x-tokowaka-request
-              exists: false # avoid loops when requests comes from Tokowaka
+            - reqHeader: x-edge-optimize-request
+              exists: false # avoid loops when requests comes from Edge Optimize
             - reqHeader: user-agent
-              matches: "(?i)(Tokowaka-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)" # routed user agents
+              matches: "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)" # routed user agents
             - reqProperty: domain
               equals: "example.com" # routed domain
             - reqProperty: originalPath
@@ -110,10 +107,10 @@ data:
               - { reqProperty: originalPath, like: "/dir/*" } # routed pages, wildcard path matching
         action:
           type: selectOrigin
-          originName: tokowaka-backend
+          originName: edge-optimize-backend
     origins:
-      - name: tokowaka-backend
-        domain: "edge.tokowaka.now"
+      - name: edge-optimize-backend
+        domain: "live.edgeoptimize.net"
 ```
 
 Testa installationen genom att köra en vändning och förvänta dig följande:
@@ -121,7 +118,7 @@ Testa installationen genom att köra en vändning och förvänta dig följande:
 ```
 curl -svo page.html https://www.example.com/page.html --header "user-agent: chatgpt-user"
 < HTTP/2 200
-< x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+< x-edge-optimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
 <!-- >>[!TAB Akamai (BYOCDN)]
@@ -402,7 +399,7 @@ Important considerations:
 
 >[!TAB Snabbt (BYOCDN)]
 
-**Tokowaka BYOCDN - snabbt - VCL**
+**Edge Optimize BYOCDN - Fast - VCL**
 
 ![Snabbt VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
 
@@ -411,40 +408,40 @@ Important considerations:
 **vcl_recv-kodfragment**
 
 ```
-unset req.http.x-tokowaka-url;
-unset req.http.x-tokowaka-config;
-unset req.http.x-tokowaka-api-key;
+unset req.http.x-edge-optimize-url;
+unset req.http.x-edge-optimize-config;
+unset req.http.x-edge-optimize-api-key;
 
-if (!req.http.x-tokowaka-request
-    && req.http.user-agent ~ "(?i)(Tokowaka-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
+if (!req.http.x-edge-optimize-request
+    && req.http.user-agent ~ "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
   set req.http.x-fowarded-host = req.http.host; # required for identifying the original host
-  set req.http.x-tokowaka-url = req.url; # required for identifying the original url
-  set req.http.x-tokowaka-config = "LLMCLIENT=true"; # required for cache key
-  set req.http.x-tokowaka-api-key = "<YOUR API KEY>"; # required for identifying the client
-  set req.backend = F_Tokowaka;
+  set req.http.x-edge-optimize-url = req.url; # required for identifying the original url
+  set req.http.x-edge-optimize-config = "LLMCLIENT=true"; # required for cache key
+  set req.http.x-edge-optimize-api-key = "<YOUR API KEY>"; # required for identifying the client
+  set req.backend = F_EDGE_OPTIMIZE;
 }
 ```
 
 **vcl_hash-kodfragment**
 
 ```
-if (req.http.x-tokowaka-config) {
-  set req.hash += "tokowaka";
-  set req.hash += req.http.x-tokowaka-config;
+if (req.http.x-edge-optimize-config) {
+  set req.hash += "edge-optimize";
+  set req.hash += req.http.x-edge-optimize-config;
 }
 ```
 
 **vcl_deliver snippet**
 
 ```
-if (req.http.x-tokowaka-config && resp.status >= 400) {
-  set req.http.x-tokowaka-request = "failover";
+if (req.http.x-edge-optimize-config && resp.status >= 400) {
+  set req.http.x-edge-optimize-request = "failover";
   set req.backend = F_Default_Origin;
   restart;
 }
 
-if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
-  set resp.http.x-tokowaka-fo = "1";
+if (!req.http.x-edge-optimize-config && req.http.x-edge-optimize-request == "failover") {
+  set resp.http.x-edge-optimize-fo = "1";
 }
 ```
 
@@ -467,7 +464,7 @@ I följande tabell visas möjligheter som kan förbättra den agentiska webbuppl
 
 ### Ytterligare verktyg
 
-[Adobe LLM Optimizer: Kan din webbsida redigeras?Tillägget &#x200B;](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome visar hur mycket av ditt webbsidesinnehåll som LLM kan komma åt och vad som döljs. Det är utformat som ett kostnadsfritt, fristående diagnosverktyg och kräver ingen produktlicens eller konfiguration.
+[Adobe LLM Optimizer: Kan din webbsida redigeras?Tillägget ](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome visar hur mycket av ditt webbsidesinnehåll som LLM kan komma åt och vad som döljs. Det är utformat som ett kostnadsfritt, fristående diagnosverktyg och kräver ingen produktlicens eller konfiguration.
 
 Med ett enda klick kan du utvärdera vilken dator som kan läsas på en webbplats. Du kan visa en jämförelse sida vid sida av vad AI-agenter ser jämfört med vad människor ser och uppskatta hur mycket innehåll som kan återställas med hjälp av LLM Optimizer. Se [Kan AI läsa din webbplats?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) sida för mer information.
 
@@ -503,7 +500,7 @@ Här hittar du sidor med långa, komplexa stycken som kan minska förståelsen a
 
 För varje affärsmöjlighet kan du förhandsgranska, redigera, driftsätta, visa direkt och återställa optimeringarna.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477988/?captions=swe&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### Förhandsgranska
 
