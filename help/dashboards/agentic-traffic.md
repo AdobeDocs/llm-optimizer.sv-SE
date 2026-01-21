@@ -2,9 +2,9 @@
 title: Myndighetstrafik
 description: Lär dig hur du använder kontrollpanelen för AI-trafik för att se hur AI-agenter interagerar med din webbplats.
 feature: Agentic Traffic
-source-git-commit: a75ce71dc0ab9ffe7956a3dbd09dca23ea5f7096
+source-git-commit: 26926f3ed4df3a408b74b0208f0d1eb064b97d28
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1307'
 ht-degree: 0%
 
 ---
@@ -140,4 +140,4 @@ Vyn URL-detaljer ger en helhetsbild av en sidas prestanda, som visar hur ofta de
 
 >[!ENDTABS]
 
-På båda tabellerna kan du använda alternativet **Exportera** för att hämta tabellen .csv och dela insikterna med ditt team eller inkludera tabellerna i den verkställande rapporten.
+På båda tabellerna kan du använda alternativet **Exportera** för att hämta tabellen `.csv` och dela insikterna med teamet eller inkludera tabellerna i den verkställande rapporten.
