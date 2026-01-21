@@ -2,9 +2,9 @@
 title: Myndighetstrafik
 description: Lär dig hur du använder kontrollpanelen för AI-trafik för att se hur AI-agenter interagerar med din webbplats.
 feature: Agentic Traffic
-source-git-commit: 2993f840c7451adeccf4f11a0132b91a9bc81803
+source-git-commit: a75ce71dc0ab9ffe7956a3dbd09dca23ea5f7096
 workflow-type: tm+mt
-source-wordcount: '1302'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
@@ -47,15 +47,17 @@ Om du väljer **Annan** måste du kontakta llmo-now@adobe.com för att få hjäl
 
 När loggarna har aktiverats hämtas de in och kontrollpanelen fylls i med mätvärden som total agentinteraktion, framgångsgrad, träffar per marknad, användaragentanalys och URL-nivåprestanda.
 
-LLM Optimizer inmatar och bearbetar bara en delmängd av fält från CDN-loggarna. Namnen på råloggsfälten varierar beroende på CDN-leverantören, men de normaliseras och presenteras som:
+LLM Optimizer bearbetar en delmängd av fält från CDN-loggarna. Namnen på råloggsfälten varierar beroende på CDN-leverantören, men de normaliseras och presenteras som:
 
 * URL (endast sökväg)
-* user_agent
-* status
-* hänvisare
-* värd
-* Ttfb (time to first byte)
-* cdn_provider
+* Användaragent
+* Statuskod
+* Referenshuvud
+* Värdhuvud
+* Tid till första byte (TTFB)
+* Begärandemetod
+* Tidsstämpel
+* Innehållstyp
 
 Dessa normaliserade fält visas genom den agiska vyn. På kontrollpanelen [Referenstrafik](/help/dashboards/referral-traffic.md) används CDN-loggar för att visa sidträffsmått. Ingen personligt identifierbar information (PII) bearbetas eller lagras vid något skede av CDN-loggintaget eller efterföljande datahantering.
 
