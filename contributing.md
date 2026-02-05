@@ -2,7 +2,7 @@
 source-git-commit: 9a086ec3124af1bf234e42287c8b4ef08eae6bcd
 workflow-type: tm+mt
 source-wordcount: '281'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 # Bidrar
@@ -13,13 +13,13 @@ Nedan följer ett antal riktlinjer som du kan följa när du bidrar till projekt
 
 ## Regler för uppförande
 
-Detta projekt följer Adobes [uppförandekod](code-of-conduct.md). Genom att delta
+Det här projektet följer Adobe [uppförandekod](code-of-conduct.md). Genom att delta
 du förväntas behålla den här koden. Rapportera oacceptabla beteenden till
 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
 ## Dokumentation för Contributor-handboken
 
-Se [Contributor-handboken](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=sv-SE).
+Se [Contributor-handboken](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
 
 ## Har du en fråga?
 
@@ -57,4 +57,4 @@ Jag kan kontakta befintliga committers för att diskutera det.
 
 ## Säkerhetsproblem
 
-Säkerhetsproblem ska inte rapporteras i den här felspåraren. [Rapportera i stället ett problem till våra säkerhetsexperter](https://helpx.adobe.com/se/security/alertus.html)
+Säkerhetsproblem ska inte rapporteras i den här felspåraren. [Rapportera i stället ett problem till våra säkerhetsexperter](https://helpx.adobe.com/security/alertus.html)
