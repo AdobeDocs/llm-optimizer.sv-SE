@@ -281,7 +281,7 @@ Här hittar du sidor med långa, komplexa stycken som kan minska förståelsen a
 
 För varje affärsmöjlighet kan du förhandsgranska, redigera, driftsätta, visa direkt och återställa optimeringarna.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477988/?captions=swe&learn=on&enablevpops)
 
 ### Förhandsgranska
 
