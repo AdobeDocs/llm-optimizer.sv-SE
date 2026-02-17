@@ -2,9 +2,9 @@
 title: Optimera på Edge
 description: Lär dig leverera optimeringar i LLM Optimizer i CDN-kanten utan att behöva göra några redigeringsändringar.
 feature: Opportunities
-source-git-commit: eb8bdf9144aebb85171a529a3cc25034be5b076e
+source-git-commit: ae37ef578f279eae6ea51fd8aed5c6b91c8e1088
 workflow-type: tm+mt
-source-wordcount: '2291'
+source-wordcount: '4843'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 På den här sidan finns en detaljerad översikt över hur du kan leverera optimeringar vid CDN-kanten utan att behöva göra några redigeringsändringar. Det handlar om introduktionsprocessen, tillgängliga optimeringsmöjligheter och hur ni kan optimera automatiskt vid behov.
 
 >[!NOTE]
->Den här funktionen är för närvarande i tidig åtkomst. Du kan läsa mer om Tidig åtkomst-program [här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs).
+>Den här funktionen är för närvarande i tidig åtkomst. Du kan läsa mer om Tidig åtkomst-program [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs).
 
 ## Vad är Optimize på Edge?
 
@@ -47,42 +47,54 @@ Krav för att kunna utnyttja Optimera på Edge:
 * Slutför vidarebefordringsprocessen för CDN-loggarna.
 
 Krav för IT-avdelningen:
-
-* Generera en API-nyckel.
+* Lägg till `*AdobeEdgeOptimize/1.0*` användaragent i Tillåtelselista i webbplatsens robots.txt-fil eller bot-trafik-hanteringsregler.
+* Kontrollera att sidorna inte blockeras på domän- eller CDN-nivå.
 * Lägg till Optimize på Edge routningsregler i CDN.
-* Tillåtslista användardefinierade sökvägar för hela domänen.
-* Lägg till en användardefinierad lista med användaragenter för LLM i målgruppen.
-* Kontrollera att `robots.txt` inte blockerar några användaragenter som är avsedda att vara målanvändare.
 * Bekräfta Optimera vid Edge-routning i LLM Optimizer gränssnitt.
 
 Som vägledning för konfigurationsprocessen, som presenteras nedan, är exempelkonfigurationer för ett antal CDN-inställningar. Tänk på att dessa exempel bör anpassas till den aktuella livekonfigurationen. Vi rekommenderar att du gör ändringar i de lägre miljöerna först.
 
 >[!BEGINTABS]
 
->[!TAB Hanterad CDN för Adobe]
+>[!TAB Hanterad CDN för tjänsten AEM Cloud (snabbt)]
 
-**Hanterad CDN för Adobe**
+**Edge Optimize - AEM Cloud Service Managed CDN (snabbt)**
 
-Syftet med den här konfigurationen är att konfigurera begäranden med agentiska användaragenter som dirigeras till optimeringstjänsten (`live.edgeoptimize.net` backend). Testa konfigurationen genom att söka efter rubriken `x-edgeoptimize-request-id` i svaret när konfigurationen är klar.
+Den här konfigurationen dirigerar agens-trafik (begäranden från AI-bots och LLM-användaragenter) till Edge Optimize-backend-tjänsten (`live.edgeoptimize.net`). Besökare på människor och SEO-botar fortsätter att betjänas som vanligt utifrån ditt ursprung. Om du vill testa konfigurationen söker du efter rubriken `x-edgeoptimize-request-id` i svaret när konfigurationen är klar.
 
-```
-curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatgpt-user"
-< HTTP/2 200
-< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
-```
+**Förutsättningar**
 
-Cirkulationskonfigurationen görs med en [originSelector CDN-regel](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). Förutsättningarna är följande:
+Så här börjar du dirigera agrotisk trafik till Edge Optimize:
 
-* bestämma vilken domän som ska dirigeras
-* bestämma vilka banor som ska dirigeras
-* bestämma vilka användaragenter som ska dirigeras (rekommenderad regex)
+1. Navigera till **Kundkonfiguration** och välj fliken **CDN-konfiguration** .
+
+   ![Navigera till Kundkonfiguration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+
+2. Markera kryssrutan **Distribuera optimeringar till AI-agenter** under **AI-trafikroutning för att distribuera optimeringar**. Adobe-teamet hanterar routningskonfigurationen åt dig.
+
+   ![Tick Deploy Optimizations to AI Agents](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+
+3. När du har aktiverat kryssrutan visas statusen för inställningen. Adobe-teamet kommer att slutföra routningskonfigurationen åt dig.
+
+   ![Konfigurering av AI-trafik pågår](/help/assets/optimize-at-edge/prereq-traffic-routing-progress.png)
+
+   När routningen är konfigurerad och aktiv uppdateras statusen till en grön bock som anger att routning har aktiverats. Du behöver inte göra något mer.
+
+Om du behöver hjälp med ovanstående steg kontaktar du ditt Adobe-kontoteam eller `llmo-at-edge@adobe.com`.
+
+**Självbetjäningsroutning via Cloud Manager Pipeline**
+
+Om du föredrar att konfigurera routningen själv via Cloud Manager Pipeline följer du stegen nedan. Cirkulationskonfigurationen görs med en [originSelector CDN-regel](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). Förutsättningarna är följande:
+
+* Bestäm vilken domän som ska dirigeras.
+* Bestäm vilka banor som ska dirigeras.
+* Bestäm vilka användaragenter som ska dirigeras (rekommenderad regex).
 
 För att kunna distribuera regeln måste du:
 
-* skapa en [konfigurationspipeline](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/config-pipeline)
-* implementera konfigurationsfilen `cdn.yaml` i din databas
-* köra konfigurationsflödet
-
+* Skapa en [konfigurationspipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline).
+* Genomför konfigurationsfilen `cdn.yaml` i din databas.
+* Kör konfigurationsflödet.
 
 ```
 kind: "CDN"
@@ -113,17 +125,57 @@ data:
         domain: "live.edgeoptimize.net"
 ```
 
+**Verifiera installationen**
+
 Testa installationen genom att köra en vändning och förvänta dig följande:
 
 ```
-curl -svo page.html https://www.example.com/page.html --header "user-agent: chatgpt-user"
+curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chatgpt-user"
 < HTTP/2 200
 < x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
+Status för trafikroutningen kan också kontrolleras i LLM Optimizer-gränssnittet. Navigera till **Kundkonfiguration** och välj fliken **CDN-konfiguration** .
+
+![AI-trafikroutningsstatus med routning aktiverat](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
+
 >[!TAB Snabbt (BYOCDN)]
 
-**Edge Optimize BYOCDN - Fast - VCL**
+**Edge Optimize - Fast (BYOCDN)**
+
+Den här konfigurationen dirigerar agens-trafik (begäranden från AI-bots och LLM-användaragenter) till Edge Optimize-backend-tjänsten (`live.edgeoptimize.net`). Besökare på människor och SEO-botar fortsätter att betjänas som vanligt utifrån ditt ursprung. Om du vill testa konfigurationen söker du efter rubriken `x-edgeoptimize-request-id` i svaret när konfigurationen är klar.
+
+**Förutsättningar**
+
+Innan du konfigurerar VCL-reglerna snabbt måste du se till att du har:
+
+* Snabb åtkomst till din domän.
+* LLM Optimizer introduktionsprocess har slutförts.
+* CDN-loggen har vidarebefordrats till LLM Optimizer.
+* En Edge Optimize API-nyckel har hämtats från LLM Optimizer användargränssnitt.
+
+**Steg för att hämta API-nyckeln:**
+
+1. Navigera till **Kundkonfiguration** och välj fliken **CDN-konfiguration** .
+
+   ![Navigera till Kundkonfiguration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+
+2. Markera kryssrutan **Distribuera optimeringar till AI-agenter** under **AI-trafikroutning för att distribuera optimeringar**.
+
+   ![Tick Deploy Optimizations to AI Agents](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+
+3. Kopiera API-nyckeln och fortsätt med stegen för routningskonfiguration nedan.
+
+   ![Kopiera API-nyckeln](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+
+   >[!NOTE]
+   >I det här skedet kan statusen visa ett rött kryss som anger att installationen inte har slutförts än. Detta förväntas - när du har slutfört routningskonfigurationen nedan och AI-robottrafiken börjar flöda uppdateras statusen till en grön bock som bekräftar att routning har aktiverats.
+
+Om du behöver hjälp med ovanstående steg kontaktar du ditt Adobe-kontoteam eller `llmo-at-edge@adobe.com`.
+
+**Konfiguration**
+
+Lägg till följande tre VCL-kodfragment till tjänsten Snabbt. Dessa fragment hanterar cirkulerande autentiska förfrågningar till Edge Optimize, cachenyckelseparation och failover till din standardursprung.
 
 ![Snabbt VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
 
@@ -138,9 +190,9 @@ unset req.http.x-edgeoptimize-api-key;
 
 if (!req.http.x-edgeoptimize-request
     && req.http.user-agent ~ "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
-  set req.http.x-fowarded-host = req.http.host; # required for identifying the original host
+  set req.http.x-forwarded-host = req.http.host; # required for identifying the original host
   set req.http.x-edgeoptimize-url = req.url; # required for identifying the original url
-  set req.http.x-edgeoptimize-config = "LLMCLIENT=true"; # required for cache key
+  set req.http.x-edgeoptimize-config = "LLMCLIENT=TRUE;"; # required for cache key
   set req.http.x-edgeoptimize-api-key = "<YOUR API KEY>"; # required for identifying the client
   set req.backend = F_EDGE_OPTIMIZE;
 }
@@ -169,26 +221,92 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 }
 ```
 
+**Redundans**
+
+`vcl_deliver`-fragmentet hanterar automatiskt växling vid fel. Om Edge Optimize returnerar ett `4XX`- eller `5XX`-fel startas begäran om och dirigeras tillbaka till ditt standardursprung så att slutanvändaren fortfarande får ett svar. Redundanssvar innehåller rubriken `x-edgeoptimize-fo: 1`.
+
+| Scenario | Beteende |
+| --- | --- |
+| Edge Optimize returnerar `2XX` | Klienten får optimerat svar. |
+| Edge Optimize returnerar `4XX` eller `5XX` | Begäran startas om och hanteras från standardkällan. |
+| Redundanssvar | Innehåller rubriken `x-edgeoptimize-fo: 1`. |
+
+**Verifiera installationen**
+
+Testa installationen genom att köra en vändning och förvänta dig följande:
+
+```
+curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chatgpt-user"
+< HTTP/2 200
+< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+```
+
+Status för trafikroutningen kan också kontrolleras i LLM Optimizer-gränssnittet. Navigera till **Kundkonfiguration** och välj fliken **CDN-konfiguration** .
+
+![AI-trafikroutningsstatus med routning aktiverat](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+
 >[!TAB Akamai (BYOCDN)]
 
-**Edge Optimize BYOCDN - Akamai**
+**Edge Optimize - Akamai (BYOCDN)**
 
-Syftet med den här konfigurationen är att dirigera begäranden från agentiska användaragenter till tjänsten Edge Optimize (`live.edgeoptimize.net` backend). Testa konfigurationen genom att söka efter rubriken `x-edgeoptimize-request-id` i svaret när konfigurationen är klar.
+Den här konfigurationen dirigerar agens-trafik (begäranden från AI-bots och LLM-användaragenter) till Edge Optimize-backend-tjänsten (`live.edgeoptimize.net`). Besökare på människor och SEO-botar fortsätter att betjänas som vanligt utifrån ditt ursprung. Om du vill testa konfigurationen söker du efter rubriken `x-edgeoptimize-request-id` i svaret när konfigurationen är klar.
 
+**Förutsättningar**
 
-**Följande Akamai Property Manager JSON-regel skickar användaragenter för LLM till Edge Optimize:**
+Innan du konfigurerar Akamai Property Manager-reglerna bör du kontrollera att du har:
 
-Konfigurationen innehåller följande steg:
+* Åtkomst till Akamai Property Manager för din domän.
+* LLM Optimizer introduktionsprocess har slutförts.
+* CDN-loggen har vidarebefordrats till LLM Optimizer.
+* En Edge Optimize API-nyckel har hämtats från LLM Optimizer användargränssnitt.
+
+**Steg för att hämta API-nyckeln:**
+
+1. Navigera till **Kundkonfiguration** och välj fliken **CDN-konfiguration** .
+
+   ![Navigera till Kundkonfiguration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+
+2. Markera kryssrutan **Distribuera optimeringar till AI-agenter** under **AI-trafikroutning för att distribuera optimeringar**.
+
+   ![Tick Deploy Optimizations to AI Agents](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+
+3. Kopiera API-nyckeln och fortsätt med stegen för routningskonfiguration nedan.
+
+   ![Kopiera API-nyckeln](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+
+   >[!NOTE]
+   >I det här skedet kan statusen visa ett rött kryss som anger att installationen inte har slutförts än. Detta förväntas - när du har slutfört routningskonfigurationen nedan och AI-robottrafiken börjar flöda uppdateras statusen till en grön bock som bekräftar att routning har aktiverats.
+
+Om du behöver hjälp med ovanstående steg kontaktar du ditt Adobe-kontoteam eller `llmo-at-edge@adobe.com`.
+
+**Konfiguration**
+
+Följande Akamai Property Manager-regel skickar användaragenter för LLM till Edge Optimize. Konfigurationen innehåller följande steg:
 
 **1. Ange routningsvillkor (matchning av användaragent)**
+
+Ange routning för följande användaragenter:
+
+```
+ *AdobeEdgeOptimize-AI*,
+ *ChatGPT-User*,
+ *GPTBot*,
+ *OAI-SearchBot*,
+ *PerplexityBot*,
+ *Perplexity-User*
+```
 
 ![Ange routningsvillkor](/help/assets/optimize-at-edge/akamai-step1-routing.png)
 
 **2. Ange ursprung och SSL-beteende**
 
+Ange ursprung som `live.edgeoptimize.net` och matcha SAN till `*.edgeoptimize.net`
+
 ![Ange ursprung och SSL-beteende](/help/assets/optimize-at-edge/akamai-step2-origin.png)
 
 **3. Ange cachenyckelvariabel**
+
+Ange cachenyckelvariabeln `PMUSER_EDGE_OPTIMIZE_CACHE_KEY` till `LLMCLIENT=TRUE;X_FORWARDED_HOST={{builtin.AK_HOST}}`
 
 ![Ange cachenyckelvariabel](/help/assets/optimize-at-edge/akamai-step3-cachekey.png)
 
@@ -197,6 +315,11 @@ Konfigurationen innehåller följande steg:
 ![Cachelagra regler](/help/assets/optimize-at-edge/akamai-step4-rules.png)
 
 **5. Ändra inkommande begärandehuvuden**
+
+Ange följande rubriker för inkommande begäran:
+`x-edgeoptimize-api-key` till API-nyckeln som hämtats från LLMO
+`x-edgeoptimize-config` to `LLMCLIENT=TRUE;`
+`x-edgeoptimize-url` to `{{builtin.AK_URL}}`
 
 ![Ändra rubriker för inkommande begäran](/help/assets/optimize-at-edge/akamai-step5-request.png)
 
@@ -208,23 +331,462 @@ Konfigurationen innehåller följande steg:
 
 ![Ändra cache-ID](/help/assets/optimize-at-edge/akamai-step7-cacheid.png)
 
-**8. Webbplatsredundans**
+**8. Ändra rubriker för utgående begäran**
 
-![Webbplatsredundans](/help/assets/optimize-at-edge/akamai-step8-failover.png)
+Ange `x-forwarded-host`-rubriken till `{{builtin.AK_HOST}}`
 
-![Redundansbeteenden](/help/assets/optimize-at-edge/akamai-step8-failover-behaviors.png)
+![Ändra rubriker för utgående begäran](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
 
-![Redundansregler](/help/assets/optimize-at-edge/akamai-step8-failover-rules.png)
+**9. Webbplatsredundans**
 
-![Beteendesvar](/help/assets/optimize-at-edge/akamai-step8-behaviors-response.png)
+![Webbplatsredundans](/help/assets/optimize-at-edge/akamai-step9-failover.png)
+
+![Redundansbeteenden](/help/assets/optimize-at-edge/akamai-step9-failover-behaviors.png)
+
+![Redundansregler](/help/assets/optimize-at-edge/akamai-step9-failover-rules.png)
+
+Om Edge Optimize returnerar ett fel av typen `4XX` eller `5XX` dirigeras begäran automatiskt tillbaka till ditt standardursprung så att slutanvändaren fortfarande får ett svar.
+
+| Scenario | Beteende |
+| --- | --- |
+| Edge Optimize returnerar `2XX` | Klienten får optimerat svar. |
+| Edge Optimize returnerar `4XX` eller `5XX` | Begäran dirigeras tillbaka till standardkällan. |
+
+**Verifiera installationen**
 
 Testa installationen genom att köra en vändning och förvänta dig följande:
 
 ```
-curl -svo page.html https://www.example.com/page.html --header "user-agent: chatgpt-user"
+curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chatgpt-user"
 < HTTP/2 200
 < x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
+
+Status för trafikroutningen kan också kontrolleras i LLM Optimizer-gränssnittet. Navigera till **Kundkonfiguration** och välj fliken **CDN-konfiguration** .
+
+![AI-trafikroutningsstatus med routning aktiverat](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+
+>[!TAB Cloudflare (BYOCDN)]
+
+**Edge Optimize - Cloudflare (BYOCDN)**
+
+Den här konfigurationen dirigerar agens-trafik (begäranden från AI-bots och LLM-användaragenter) till Edge Optimize-backend-tjänsten (`live.edgeoptimize.net`). Besökare på människor och SEO-botar fortsätter att betjänas som vanligt utifrån ditt ursprung. Om du vill testa konfigurationen söker du efter rubriken `x-edgeoptimize-request-id` i svaret när konfigurationen är klar.
+
+**Förutsättningar**
+
+Innan du konfigurerar Cloudflare Worker-routningsreglerna måste du se till att du har:
+
+* Ett CloudFlare-konto med arbetare aktiverade på din domän.
+* Åtkomst till domänens DNS-inställningar i CloudFlare.
+* LLM Optimizer introduktionsprocess har slutförts.
+* CDN-loggen har vidarebefordrats till LLM Optimizer.
+* En Edge Optimize API-nyckel har hämtats från LLM Optimizer användargränssnitt.
+
+**Steg för att hämta API-nyckeln:**
+
+1. Navigera till **Kundkonfiguration** och välj fliken **CDN-konfiguration** .
+
+   ![Navigera till Kundkonfiguration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+
+2. Markera kryssrutan **Distribuera optimeringar till AI-agenter** under **AI-trafikroutning för att distribuera optimeringar**.
+
+   ![Tick Deploy Optimizations to AI Agents](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+
+3. Kopiera API-nyckeln och fortsätt med stegen för routningskonfiguration nedan.
+
+   ![Kopiera API-nyckeln](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+
+   >[!NOTE]
+   >I det här skedet kan statusen visa ett rött kryss som anger att installationen inte har slutförts än. Detta förväntas - när du har slutfört routningskonfigurationen nedan och AI-robottrafiken börjar flöda uppdateras statusen till en grön bock som bekräftar att routning har aktiverats.
+
+Om du behöver hjälp med ovanstående steg kontaktar du ditt Adobe-kontoteam eller `llmo-at-edge@adobe.com`.
+
+**Så här fungerar routning**
+
+När den är korrekt konfigurerad fångas en begäran till din domän (till exempel `www.example.com/page.html`) från en autentisk användaragent upp av Cloudflare Worker och dirigeras till Edge Optimize-backend. Backend-begäran innehåller de huvuden som krävs.
+
+**Testar backend-begäran**
+
+Du kan verifiera routningen genom att göra en direkt begäran till Edge Optimize-backend.
+
+```
+curl -svo /dev/null https://live.edgeoptimize.net/page.html \
+  -H 'x-forwarded-host: www.example.com' \
+  -H 'x-edgeoptimize-url: /page.html' \
+  -H 'x-edgeoptimize-api-key: $EDGE_OPTIMIZE_API_KEY' \
+  -H 'x-edgeoptimize-config: LLMCLIENT=TRUE;'
+```
+
+**Obligatoriska rubriker**
+
+Följande huvuden måste anges på begäranden till Edge Optimize-backend:
+
+| Sidhuvud | Beskrivning | Exempel |
+|--------|-------------|---------|
+| `x-forwarded-host` | Den ursprungliga värddatorn för begäran. Krävs för att identifiera webbplatsdomänen. | `www.example.com` |
+| `x-edgeoptimize-url` | Den ursprungliga URL-sökvägen och frågesträngen för begäran. | `/page.html` eller `/products?id=123` |
+| `x-edgeoptimize-api-key` | Den API-nyckel som tillhandahålls av Adobe för din domän. | `your-api-key-here` |
+| `x-edgeoptimize-config` | Konfigurationssträng för cachenyckeldifferentiering. | `LLMCLIENT=TRUE;` |
+
+**Steg 1: Skapa molnarbetare**
+
+1. Logga in på din Cloudflare-kontrollpanel.
+2. Navigera till **Arbetare och sidor** i sidlisten.
+3. Klicka på **Skapa program** och sedan på **Skapa arbetare**.
+4. Namnge din arbetare (till exempel `edge-optimize-router`).
+5. Klicka på **Distribuera** för att skapa arbetaren med standardkoden.
+
+![Kontrollpanelen för CloudFlow-arbetare](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
+
+**Steg 2: Lägg till arbetarkoden**
+
+När du har skapat arbetaren klickar du på **Redigera kod** och ersätter standardkoden med följande:
+
+```javascript
+/**
+ * Edge Optimize BYOCDN - Cloudflare Worker
+ *
+ * This worker routes requests from agentic bots (AI/LLM user agents) to the
+ * Edge Optimize backend service for optimized content delivery.
+ *
+ * Features:
+ * - Routes agentic bot traffic to Edge Optimize backend
+ * - Failover to origin on Edge Optimize errors (any 4XX or 5XX errors)
+ * - Loop protection to prevent infinite redirects
+ * - Human visitors and SEO bots are served from the origin as usual
+ */
+
+// List of agentic bot user agents to route to Edge Optimize
+const AGENTIC_BOTS = [
+  'AdobeEdgeOptimize-AI',
+  'ChatGPT-User',
+  'GPTBot',
+  'OAI-SearchBot',
+  'PerplexityBot',
+  'Perplexity-User'
+];
+
+// Targeted paths for Edge Optimize routing
+// Set to null to route all HTML pages, or specify an array of paths
+const TARGETED_PATHS = null; // e.g., ['/', '/page.html', '/products']
+
+// Failover configuration
+// Failover on any 4XX client error or 5XX server error from Edge Optimize
+const FAILOVER_ON_4XX = true; // Failover on any 4XX error (400-499)
+const FAILOVER_ON_5XX = true; // Failover on any 5XX error (500-599)
+
+export default {
+  async fetch(request, env, ctx) {
+    return await handleRequest(request, env, ctx);
+  },
+};
+
+async function handleRequest(request, env, ctx) {
+  const url = new URL(request.url);
+  const userAgent = request.headers.get("user-agent")?.toLowerCase() || "";
+
+  // Check if request is already processed (loop protection)
+  const isEdgeOptimizeRequest = !!request.headers.get("x-edgeoptimize-request");
+
+  // Construct the original path and query string
+  const pathAndQuery = `${url.pathname}${url.search}`;
+
+  // Check if the path matches HTML pages (no extension or .html extension)
+  const isHtmlPage = /(?:\/[^./]+|\.html|\/)$/.test(url.pathname);
+
+  // Check if path is in targeted paths (if specified)
+  const isTargetedPath = TARGETED_PATHS === null
+    ? isHtmlPage
+    : (isHtmlPage && TARGETED_PATHS.includes(url.pathname));
+
+  // Check if user agent is an agentic bot
+  const isAgenticBot = AGENTIC_BOTS.some((ua) => userAgent.includes(ua.toLowerCase()));
+
+  // Route to Edge Optimize if:
+  // 1. Request is NOT already from Edge Optimize (prevents infinite loops)
+  // 2. User agent matches one of the agentic bots
+  // 3. Path is targeted for optimization
+  if (!isEdgeOptimizeRequest && isAgenticBot && isTargetedPath) {
+
+    // Build the Edge Optimize request URL
+    const edgeOptimizeURL = `https://live.edgeoptimize.net${pathAndQuery}`;
+
+    // Clone and modify headers for the Edge Optimize request
+    const edgeOptimizeHeaders = new Headers(request.headers);
+
+    // Remove any existing Edge Optimize headers for security
+    edgeOptimizeHeaders.delete("x-edgeoptimize-api-key");
+    edgeOptimizeHeaders.delete("x-edgeoptimize-url");
+    edgeOptimizeHeaders.delete("x-edgeoptimize-config");
+
+    // x-forwarded-host: The original site domain
+    // Use environment variable if set, otherwise use the request host
+    edgeOptimizeHeaders.set("x-forwarded-host", env.EDGE_OPTIMIZE_TARGET_HOST ?? url.host);
+
+    // x-edgeoptimize-api-key: Your Adobe-provided API key
+    edgeOptimizeHeaders.set("x-edgeoptimize-api-key", env.EDGE_OPTIMIZE_API_KEY);
+
+    // x-edgeoptimize-url: The original request URL path and query
+    edgeOptimizeHeaders.set("x-edgeoptimize-url", pathAndQuery);
+
+    // x-edgeoptimize-config: Configuration for cache key differentiation
+    edgeOptimizeHeaders.set("x-edgeoptimize-config", "LLMCLIENT=TRUE;");
+
+    try {
+      // Send request to Edge Optimize backend
+      const edgeOptimizeResponse = await fetch(new Request(edgeOptimizeURL, {
+        headers: edgeOptimizeHeaders,
+        redirect: "manual", // Preserve redirect responses from Edge Optimize
+      }), {
+        cf: {
+          cacheEverything: true, // Enable caching based on origin's cache-control headers
+        },
+      });
+
+      // Check if we need to failover to origin
+      const status = edgeOptimizeResponse.status;
+      const is4xxError = FAILOVER_ON_4XX && status >= 400 && status < 500;
+      const is5xxError = FAILOVER_ON_5XX && status >= 500 && status < 600;
+
+      if (is4xxError || is5xxError) {
+        console.log(`Edge Optimize returned ${status}, failing over to origin`);
+        return await failoverToOrigin(request, env, url);
+      }
+
+      // Return the Edge Optimize response
+      return edgeOptimizeResponse;
+
+    } catch (error) {
+      // Network error or timeout - failover to origin
+      console.log(`Edge Optimize request failed: ${error.message}, failing over to origin`);
+      return await failoverToOrigin(request, env, url);
+    }
+  }
+
+  // For all other requests (human users, SEO bots), pass through unchanged
+  return fetch(request);
+}
+
+/**
+ * Failover to origin server when Edge Optimize returns an error
+ * @param {Request} request - The original request
+ * @param {Object} env - Environment variables
+ * @param {URL} url - Parsed URL object
+ */
+async function failoverToOrigin(request, env, url) {
+  // Build origin URL
+  const originURL = `${url.protocol}//${env.EDGE_OPTIMIZE_TARGET_HOST}${url.pathname}${url.search}`;
+
+  // Prepare headers - clean Edge Optimize headers and add loop protection
+  const originHeaders = new Headers(request.headers);
+  originHeaders.set("Host", env.EDGE_OPTIMIZE_TARGET_HOST);
+  originHeaders.delete("x-edgeoptimize-api-key");
+  originHeaders.delete("x-edgeoptimize-url");
+  originHeaders.delete("x-edgeoptimize-config");
+  originHeaders.delete("x-forwarded-host");
+  originHeaders.set("x-edgeoptimize-request", "fo");
+
+  // Create and send origin request
+  const originRequest = new Request(originURL, {
+    method: request.method,
+    headers: originHeaders,
+    body: request.body,
+    redirect: "manual",
+  });
+
+  const originResponse = await fetch(originRequest);
+
+  // Add failover marker header to response
+  const modifiedResponse = new Response(originResponse.body, {
+    status: originResponse.status,
+    statusText: originResponse.statusText,
+    headers: originResponse.headers,
+  });
+  modifiedResponse.headers.set("x-edgeoptimize-fo", "1");
+  return modifiedResponse;
+}
+```
+
+Klicka på **Spara och distribuera** för att publicera arbetaren.
+
+![Kodredigeraren för Cloudflare Worker](/help/assets/optimize-at-edge/cloudflare-worker-editor.png)
+
+**Steg 3: Konfigurera miljövariabler**
+
+Miljövariabler lagrar känslig konfiguration som din API-nyckel säkert.
+
+1. Navigera till **Inställningar** > **Variabler** i arbetarens inställningar.
+2. Klicka på **Lägg till variabel** under **Miljövariabler**.
+3. Lägg till följande variabler:
+
+   | Variabelnamn | Beskrivning | Obligatoriskt |
+   |---------------|-------------|----------|
+   | `EDGE_OPTIMIZE_API_KEY` | Din Adobe-medföljande Edge Optimize API-nyckel. | Ja |
+   | `EDGE_OPTIMIZE_TARGET_HOST` | Målvärden för Edge Optimize-begäranden (skickas som `x-forwarded-host`-huvud) och ursprungsdomänen för redundans. Måste vara domänen utan protokoll (till exempel `www.example.com`, inte `https://www.example.com`). | Ja |
+
+4. För API-nyckeln klickar du på **Kryptera** för att lagra den säkert.
+5. Klicka på **Spara och distribuera**.
+
+![CloudFlare-miljövariabler](/help/assets/optimize-at-edge/cloudflare-env-variables.png)
+
+**Steg 4: Lägg till en väg till din domän**
+
+Så här aktiverar du arbetaren på din domän:
+
+1. Gå till din arbetares **inställningar** > **Utlösare**.
+2. Klicka på **Lägg till flöde** under **Routningar**.
+3. Ange ditt domänmönster (till exempel `www.example.com/*` eller `example.com/*`).
+4. Välj din zon i listrutan.
+5. Klicka på **Spara**.
+
+Du kan också konfigurera vägar på zonnivå:
+
+1. Navigera till din domän i Cloudflare.
+2. Gå till **Arbetsvägar**.
+3. Klicka på **Lägg till flöde** och ange mönster och arbetare.
+
+![Cloudflare Worker-vägar](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
+
+**Steg 5: Verifiera installationen**
+
+Efter distributionen testar du konfigurationen genom att göra en begäran med en autentisk användaragent.
+
+```
+curl -svo /dev/null https://www.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
+
+Ett godkänt svar innehåller rubriken `x-edgeoptimize-request-id`:
+
+```
+< HTTP/2 200
+< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+```
+
+Status för trafikroutningen kan också kontrolleras i LLM Optimizer-gränssnittet. Navigera till **Kundkonfiguration** och välj fliken **CDN-konfiguration** .
+
+![AI-trafikroutningsstatus med routning aktiverat](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+
+Du kan även verifiera att normal trafik fortsätter att fungera:
+
+```
+curl -svo /dev/null https://www.example.com/page.html \
+  --header "user-agent: Mozilla/5.0"
+```
+
+Den här begäran ska hanteras från ditt ursprung utan rubriken `x-edgeoptimize-request-id`.
+
+**Verifierar failover-beteende**
+
+Om Edge Optimize inte är tillgängligt eller returnerar ett fel, kommer arbetaren automatiskt att gå över till ditt ursprung. Redundanssvar innehåller rubriken `x-edgeoptimize-fo`:
+
+```
+< HTTP/2 200
+< x-edgeoptimize-fo: 1
+```
+
+Du kan övervaka failover-händelser i loggar för Cloudflare-arbetare för att felsöka problem.
+
+**Förstå arbetslogiken**
+
+Cloudflare Worker implementerar följande logik:
+
+1. **Identifiering av användaragent:** Kontrollerar om användaragenten för den inkommande begäran matchar någon av de definierade officiella boten (skiftlägesokänslig).
+
+2. **Sökvägsmål:** Du kan också filtrera begäranden baserat på målsökvägar. Som standard dirigeras alla HTML-sidor (URL:er som slutar med `/`, inget tillägg eller `.html`). Du kan ange specifika sökvägar med arrayen `TARGETED_PATHS`.
+
+3. **Loopskydd:** Rubriken `x-edgeoptimize-request` förhindrar oändliga loopar. När Edge Optimize skickar tillbaka begäranden till ditt ursprung anges rubriken till `"1"`, och arbetaren skickar begäran genom begäran utan att vidarebefordra den till Edge Optimize.
+
+4. **Huvudsäkerhet:** Innan du anger Edge Optimize-huvuden tar arbetaren bort alla befintliga `x-edgeoptimize-*` huvuden från den inkommande begäran för att förhindra huvudinmatningsattacker.
+
+5. **Mappning av sidhuvud:** Arbetaren anger de sidhuvuden som krävs för Edge Optimize:
+   * `x-forwarded-host` - Identifierar den ursprungliga webbplatsdomänen.
+   * `x-edgeoptimize-url` - Bevarar den ursprungliga sökvägen och frågesträngen för begäran.
+   * `x-edgeoptimize-api-key` - Autentiserar begäran med Edge Optimize.
+   * `x-edgeoptimize-config` - Tillhandahåller cachenyckelkonfiguration.
+
+6. **Redundanslogik:** Om Edge Optimize returnerar en felstatuskod (4XX klientfel eller 5XX serverfel) eller om begäran misslyckas på grund av ett nätverksfel, misslyckas arbetaren automatiskt över till ditt ursprung med `EDGE_OPTIMIZE_TARGET_HOST`. Redundanssvaret innehåller rubriken `x-edgeoptimize-fo: 1` som anger att redundans inträffade.
+
+7. **Omdirigeringshantering:** Med alternativet `redirect: "manual"` ser du till att omdirigeringssvar från Edge Optimize skickas till klienten utan att arbetaren följer dem.
+
+**Anpassa konfigurationen**
+
+Du kan anpassa arbetsbeteendet genom att ändra konfigurationskonstanterna högst upp i koden:
+
+**Agentrobotlista**
+
+Ändra `AGENTIC_BOTS`-arrayen för att lägga till eller ta bort användaragenter:
+
+```javascript
+const AGENTIC_BOTS = [
+  'AdobeEdgeOptimize-AI',
+  'ChatGPT-User',
+  'GPTBot',
+  'OAI-SearchBot',
+  'PerplexityBot',
+  'Perplexity-User',
+  // Add additional user agents as needed
+  'ClaudeBot',
+  'Anthropic-AI'
+];
+```
+
+**Målsökvägar**
+
+Som standard dirigeras alla HTML-sidor till Edge Optimize. Om du vill begränsa routning till specifika sökvägar ändrar du `TARGETED_PATHS`-arrayen:
+
+```javascript
+// Route all HTML pages (default)
+const TARGETED_PATHS = null;
+
+// Or specify exact paths to route
+const TARGETED_PATHS = ['/', '/page.html', '/products', '/about-us'];
+```
+
+**Konfiguration för växling vid fel**
+
+Som standard misslyckas arbetaren med alla 4XX- eller 5XX-fel från Edge Optimize. Anpassa detta beteende:
+
+```javascript
+// Default: failover on any 4XX or 5XX error
+const FAILOVER_ON_4XX = true;
+const FAILOVER_ON_5XX = true;
+
+// Failover only on 5XX server errors (not 4XX client errors)
+const FAILOVER_ON_4XX = false;
+const FAILOVER_ON_5XX = true;
+
+// Disable automatic failover (not recommended)
+const FAILOVER_ON_4XX = false;
+const FAILOVER_ON_5XX = false;
+```
+
+**Viktiga överväganden**
+
+* **Redundansbeteende:** Arbetaren övergår automatiskt till ditt ursprung om Edge Optimize returnerar ett fel (4XX- eller 5XX-statuskoder) eller om begäran misslyckas på grund av ett nätverksfel. Redundans använder `EDGE_OPTIMIZE_TARGET_HOST` som ursprungsdomän (liknande Fastly `F_Default_Origin` eller CloudFront `Default_Origin`). Redundanssvar innehåller rubriken `x-edgeoptimize-fo: 1` som du kan använda för övervakning och felsökning.
+
+* **Cachelagring:** Cloudflare cachelagrar svar baserat på URL-adressen som standard. Eftersom agens trafik tar emot annat innehåll än mänsklig trafik bör du kontrollera dina cachekonfigurationskonton för detta. Använd cache-API eller cacherubriker för att differentiera cachelagrat innehåll. Rubriken `x-edgeoptimize-config` ska inkluderas i cachenyckeln.
+
+* **Hastighetsbegränsning:** Övervaka din Edge Optimera-användning och överväg att implementera hastighetsbegränsning för autentisk trafik om det behövs.
+
+* **Testar:** Testa alltid konfigurationen i en staging-miljö innan du distribuerar till produktion. Verifiera att både den autentiska och den mänskliga trafiken beter sig som förväntat. Testa failover-beteendet genom att simulera Edge Optimize-fel.
+
+* **Loggning:** Aktivera loggning av Cloudflare-arbetare för att övervaka förfrågningar och felsöka problem. Navigera till **Arbetare** > **din arbetare** > **Loggar** om du vill visa realtidsloggar. Arbetaren loggar redundanshändelser i felsökningssyfte.
+
+**Felsökning**
+
+| Problem | Möjlig orsak | Lösning |
+|-------|----------------|----------|
+| Inget `x-edgeoptimize-request-id`-huvud i svaret | Worker-vägen matchar inte, eller så finns inte användaragenten i listan med giltiga botar. | Kontrollera att ruttmönstret matchar begärande-URL:en. Kontrollera att användaragenten finns i `AGENTIC_BOTS`-arrayen. |
+| 401- eller 403-fel från Edge Optimize | Ogiltig eller saknad API-nyckel. | Kontrollera att `EDGE_OPTIMIZE_API_KEY` har angetts korrekt i miljövariabler. Kontakta Adobe för att bekräfta att API-nyckeln är aktiv. |
+| Oändliga omdirigeringar eller slingor | Loopskyddshuvudet är inte inställt eller korrekt markerat. | Kontrollera att rubrikkontrollen `x-edgeoptimize-request` är på plats. |
+| Infektion hos människan | Worker-routningslogiken är för bred. | Kontrollera att logiken för matchning av användaragent är korrekt och skiftlägeskänslig. Kontrollera att `TARGETED_PATHS` har konfigurerats korrekt. |
+| Långsamma svarstider | Nätverksfördröjning till Edge Optimize-backend. | Detta förväntas för den första begäran. Efterföljande begäranden cachelagras på Edge Optimize. |
+| `x-edgeoptimize-fo: 1`-huvud i svar | Edge Optimize returnerade ett fel och en växling till fel inträffade. | Kontrollera loggarna för Cloudflare Workers för den specifika felkoden. Verifiera Edge Optimize-tjänstens status med Adobe. |
+| Redundans fungerar inte | Redundansflaggor är inaktiverade eller fel i redundanslogiken. | Verifiera att `FAILOVER_ON_4XX` och `FAILOVER_ON_5XX` är inställda på `true`. Sök efter felmeddelanden i arbetarloggarna. |
+| Vissa banor optimeras inte | Sökvägen matchar inte målsökvägarna eller HTML sidmönster. | Kontrollera att sökvägen är i `TARGETED_PATHS` (om den anges) och matchar HTML sidans regex-mönster. |
+| Misslyckade begäranden med ogiltig värd | `EDGE_OPTIMIZE_TARGET_HOST` innehåller protokoll (till exempel `https://`). | Använd bara domännamnet utan protokoll (till exempel `example.com`, inte `https://example.com`). |
+| 530-fel vid växling vid fel | Cloudflare kan inte ansluta till ursprungsläget, eller så har redundansbegäran ogiltiga huvuden. | Kontrollera att failover-funktionen tar bort Edge Optimize-huvuden. Kontrollera att du kan komma åt källan och att DNS är korrekt konfigurerat. |
 
 >[!ENDTABS]
 
@@ -245,9 +807,9 @@ I följande tabell visas möjligheter som kan förbättra den agentiska webbuppl
 
 ### Ytterligare verktyg
 
-[Adobe LLM Optimizer: Kan din webbsida redigeras?Tillägget &#x200B;](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome visar hur mycket av ditt webbsidesinnehåll som LLM kan komma åt och vad som döljs. Det är utformat som ett kostnadsfritt, fristående diagnosverktyg och kräver ingen produktlicens eller konfiguration.
+[Adobe LLM Optimizer: Kan din webbsida redigeras?](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome-tillägget visar hur mycket av webbsidans innehåll som LLM kan komma åt och vad som döljs. Det är utformat som ett kostnadsfritt, fristående diagnosverktyg och kräver ingen produktlicens eller konfiguration.
 
-Med ett enda klick kan du utvärdera vilken dator som kan läsas på en webbplats. Du kan visa en jämförelse sida vid sida av vad AI-agenter ser jämfört med vad människor ser och uppskatta hur mycket innehåll som kan återställas med hjälp av LLM Optimizer. Se [Kan AI läsa din webbplats?](https://business.adobe.com/se/blog/introducing-the-llm-optimizer-chrome-extension) sida för mer information.
+Med ett enda klick kan du utvärdera vilken dator som kan läsas på en webbplats. Du kan visa en jämförelse sida vid sida av vad AI-agenter ser jämfört med vad människor ser och uppskatta hur mycket innehåll som kan återställas med hjälp av LLM Optimizer. Ser du [Kan AI läsa din webbplats?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) sida för mer information.
 
 ## Detaljerade affärsmöjligheter
 
@@ -281,7 +843,7 @@ Här hittar du sidor med långa, komplexa stycken som kan minska förståelsen a
 
 För varje affärsmöjlighet kan du förhandsgranska, redigera, driftsätta, visa direkt och återställa optimeringarna.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477988/?captions=swe&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### Förhandsgranska
 
@@ -333,7 +895,8 @@ Om du klickar på **Distribuera optimeringar** innan du slutför den nödvändig
 
 F: Vad händer när innehållet uppdateras vid källan?
 
-Vi levererar den optimerade versionen av sidan från cache så länge som den underliggande källsidan inte har ändrats. Men när källan ändras uppdateras vårt system automatiskt så att AI-agenter alltid får det senaste innehållet. Det beror på att vi använder låg cachetid för att göra inställningar (i minutordning) så att alla innehållsuppdateringar på webbplatsen utlöser en ny optimering i det fönstret. <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
+Vi levererar den optimerade versionen av sidan från cacheminnet så länge som den underliggande källsidan inte har ändrats. Men när källan ändras för **Återskapa innehållets synlighet** uppdateras systemet automatiskt så att AI-agenter alltid får det senaste innehållet. Det beror på att vi använder låg cachetid för att göra inställningar (i minutordning) så att alla innehållsuppdateringar på webbplatsen utlöser en ny optimering i det fönstret. För innehållsmöjligheter som **Lägg till vänliga LLM-sammanfattningar** övervakar LLM Optimizer källsidan för ändringar. Om en ändring upptäcks pausar vi optimeringen och flaggar den för mänsklig granskning för att förhindra att innehållet växlar mellan den agentsynliga sidan och den mänskligt synliga sidan.
+<!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 F. Optimerar Edge endast för webbplatser som använder Adobe Edge Delivery Service (EDS)?
 
@@ -342,3 +905,7 @@ Nej. Optimera på Edge är CDN-agnostiker och fungerar med alla frontendarkitekt
 F. Hur skiljer sig Optimera vid Edge-förrendering från traditionell SSR-rendering (server-side rendering)?
 
 Båda problemen kan lösas och fungera tillsammans. Traditionell SSR återger innehåll på serversidan, men inkluderar inte innehåll som läses in senare i webbläsaren. Optimera vid Edge-förrendering fångar upp sidan när data från JavaScript och klientsidan har lästs in, vilket skapar den fullständigt monterade versionen vid CDN-kanten. SSR fokuserar på att förbättra människors upplevelse och på Optimera på Edge förbättrar webbupplevelsen för LLM.
+
+F. Vad händer om jag distribuerar optimeringar för vissa URL:er i min domän, men inte för alla?
+
+Endast de URL:er som du uttryckligen optimerar ändras. För URL:er med distribuerade möjligheter får AI-agenter den optimerade versionen. För URL-adresser utan distribuerade möjligheter proxyanpassar vår tjänst helt enkelt originalsidan i befintligt skick utan att tillämpa ändringar eller lagra den i vårt optimeringslager för cache. På så sätt kan du selektivt driftsätta optimeringar utan att påverka resten av webbplatsen.

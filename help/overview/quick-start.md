@@ -2,9 +2,9 @@
 title: Snabbstart
 description: Kom igång med Adobe LLM Optimizer - ta in ditt varumärke i datorn, lås upp insikter om AI-synlighet och utforska instrumentpaneler för att förbättra sökresultatet.
 feature: Quickstart, Onboarding
-source-git-commit: 24183fbe2577bb9402f8b6aaaf1e46c75403383d
+source-git-commit: ae37ef578f279eae6ea51fd8aed5c6b91c8e1088
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1151'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Snabbstart
 
-För att komma igång med LLM-optimering måste du slutföra introduktionsprocessen enligt anvisningarna nedan. När du har slutfört processen får du fullständig åtkomst till [LLM Optimizer-kontrollpaneler](/help/dashboards/dashboards-overview.md) och andra funktioner.
+För att komma igång med LLM Optimizer måste du slutföra introduktionsprocessen enligt anvisningarna nedan. När du har slutfört processen får du fullständig åtkomst till [LLM Optimizer-kontrollpaneler](/help/dashboards/dashboards-overview.md) och andra funktioner.
 
 ## Översikt över introduktion
 
@@ -38,13 +38,13 @@ AEM Cloud-kunder (Cloud Service, Managed Services, Edge Delivery Service) kan v�
 Det finns en del funktioner som inte finns i den kostnadsfria versionen:
 
 * Testversionen är begränsad till en domän. Du kan inte ändra domänen som du angav när du har slutfört installationen.
-* Det kommer inte att finnas stöd för driftsättningsoptimeringar.
+* Möjligheten att driftsätta optimeringar finns i Tidig åtkomst. Läs mer på [Optimera på Edge Frågor och svar](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge#frequently-asked-questions).
 
 Se avsnittet nedan för mer ingående information om hur du aktiverar den kostnadsfria testversionen och registrerar din domän.
 
 ### AEM Cloud-kunder
 
-Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
+Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
 
 >[!NOTE]
 >Nyligen tillagda uppmaningar visas inte på kontrollpanelen [Varumärkesnärvaro](/help/dashboards/brand-presence.md) förrän bearbetningen är klar. AEM Cloud-kunder kan använda den kostnadsfria testversionen av LLM Optimizer. Användning av fler än 200 uppmaningar kräver ett separat licensavtal. Tillgång ges i befintligt skick och i befintligt skick och kan ändras, begränsas eller tas bort av Adobe när som helst. Kontakta din kontorepresentant om du vill ha mer information.
@@ -68,7 +68,7 @@ Dessutom måste du konfigurera [CDN-loggvidarebefordran](#step-4) för trafikana
 
 När affärsavtalet är klart kommer du att vara registrerad på den domän du vill anlita på LLM Optimizer. När introduktionen är klar kan du logga in på LLM Optimizer via [https://llmo.now](https://llmo.now).
 
-### Steg 2: Anpassa kategorier, ämnen och frågor
+## Steg 2: Anpassa kategorier, ämnen och frågor
 
 När sajten väl har anslutits kan du visa analysen för varumärkesnärvaro baserat på den lilla uppsättning uppmaningar som automatiskt genererades under introduktionsfasen. I framtiden kan ni anpassa kategorier, ämnen och uppmaningar för ert varumärke. Den här konfigurationen skapas på [kundkonfigurationspanelen](/help/dashboards/customer-configuration.md).
 
@@ -89,11 +89,11 @@ Från den här instrumentpanelen kan du:
 >
 > Mer information om hur du konfigurerar dina kategorier, ämnen, uppmaningar finns på sidan [Bästa tillvägagångssätt för att konfigurera kategorier, ämnen, uppmaningar](/help/overview/best-practices-topics-prompts.md).
 
-### Steg 3: Insikter om varumärkesnärvaro
+## Steg 3: Insikter om varumärkesnärvaro
 
 När din domän har introducerats ser du inledande insikter i vyn Varumärkesnärvaro baserat på de uppmaningar som automatiskt genererades under introduktionen. När du har anpassat dina kategorier, ämnen och uppmaningar kommer LLM Optimizer automatiskt att aktivera analysen av närvaro i varumärke på de uppmaningar du har angett och resultaten blir tillgängliga inom 24 timmar.
 
-### Steg 4: Ange information för vidarebefordran av CDN-loggar {#step-4}
+## Steg 4: Ange information för vidarebefordran av CDN-loggar {#step-4}
 
 Om du vill låsa upp information om AGT- och REFERENSTRERINGSTRANSPLANER måste du ange information för vidarebefordran av CDN-loggar. Den kan läggas till från [kundkonfigurationspanelen](/help/dashboards/customer-configuration.md#cdn-configuration) genom att gå till fliken **CDN-konfiguration** och klicka på **Inbyggt CDN**.
 
@@ -104,7 +104,7 @@ Om ingen CDN-leverantör har lagts till i förväg (enligt beskrivningen ovan) u
 * [Myndighetstrafik](/help/dashboards/agentic-traffic.md#cdn-setup)
 * [Hänvisningstrafik](/help/dashboards/referral-traffic.md#setup#setup)
 
-### Steg 5: Utforska instrumentpaneler och vidta åtgärder
+## Steg 5: Utforska instrumentpaneler och vidta åtgärder
 
 När du har angett information för CDN-loggvidarebefordran kan du:
 

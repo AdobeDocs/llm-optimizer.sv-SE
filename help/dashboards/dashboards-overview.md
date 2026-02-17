@@ -2,9 +2,9 @@
 title: Översikt över instrumentpaneler
 description: Det här är artikelöversikten.
 feature: Onboarding
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: ae37ef578f279eae6ea51fd8aed5c6b91c8e1088
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Välkommen till översikten över kontrollpanelerna. Kontrollpanelerna i LLM-Optimizer hjälper marknadsförarna att spåra varumärkets synlighet och känsla över alla AI-sökplattformar, identifiera optimeringsmöjligheter och implementera förskrivande ändringar för att förbättra citat och prestanda.
 
-Nyckelvyer är bland annat Varumärkesnärvaro, Agentinsk trafik och Hänvisningstrafik, URL Inspector, Opportunity Identification, Collaboration och Customer Configuration.
+Bland huvudvyerna finns Översikt, Varumärkesnärvaro, Agentinsk trafik och Referenstrafik, URL-inspektör, Affärsmöjligheter, Collaboration och Kundkonfiguration.
 
 <!-- CARDS
 
