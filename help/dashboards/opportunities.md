@@ -2,9 +2,9 @@
 title: Optimeringsmöjligheter
 description: Lär dig hur du använder kontrollpanelen för affärsmöjligheter för att automatiskt upptäcka hur webbplatsen kan förbättras för att öka varumärkets synlighet.
 feature: Opportunities
-source-git-commit: 39658a057fd4d67f74dc286e1687e384133ac653
+source-git-commit: 1f665bd14349c15d92f8274742606abcf9b02000
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '575'
 ht-degree: 0%
 
 ---
@@ -34,8 +34,6 @@ Nedan finns en tabell över de affärsmöjligheter som stöds:
 | Rekommendera strukturerat innehåll (frågor och svar) | Innehåll (på plats) | Identifierar meddelanden med stor popularitet utan matchande FAQ-poster. Visar relaterade uppmaningar, kategorier och URL:er som påverkas. | Lägg till schemablock med vanliga frågor och svar som matchar vanliga frågor. |
 | Identifiera saknade reflexer | Innehåll (på plats) | Flaggar sidor som saknar speglingsattribut. Tillhandahåller URL:er som påverkas och förväntad täckning per språk/region. | Implementera hreflang-taggar för att ange rätt lokaliserade versioner. |
 | Identifiera saknade kanonicaler | Innehåll (på plats) | Söker efter sidor utan kanoniska taggar eller med taggar i konflikt. Listar URL:er och dubbletter som påverkas. | Lägg till kanoniska taggar som pekar på den önskade versionen av varje sida. Säkerställ konsekvent användning över alla varianter. |
-| Identifiera tomma rubriker | Innehåll (på plats) | Flaggar sidor där rubriktaggar finns men inte innehåller någon text. Visar URL och plats för tomma taggar. | Lägg till beskrivande text i rubriker som återspeglar innehållet under dem. |
-| Identifiera duplicerade rubriker | Innehåll (på plats) | Söker igenom HTML rubriktaggar och flaggar upprepade rubriker. Visar URL:er som påverkas och duplicerade textfragment. | Ändra rubrikerna så att de blir unika och bibehåll hierarkin (H1 → H2 → H3). Sammanfoga eller byt namn på duplicerade avsnitt. |
 | Identifiera blockerad kontorstrafik | Teknisk GEO | Analyserar CDN-loggar för blockerade begäranden från kända AI-agenter (t.ex. GPTBot, PerplexityBot). Rapporterar URL:er och agenter som påverkas. | Uppdatera robots.txt eller serverkonfigurationer för att tillåta åtkomst för AI-crawler där det är lämpligt. |
 | Identifiera 404s/403s/5xx-problem | Teknisk GEO | Övervakar CDN-loggar för felsvar. Rapporteringsfrekvens, påverkade URL:er och beräknade antal förlorade träffar. | Åtgärda brutna länkar, uppdatera behörigheter och åtgärda problem på serversidan så att nyckelinnehållet returnerar 200 svar. |
 | Återskapa innehållets synlighet (tidig åtkomst) | Teknisk GEO | Flaggar sidor där kritiskt innehåll döljs för AI-agenter. Visar URL:er som påverkas och förväntat innehåll som kan återställas. | Återge sidorna i förväg så att mer innehåll är tillgängligt för AI-agenter utan att JavaScript exekveras. |

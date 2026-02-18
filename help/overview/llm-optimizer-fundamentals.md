@@ -1,9 +1,9 @@
 ---
 title: LLM Optimizer Basics
 description: Läs om hur Adobe LLM Optimizer ökar synligheten för varumärken i AI-driven sökning. Spåra omnämnanden, citat och insikter. Börja optimera idag för bättre engagemang och påverkan.
-source-git-commit: 06c09c4690488d9b29d0626521fb53bf7d70d3a8
+source-git-commit: 1f665bd14349c15d92f8274742606abcf9b02000
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Med Adobe LLM Optimizer kan man
 
 **Mät varumärkets synlighet** - spåra när, var och hur ofta ditt varumärke omnämns i AI-baserade sökresultat. Gå steget längre och arbeta med tydliga resultat som du kan testa över tid.
 **Benchmark Others** - Se hur ert varumärke står sig mot andra i generativa motorer. Identifiera andel av röstluckor och upptäck konkurrensfördelar.
-**Upptäck användbara möjligheter** - Hitta innehållsmöjligheter (t.ex. vanliga frågor och svar, abstrakt, schema) och tekniska möjligheter (crawlbarhet, indexeringsproblem) som direkt ökar omnämnanden och citat.
+**Identifiera användningsbara möjligheter** - Hitta innehållsmöjligheter (t.ex. vanliga frågor och svar, abstrakt, schema) och tekniska möjligheter (crawlbarhet, indexeringsproblem) som direkt ökar omnämnanden och citat.
 **Spåra trafikpåverkan från AI** - Övervaka autentisk trafik (från AI-assistenter) och hänvisningstrafik (användarklickningar från citat) till dina ägda egenskaper. Ge GEO synlighet till verkligt engagemang.
 **Aktivera Team Collaboration** - Dela instrumentpaneler, tilldela ägare för frågor eller kategorier och se till att synlighetsmålen spåras för alla marknadsförings-, SEO- och kommunikationsfunktioner.
 
@@ -112,7 +112,7 @@ Use these as guidelines for creating tutorials - some may be covered already in 
 
 ## Identifying Optimization Opportunities
 
-* Content Fixes (Headings, FAQs, Canonicals)
+* Content Fixes (FAQs, Canonicals)
 * Technical Fixes (Blocked Agents, Errors)
 * Third-Party Influence Strategies
 

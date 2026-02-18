@@ -2,9 +2,9 @@
 title: Optimera på Edge
 description: Lär dig leverera optimeringar i LLM Optimizer i CDN-kanten utan att behöva göra några redigeringsändringar.
 feature: Opportunities
-source-git-commit: ae37ef578f279eae6ea51fd8aed5c6b91c8e1088
+source-git-commit: 1f665bd14349c15d92f8274742606abcf9b02000
 workflow-type: tm+mt
-source-wordcount: '4843'
+source-wordcount: '4708'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 På den här sidan finns en detaljerad översikt över hur du kan leverera optimeringar vid CDN-kanten utan att behöva göra några redigeringsändringar. Det handlar om introduktionsprocessen, tillgängliga optimeringsmöjligheter och hur ni kan optimera automatiskt vid behov.
 
 >[!NOTE]
->Den här funktionen är för närvarande i tidig åtkomst. Du kan läsa mer om Tidig åtkomst-program [här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs).
+>Den här funktionen är för närvarande i tidig åtkomst. Du kan läsa mer om Tidig åtkomst-program [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs).
 
 ## Vad är Optimize på Edge?
 
@@ -84,7 +84,7 @@ Om du behöver hjälp med ovanstående steg kontaktar du ditt Adobe-kontoteam el
 
 **Självbetjäningsroutning via Cloud Manager Pipeline**
 
-Om du föredrar att konfigurera routningen själv via Cloud Manager Pipeline följer du stegen nedan. Cirkulationskonfigurationen görs med en [originSelector CDN-regel](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). Förutsättningarna är följande:
+Om du föredrar att konfigurera routningen själv via Cloud Manager Pipeline följer du stegen nedan. Cirkulationskonfigurationen görs med en [originSelector CDN-regel](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). Förutsättningarna är följande:
 
 * Bestäm vilken domän som ska dirigeras.
 * Bestäm vilka banor som ska dirigeras.
@@ -92,7 +92,7 @@ Om du föredrar att konfigurera routningen själv via Cloud Manager Pipeline fö
 
 För att kunna distribuera regeln måste du:
 
-* Skapa en [konfigurationspipeline](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/config-pipeline).
+* Skapa en [konfigurationspipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline).
 * Genomför konfigurationsfilen `cdn.yaml` i din databas.
 * Kör konfigurationsflödet.
 
@@ -800,7 +800,6 @@ I följande tabell visas möjligheter som kan förbättra den agentiska webbuppl
 | Möjligheter | Typ | Identifiera automatiskt | Föreslå automatiskt | Automatisk optimering |
 |---------|----------|----------|----------|----------|
 | Återskapa innehållets synlighet | Teknisk GEO | Identifierar sidor där kritiskt innehåll är dolt för AI-agenter. Visar URL:er som påverkas och förväntat innehåll som kan återställas. | Markerar innehåll som kan göras tillgängligt för AI-agenter och rekommenderar att förrendering aktiveras för dessa sidor. | Skapar en helåtergiven, AI-vänlig HTML-ögonblicksbild av den autentiska trafik som återställer det tidigare dolda innehållet. |
-| Optimera rubriker för budskap om livslångt lärande | Optimering av innehåll | Söker igenom rubriker för att upptäcka tomma, duplicerade, saknade eller tvetydiga rubriker som kan minska maskinläsbarheten. | Föreslår en renare rubrikhierarki och förbättrade etiketter och visar en förhandsvisning av den uppdaterade strukturen för varje sida. | Infogar den förbättrade rubrikstrukturen för AI-agenter och bevarar den visuella designen samtidigt som sidan blir mer läsbar för LLM-program. |
 | Lägg till LLM-vänliga sammanfattningar | Optimering av innehåll | Identifierar långa eller komplexa sidor som saknar koncisa sammanfattningar på sid- eller avsnittsnivå, vilket gör dem svårare för AI att snabbt skanna och förstå. | Rekommenderar korta, AI-genererade sammanfattningar på sid- och avsnittsnivå som hämtar nyckelinnehåll. | Infogar sammanfattningarna i de relevanta HTML-avsnitten, vilket förbättrar hur modellerna tolkar och beskriver sidinnehållet. |
 | Lägg till relevanta frågor | Optimering av innehåll | Identifierar mellanrum i det befintliga sidinnehållet som skulle kunna dra nytta av vanliga frågor. | Föreslår AI-genererat FAQ-innehåll som är anpassat till användaravsikten och befintliga ämnen. | Inför innehåll med vanliga frågor i HTML, vilket gör sidorna mer identifierbara och relevanta i AI-drivna svar. |
 | Förenkla komplext innehåll | Optimering av innehåll | Flaggar sidor med komplex text som kan förhindra AI-förståelsen. | Innehåller AI-genererade förenklade versioner av komplex text samtidigt som den ursprungliga innebörden bevaras. | Skriver om komplexa avsnitt på sidan, vilket förbättrar AI-läsbarheten. |
@@ -809,7 +808,7 @@ I följande tabell visas möjligheter som kan förbättra den agentiska webbuppl
 
 [Adobe LLM Optimizer: Kan din webbsida redigeras?](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome-tillägget visar hur mycket av webbsidans innehåll som LLM kan komma åt och vad som döljs. Det är utformat som ett kostnadsfritt, fristående diagnosverktyg och kräver ingen produktlicens eller konfiguration.
 
-Med ett enda klick kan du utvärdera vilken dator som kan läsas på en webbplats. Du kan visa en jämförelse sida vid sida av vad AI-agenter ser jämfört med vad människor ser och uppskatta hur mycket innehåll som kan återställas med hjälp av LLM Optimizer. Ser du [Kan AI läsa din webbplats?](https://business.adobe.com/se/blog/introducing-the-llm-optimizer-chrome-extension) sida för mer information.
+Med ett enda klick kan du utvärdera vilken dator som kan läsas på en webbplats. Du kan visa en jämförelse sida vid sida av vad AI-agenter ser jämfört med vad människor ser och uppskatta hur mycket innehåll som kan återställas med hjälp av LLM Optimizer. Ser du [Kan AI läsa din webbplats?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) sida för mer information.
 
 ## Detaljerade affärsmöjligheter
 
@@ -822,10 +821,6 @@ Detta garanterar att sidan först är helt synlig för AI-agenter. Ytterligare f
 
 >[!IMPORTANT]
 >Denna förrenderingsfunktion gäller automatiskt alla möjligheter som presenteras nedan när den används med Optimera på Edge för att säkerställa att sidan är helt synlig för AI-agenter.
-
-### Optimera rubriker för budskap om livslångt lärande
-
-Denna möjlighet identifierar sidor där rubrikstrukturen gör det svårt för AI-agenter att förstå sidan på grund av tomma, duplicerade, saknade eller tvetydiga rubriker. För varje berörd sida kommer affärsmöjligheten att visa de underoptimala rubrikerna och rekommenderar en tydligare hierarki. När de används med Optimera i Edge används de förbättrade rubrikerna i HTML för agell trafik. Detta gör att datorn blir läsbar samtidigt som den mänskliga motstående layouten förblir densamma.
 
 ### Lägg till LLM-vänliga sammanfattningar
 
@@ -843,7 +838,7 @@ Här hittar du sidor med långa, komplexa stycken som kan minska förståelsen a
 
 För varje affärsmöjlighet kan du förhandsgranska, redigera, driftsätta, visa direkt och återställa optimeringarna.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477988/?captions=swe&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### Förhandsgranska
 
