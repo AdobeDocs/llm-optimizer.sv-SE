@@ -36,7 +36,7 @@ Om du behöver hjälp med ovanstående steg kontaktar du ditt Adobe-kontoteam el
 
 **Självbetjäningsroutning via Cloud Manager Pipeline**
 
-Om du föredrar att konfigurera routningen själv via Cloud Manager Pipeline följer du stegen nedan. Cirkulationskonfigurationen görs med en [originSelector CDN-regel](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). Förutsättningarna är följande:
+Om du föredrar att konfigurera routningen själv via Cloud Manager Pipeline följer du stegen nedan. Cirkulationskonfigurationen görs med en [originSelector CDN-regel](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). Förutsättningarna är följande:
 
 * Bestäm vilken domän som ska dirigeras.
 * Bestäm vilka banor som ska dirigeras.
@@ -44,7 +44,7 @@ Om du föredrar att konfigurera routningen själv via Cloud Manager Pipeline fö
 
 För att kunna distribuera regeln måste du:
 
-* Skapa en [konfigurationspipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline).
+* Skapa en [konfigurationspipeline](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/config-pipeline).
 * Genomför konfigurationsfilen `cdn.yaml` i din databas.
 * Kör konfigurationsflödet.
 
