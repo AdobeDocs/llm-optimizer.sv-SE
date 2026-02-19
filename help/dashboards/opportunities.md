@@ -2,9 +2,9 @@
 title: Optimeringsmöjligheter
 description: Lär dig hur du använder kontrollpanelen för affärsmöjligheter för att automatiskt upptäcka hur webbplatsen kan förbättras för att öka varumärkets synlighet.
 feature: Opportunities
-source-git-commit: 33196139fef1cebd47b15aa964df2bac366ea12a
+source-git-commit: 3204d46106b4ae1645df19138cabd55bf153eb42
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,7 @@ Nedan finns en tabell över de affärsmöjligheter som stöds:
 | Rekommendera strukturerat innehåll (frågor och svar) | Innehåll (på plats) | Identifierar meddelanden med stor popularitet utan matchande FAQ-poster. Visar relaterade uppmaningar, kategorier och URL:er som påverkas. | Lägg till schemablock med vanliga frågor och svar som matchar vanliga frågor. |
 | Identifiera blockerad kontorstrafik | Teknisk GEO | Analyserar CDN-loggar för blockerade begäranden från kända AI-agenter (t.ex. GPTBot, PerplexityBot). Rapporterar URL:er och agenter som påverkas. | Uppdatera robots.txt eller serverkonfigurationer för att tillåta åtkomst för AI-crawler där det är lämpligt. |
 | Identifiera 404s/403s/5xx-problem | Teknisk GEO | Övervakar CDN-loggar för felsvar. Rapporteringsfrekvens, påverkade URL:er och beräknade antal förlorade träffar. | Åtgärda brutna länkar, uppdatera behörigheter och åtgärda problem på serversidan så att nyckelinnehållet returnerar 200 svar. |
+| Förenkla komplext innehåll | Innehåll (på plats) | Identifierar långa, komplexa stycken som överskrider läsbarhetströskeln, vilket kan minska AI-förståelsen. | Återge sidorna i förväg så att mer innehåll är tillgängligt för AI-agenter utan att JavaScript exekveras. |
 | Återskapa innehållets synlighet (tidig åtkomst) | Teknisk GEO | Flaggar sidor där kritiskt innehåll döljs för AI-agenter. Visar URL:er som påverkas och förväntat innehåll som kan återställas. | Återge sidorna i förväg så att mer innehåll är tillgängligt för AI-agenter utan att JavaScript exekveras. |
 
 ## Automatisk optimering {#auto-optimization}
