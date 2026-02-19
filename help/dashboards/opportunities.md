@@ -2,7 +2,7 @@
 title: Optimeringsmöjligheter
 description: Lär dig hur du använder kontrollpanelen för affärsmöjligheter för att automatiskt upptäcka hur webbplatsen kan förbättras för att öka varumärkets synlighet.
 feature: Opportunities
-source-git-commit: 1f665bd14349c15d92f8274742606abcf9b02000
+source-git-commit: 82830e66d43ddd9741617cdf6daab63cd259554b
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Nedan finns en tabell över de affärsmöjligheter som stöds:
 
 ## Automatisk optimering {#auto-optimization}
 
-Automatisk optimering gör det möjligt att med ett enda klick driftsätta rekommenderade optimeringar, vilket minskar den manuella ansträngningen och den tid det tar att utvärdera. Optimeringar kan användas antingen i innehållskällan eller vid CDN-kanten. Edge-baserad automatisk optimering är för närvarande tillgänglig i tidig åtkomst för utvalda möjligheter. Mer information finns på sidan [Optimera på Edge](/help/dashboards/optimize-at-edge.md).
+Automatisk optimering gör det möjligt att med ett enda klick driftsätta rekommenderade optimeringar, vilket minskar den manuella ansträngningen och den tid det tar att utvärdera. Optimeringar kan användas antingen i innehållskällan eller vid CDN-kanten. Edge-baserad automatisk optimering är för närvarande tillgänglig i tidig åtkomst för utvalda möjligheter. Mer information finns på sidan [Optimera på Edge](/help/dashboards/optimize-at-edge/overview.md).
 
 <!--### Recover Content Visibility Opportunity {#recover-contet}
 

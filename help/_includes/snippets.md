@@ -1,99 +1,11 @@
 ---
-source-git-commit: beae935e7a34f5bccbe21578fa9a928912958710
+source-git-commit: 9230e525340bb951fcd9f2ae1f88bad557d5b7d7
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 1%
+source-wordcount: '153'
+ht-degree: 0%
 
 ---
 # Fragment
-
-## Verifiera installationen - Adobe hanterat CDN {#verify-setup-adobe-aem-cs-cdn}
-
-**Verifiera installationen**
-
-När installationen är klar kontrollerar du att både trafik dirigeras till Edge Optimize och att mänsklig trafik inte påverkas.
-
-**1. Testa starttrafik (bör optimeras)**
-
-Simulera en AI-robotbegäran med en agentisk användaragent:
-
-```
-curl -svo /dev/null https://www.example.com/page.html \
-  --header "user-agent: chatgpt-user"
-```
-
-Ett svar innehåller rubriken `x-edgeoptimize-request-id` som bekräftar att begäran har vidarebefordrats via Edge Optimize:
-
-```
-< HTTP/2 200
-< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
-```
-
-**2. Testa mänsklig trafik (bör INTE påverkas)**
-
-Simulera en vanlig webbläsarbegäran:
-
-```
-curl -svo /dev/null https://www.example.com/page.html \
-  --header "user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
-```
-
-Svaret ska **inte** innehålla rubriken `x-edgeoptimize-request-id`. Sidinnehållet och svarstiden ska vara identiska med innan Optimera aktiveras på Edge.
-
-**3. Så här skiljer du mellan de två scenarierna**
-
-| Sidhuvud | Punkttrafik (optimerad) | Humantrafik (ej påverkad) |
-|---|---|---|
-| `x-edgeoptimize-request-id` | Presentera - innehåller ett unikt begärande-ID | Frånvarande |
-| `x-edgeoptimize-fo` | Finns bara om redundans inträffade (värde: `1`) | Frånvarande |
-
-Status för trafikroutningen kan också kontrolleras i LLM Optimizer-gränssnittet. Navigera till **Kundkonfiguration** och välj fliken **CDN-konfiguration** .
-
-![AI-trafikroutningsstatus med routning aktiverat](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
-
-## Verifiera installationen - BYOCDN {#verify-setup-byocdn}
-
-**Verifiera installationen**
-
-När installationen är klar kontrollerar du att både trafik dirigeras till Edge Optimize och att mänsklig trafik inte påverkas.
-
-**1. Testa starttrafik (bör optimeras)**
-
-Simulera en AI-robotbegäran med en agentisk användaragent:
-
-```
-curl -svo /dev/null https://www.example.com/page.html \
-  --header "user-agent: chatgpt-user"
-```
-
-Ett svar innehåller rubriken `x-edgeoptimize-request-id` som bekräftar att begäran har vidarebefordrats via Edge Optimize:
-
-```
-< HTTP/2 200
-< x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
-```
-
-**2. Testa mänsklig trafik (bör INTE påverkas)**
-
-Simulera en vanlig webbläsarbegäran:
-
-```
-curl -svo /dev/null https://www.example.com/page.html \
-  --header "user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
-```
-
-Svaret ska **inte** innehålla rubriken `x-edgeoptimize-request-id`. Sidinnehållet och svarstiden ska vara identiska med innan Optimera aktiveras på Edge.
-
-**3. Så här skiljer du mellan de två scenarierna**
-
-| Sidhuvud | Punkttrafik (optimerad) | Humantrafik (ej påverkad) |
-|---|---|---|
-| `x-edgeoptimize-request-id` | Presentera - innehåller ett unikt begärande-ID | Frånvarande |
-| `x-edgeoptimize-fo` | Finns bara om redundans inträffade (värde: `1`) | Frånvarande |
-
-Status för trafikroutningen kan också kontrolleras i LLM Optimizer-gränssnittet. Navigera till **Kundkonfiguration** och välj fliken **CDN-konfiguration** .
-
-![AI-trafikroutningsstatus med routning aktiverat](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 ## Hämtningssteg för API-nyckel {#retrieve-byocdn-api-key}
 
@@ -118,4 +30,4 @@ Om du behöver hjälp med ovanstående steg kontaktar du ditt Adobe-kontoteam el
 
 ## Återgå till översikt {#return-to-overview}
 
-Om du vill veta mer om Optimera på Edge, inklusive tillgängliga möjligheter, automatiska optimeringsarbetsflöden och vanliga frågor och svar, går du tillbaka till [Optimera på Edge-översikt](/help/dashboards/optimize-at-edge.md).
+Om du vill veta mer om Optimera på Edge, inklusive tillgängliga möjligheter, automatiska optimeringsarbetsflöden och vanliga frågor och svar, går du tillbaka till [Optimera på Edge-översikt](/help/dashboards/optimize-at-edge/overview.md).
