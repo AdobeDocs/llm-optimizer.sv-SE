@@ -38,7 +38,7 @@ AEM Cloud-kunder (Cloud Service, Managed Services, Edge Delivery Service) kan v�
 Det finns en del funktioner som inte finns i den kostnadsfria versionen:
 
 * Testversionen är begränsad till en domän. Du kan inte ändra domänen som du angav när du har slutfört installationen.
-* Möjligheten att driftsätta optimeringar finns i Tidig åtkomst. Läs mer på [Optimera på Edge Frågor och svar](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions).
+* Möjligheten att driftsätta optimeringar finns i Tidig åtkomst. Läs mer på [Optimera på Edge Frågor och svar](https://experienceleague.adobe.com/sv/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions).
 
 Se avsnittet nedan för mer ingående information om hur du aktiverar den kostnadsfria testversionen och registrerar din domän.
 
