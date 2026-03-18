@@ -2,9 +2,9 @@
 user-guide-title: LLM Optimizer
 breadcrumb-title: LLM Optimizer
 user-guide-description: Lyft varumärket med Adobe LLM Optimizer. Spåra omnämnanden, identifiera insikter och dominera AI-driven sökning. Ta kontroll över din synlighet - börja optimera nu!
-source-git-commit: 547c38986da609a6cd42cb94402c811d6eb1f939
+source-git-commit: b590cd14ba7d64e56a6c972fd6090e2df9de58f6
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,14 @@ ht-degree: 0%
    + [Möjligheter](/help/dashboards/opportunities.md)
    + [Kundkonfiguration](/help/dashboards/customer-configuration.md)
    + [Collaboration](/help/dashboards/collaboration.md)
++ Vidarebefordran av BYOCDN-logg{#log-forwarding}
+   + [Ökning](/help/overview/log-forwarding/log-forwarding-overview.md)
+   + [Akamai](/help/overview/log-forwarding/akamai.md)
+   + [Cloudflare](/help/overview/log-forwarding/cloudflare.md)
+   + [CloudFront](/help/overview/log-forwarding/cloudfront.md)
+   + [Snabbt](/help/overview/log-forwarding/fastly.md)
+   + [Imperva](/help/overview/log-forwarding/imperva.md)
+   + [Annat (manuell överföring)](/help/overview/log-forwarding/other.md)
 + Ytterligare resurser{#resources}
    + Optimera på Edge{#optimize-at-edge}
       + [Ökning](/help/dashboards/optimize-at-edge/overview.md)

@@ -2,9 +2,9 @@
 title: Snabbstart
 description: Kom igång med Adobe LLM Optimizer - ta in ditt varumärke i datorn, lås upp insikter om AI-synlighet och utforska instrumentpaneler för att förbättra sökresultatet.
 feature: Quickstart, Onboarding
-source-git-commit: 82830e66d43ddd9741617cdf6daab63cd259554b
+source-git-commit: a1ba7684ccef9baf3452cc158fc0d6a12aa7adb8
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1169'
 ht-degree: 0%
 
 ---
@@ -38,13 +38,13 @@ AEM Cloud-kunder (Cloud Service, Managed Services, Edge Delivery Service) kan v�
 Det finns en del funktioner som inte finns i den kostnadsfria versionen:
 
 * Testversionen är begränsad till en domän. Du kan inte ändra domänen som du angav när du har slutfört installationen.
-* Möjligheten att driftsätta optimeringar finns i Tidig åtkomst. Läs mer på [Optimera på Edge Frågor och svar](https://experienceleague.adobe.com/sv/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions).
+* Möjligheten att driftsätta optimeringar finns i Tidig åtkomst. Läs mer på [Optimera på Edge Frågor och svar](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions).
 
 Se avsnittet nedan för mer ingående information om hur du aktiverar den kostnadsfria testversionen och registrerar din domän.
 
 ### AEM Cloud-kunder
 
-Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
+Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
 
 >[!NOTE]
 >Nyligen tillagda uppmaningar visas inte på kontrollpanelen [Varumärkesnärvaro](/help/dashboards/brand-presence.md) förrän bearbetningen är klar. AEM Cloud-kunder kan använda den kostnadsfria testversionen av LLM Optimizer. Användning av fler än 200 uppmaningar kräver ett separat licensavtal. Tillgång ges i befintligt skick och i befintligt skick och kan ändras, begränsas eller tas bort av Adobe när som helst. Kontakta din kontorepresentant om du vill ha mer information.
@@ -103,6 +103,9 @@ Om ingen CDN-leverantör har lagts till i förväg (enligt beskrivningen ovan) u
 
 * [Myndighetstrafik](/help/dashboards/agentic-traffic.md#cdn-setup)
 * [Hänvisningstrafik](/help/dashboards/referral-traffic.md#setup#setup)
+
+>[!NOTE]
+>Mer information om vidarebefordran av loggar när du använder ett kundhanterat CDN (BYOCDN) finns i [Översikt över vidarebefordran av BYOCDN-loggar](/help/overview/log-forwarding/log-forwarding-overview.md)
 
 ## Steg 5: Utforska instrumentpaneler och vidta åtgärder
 

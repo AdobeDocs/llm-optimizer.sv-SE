@@ -2,9 +2,9 @@
 title: Myndighetstrafik
 description: Lär dig hur du använder kontrollpanelen för AI-trafik för att se hur AI-agenter interagerar med din webbplats.
 feature: Agentic Traffic
-source-git-commit: 26926f3ed4df3a408b74b0208f0d1eb064b97d28
+source-git-commit: a1ba7684ccef9baf3452cc158fc0d6a12aa7adb8
 workflow-type: tm+mt
-source-wordcount: '1307'
+source-wordcount: '1333'
 ht-degree: 0%
 
 ---
@@ -44,6 +44,9 @@ I fönstret **Onboard CDN Provider**:
 2. Klicka på **Anonboard** om du vill aktivera vidarebefordran av loggar.
 
 Om du väljer **Annan** måste du kontakta llmo-now@adobe.com för att få hjälp.
+
+>[!NOTE]
+>Mer information om vidarebefordran av loggar när du använder ett kundhanterat CDN (BYOCDN) finns i [Översikt över vidarebefordran av BYOCDN-loggar](/help/overview/log-forwarding/log-forwarding-overview.md)
 
 När loggarna har aktiverats hämtas de in och kontrollpanelen fylls i med mätvärden som total agentinteraktion, framgångsgrad, träffar per marknad, användaragentanalys och URL-nivåprestanda.
 
@@ -96,7 +99,7 @@ Använd diagrammet&quot;Agentic Traffic Trends&quot; för att följa upp antalet
 
 ## Övre och nedre flyttningar {#top-bottom-movers}
 
-I vyn Top and Bottom Movers (Översta och understa flytten) markeras URL:er med de största vecko-över-vecka-förändringarna i autentisk trafik - besök eller träffar från AI-system som använder ditt innehåll. **De översta topparna** visar sidor som får synlighet eller engagemang, medan **De nedersta topparna** visar URL:erna med de största minskningarna. På så sätt kan ni snabbt identifiera vilket innehåll som trasar uppåt, vilket kan behöva åtgärdas och var de AI-drivna identifieringsmönstren förskjuts.
+I vyn Top and Bottom Movers (Översta och understa flytten) markeras URL:er med de största vecko-över-vecka-förändringarna i autentisk trafik - besök eller träffar från AI-system som använder ditt innehåll. **De översta topparna** visar sidor som får synlighet eller engagemang, medan **De nedersta övertoningarna** visar URL:erna med de största minskningarna. På så sätt kan ni snabbt identifiera vilket innehåll som trasar uppåt, vilket kan behöva åtgärdas och var de AI-drivna identifieringsmönstren förskjuts.
 
 ![Övre och nedre flyttningar](/help/dashboards/assets/movers.png)
 
