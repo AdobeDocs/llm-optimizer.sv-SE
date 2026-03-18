@@ -53,7 +53,7 @@ På [Imperva-konsolen](https://my.imperva.com):
    | Fält | Beskrivning | Anteckning |
    |---|---|---|
    | **Anslutningsnamn** | Ett beskrivande namn för anslutningen (till exempel Production S3-loggar). Du kan byta namn på standardinställningen. | |
-   | **Sökväg** | Platsen för mappen där loggfilerna ska lagras. Använd formatet `<Amazon S3 bucket name>/<log folder>`. Till exempel: `MyBucket/MyImpervaLogFolder`. | `Amazon S3 bucket name` är **Bucket Name** från LLM Optimizer konfigurationssida. ![Bucket Name](/help/overview/assets/log-forwarding/imperva/imperva-bucket-name.png) Loggmappen är **Path** från LLM Optimizer konfigurationssida. ![Sökväg ](/help/overview/assets/log-forwarding/imperva/imperva-path.png) |
+   | **Sökväg** | Platsen för mappen där loggfilerna ska lagras. Använd formatet `<Amazon S3 bucket name>/<log folder>`. Till exempel: `MyBucket/MyImpervaLogFolder`. | `Amazon S3 bucket name` är **Bucket Name** från LLM Optimizer konfigurationssida. ![Bucket Name](/help/overview/assets/log-forwarding/imperva/imperva-bucket-name.png) Loggmappen är **Path** från LLM Optimizer konfigurationssida. ![Sökväg &#x200B;](/help/overview/assets/log-forwarding/imperva/imperva-path.png) |
 
 5. Klicka på **Testa anslutningen**. Imperva kör ett fullständigt test där en testfil (inga verkliga data) skickas till den angivna mappen och sedan tas bort när överföringen är klar.
 

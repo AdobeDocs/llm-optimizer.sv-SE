@@ -64,7 +64,7 @@ Om du vill aktivera standardloggning går du till [AWS Management Console](https
 
    - **Fältval** - välj loggfilsfälten. Se de obligatoriska fälten på LLM Optimizer CDN-konfigurationssidan.
 
-     ![Markering av molnfältet ](/help/overview/assets/log-forwarding/cloudfront/cloudfront-field-selection.png)
+     ![Markering av molnfältet &#x200B;](/help/overview/assets/log-forwarding/cloudfront/cloudfront-field-selection.png)
 
    - **Partitionering** - kopiera **sökvägssuffixet** från LLM Optimizer konfigurationssida.
 

@@ -49,10 +49,10 @@ Om du vill skapa en S3-slutpunkt går du till **snabbkontrollpanelen**:
 | **Placement** | Standard |
 | **Loggformat** | Använd loggformatssträngen som visas i avsnittet **Loggformatsträng** nedan. |
 | **Tidsstämpelformat** | `%Y-%m-%dT%H:%M:%S.000` |
-| **Bucket-namn** | Kopiera **Bucket-namnet** från LLM Optimizer konfigurationssida. ![Bucket-namn ](/help/overview/assets/log-forwarding/fastly/fastly-bucket-name.png) |
-| **Domän** | Kopiera **domännamnet** från LLM Optimizer konfigurationssida. ![Domännamn ](/help/overview/assets/log-forwarding/fastly/fastly-domain-name.png) |
+| **Bucket-namn** | Kopiera **Bucket-namnet** från LLM Optimizer konfigurationssida. ![Bucket-namn &#x200B;](/help/overview/assets/log-forwarding/fastly/fastly-bucket-name.png) |
+| **Domän** | Kopiera **domännamnet** från LLM Optimizer konfigurationssida. ![Domännamn &#x200B;](/help/overview/assets/log-forwarding/fastly/fastly-domain-name.png) |
 | **Åtkomstmetod** | **Användarautentiseringsuppgifter** |
-| **Användarautentiseringsuppgifter** | Kopiera **Access Key** och **Secret Key** från konfigurationssidan för LLM Optimizer. ![Åtkomstnycklar ](/help/overview/assets/log-forwarding/common/access-keys.png) |
+| **Användarautentiseringsuppgifter** | Kopiera **Access Key** och **Secret Key** från konfigurationssidan för LLM Optimizer. ![Åtkomstnycklar &#x200B;](/help/overview/assets/log-forwarding/common/access-keys.png) |
 | **Period** | `300` |
 
 **Loggformatsträng:**
@@ -69,7 +69,7 @@ När du har slutfört stegen ovan klickar du på **Avancerade alternativ** och a
 
 | Fält | Beskrivning |
 | --- | --- |
-| **Sökväg** | Kopiera **Sökväg** från LLM Optimizer konfigurationssida. ![Sökväg ](/help/overview/assets/log-forwarding/fastly/fastly-path.png) |
+| **Sökväg** | Kopiera **Sökväg** från LLM Optimizer konfigurationssida. ![Sökväg &#x200B;](/help/overview/assets/log-forwarding/fastly/fastly-path.png) |
 | **Välj ett loggradformat** | Tom |
 | **Komprimering** | Gzip |
 | **Redundansnivå** | Standard |
