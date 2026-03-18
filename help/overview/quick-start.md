@@ -38,13 +38,13 @@ AEM Cloud-kunder (Cloud Service, Managed Services, Edge Delivery Service) kan v�
 Det finns en del funktioner som inte finns i den kostnadsfria versionen:
 
 * Testversionen är begränsad till en domän. Du kan inte ändra domänen som du angav när du har slutfört installationen.
-* Möjligheten att driftsätta optimeringar finns i Tidig åtkomst. Läs mer på [Optimera på Edge Frågor och svar](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions).
+* Möjligheten att driftsätta optimeringar finns i Tidig åtkomst. Läs mer på [Optimera på Edge Frågor och svar](https://experienceleague.adobe.com/sv/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions).
 
 Se avsnittet nedan för mer ingående information om hur du aktiverar den kostnadsfria testversionen och registrerar din domän.
 
 ### AEM Cloud-kunder
 
-Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
+Om du är en AEM Cloud-kund kan du testa LLM Optimizer med produktanmälningskortet i [Experience Hub](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/experience-hub/experience-hub).
 
 >[!NOTE]
 >Nyligen tillagda uppmaningar visas inte på kontrollpanelen [Varumärkesnärvaro](/help/dashboards/brand-presence.md) förrän bearbetningen är klar. AEM Cloud-kunder kan använda den kostnadsfria testversionen av LLM Optimizer. Användning av fler än 200 uppmaningar kräver ett separat licensavtal. Tillgång ges i befintligt skick och i befintligt skick och kan ändras, begränsas eller tas bort av Adobe när som helst. Kontakta din kontorepresentant om du vill ha mer information.
