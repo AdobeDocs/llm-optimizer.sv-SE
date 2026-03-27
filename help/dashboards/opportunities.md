@@ -2,7 +2,7 @@
 title: Optimeringsmöjligheter
 description: Lär dig hur du använder kontrollpanelen för affärsmöjligheter för att automatiskt upptäcka hur webbplatsen kan förbättras för att öka varumärkets synlighet.
 feature: Opportunities
-source-git-commit: 3204d46106b4ae1645df19138cabd55bf153eb42
+source-git-commit: f62148a9073e79d63e6ae19f0585aa87c16bcd3e
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 0%
@@ -41,13 +41,17 @@ Nedan finns en tabell över de affärsmöjligheter som stöds:
 
 Automatisk optimering gör det möjligt att med ett enda klick driftsätta rekommenderade optimeringar, vilket minskar den manuella ansträngningen och den tid det tar att utvärdera. Optimeringar kan användas antingen i innehållskällan eller vid CDN-kanten. Edge-baserad automatisk optimering är för närvarande tillgänglig i tidig åtkomst för utvalda möjligheter. Mer information finns på sidan [Optimera på Edge](/help/dashboards/optimize-at-edge/overview.md).
 
-<!--### Recover Content Visibility Opportunity {#recover-contet}
+<!--
+### Recover Content Visibility Opportunity {#recover-contet}
 
-As stated above, the content visibility opportunity, flags pages where key content is lost for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, helping you pinpoint visibility gaps. It's also supported by an edge-based pre-rendering capability that can serve more HTML content to agentic traffic without requiring Content Management System (CMS) changes. This functionality is currently in Early Access and requires setup from the LLM Optimizer team. Please contact `llmo-at-edge@adobe.com` to activate the content visibility opportunity.-->
+As stated above, the content visibility opportunity, flags pages where key content is lost for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, helping you pinpoint visibility gaps. It's also supported by an edge-based pre-rendering capability that can serve more HTML content to agentic traffic without requiring Content Management System (CMS) changes. This functionality is currently in Early Access and requires setup from the LLM Optimizer team. Please contact `llmo-at-edge@adobe.com` to activate the content visibility opportunity.
+-->
 
 ### Ytterligare verktyg
 
 [LLM-synlighetskontrollen](https://chromewebstore.google.com/detail/is-your-webpage-citable/jbjngahjjdgonbeinjlepfamjdmdcbcc) är ett Chrome-tillägg som gör att du kan se exakt hur mycket av webbsidans innehåll som LLM kan komma åt och vad som döljs. Det är utformat som ett kostnadsfritt, fristående diagnosverktyg och kräver ingen produktlicens eller konfiguration. Med ett enda klick kan man utvärdera vilken dator som är läsbar på en webbplats, visa en jämförelse sida vid sida av vad AI-agenter ser jämfört med vad som är fallet för den mänskliga användaren. Beräknar också hur mycket innehåll som kan återskapas med LLM Optimizer.
 
-<!--| Detect Missing Hreflang | Content (Onsite)| Flags pages missing hreflang attributes. Provides affected URLs and expected coverage by language/region.| Implement hreflang tags to indicate correct localized versions. |
-| Detect Missing Canonicals | Content (Onsite) | Scans for pages without canonical tags or with conflicting tags. Lists affected URLs and duplicates. | Add canonical tags pointing to the preferred version of each page. Ensure consistent usage across variants. |-->
+<!--
+| Detect Missing Hreflang | Content (Onsite)| Flags pages missing hreflang attributes. Provides affected URLs and expected coverage by language/region.| Implement hreflang tags to indicate correct localized versions. |
+| Detect Missing Canonicals | Content (Onsite) | Scans for pages without canonical tags or with conflicting tags. Lists affected URLs and duplicates. | Add canonical tags pointing to the preferred version of each page. Ensure consistent usage across variants. |
+-->

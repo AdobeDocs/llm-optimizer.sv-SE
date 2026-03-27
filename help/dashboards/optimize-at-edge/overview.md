@@ -2,7 +2,7 @@
 title: Optimera på Edge
 description: Lär dig leverera optimeringar i LLM Optimizer i CDN-kanten utan att behöva göra några redigeringsändringar.
 feature: Opportunities
-source-git-commit: 547c38986da609a6cd42cb94402c811d6eb1f939
+source-git-commit: d0134d1b7f8e1e50c7edf75e427d759389a0d18b
 workflow-type: tm+mt
 source-wordcount: '2181'
 ht-degree: 0%
@@ -15,7 +15,8 @@ ht-degree: 0%
 På den här sidan finns en detaljerad översikt över hur du kan leverera optimeringar vid CDN-kanten utan att behöva göra några redigeringsändringar. Det handlar om introduktionsprocessen, tillgängliga optimeringsmöjligheter och hur ni kan optimera automatiskt vid behov.
 
 >[!NOTE]
->Den här funktionen är för närvarande i tidig åtkomst. Du kan läsa mer om Tidig åtkomst-program [här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs).
+>
+>Den här funktionen är för närvarande i tidig åtkomst. Du kan läsa mer om Tidig åtkomst-program [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs).
 
 ## Vad är Optimize på Edge?
 
@@ -47,6 +48,7 @@ Krav för att kunna utnyttja Optimera på Edge:
 * Slutför vidarebefordringsprocessen för CDN-loggarna.
 
 Krav för IT-avdelningen:
+
 * Lägg till `*AdobeEdgeOptimize/1.0*` användaragent i Tillåtelselista i webbplatsens robots.txt-fil eller bot-trafik-hanteringsregler.
 * Kontrollera att sidorna inte blockeras på domän- eller CDN-nivå.
 * Lägg till Optimize på Edge routningsregler i CDN.
@@ -65,6 +67,7 @@ Om du vill vägleda installationsprocessen väljer du din CDN-leverantör nedan 
 | CloudFront (BYOCDN) | Ta med din egen CDN | [Visa installationsguiden](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
 
 >[!NOTE]
+>
 >Om din CDN-leverantör inte finns med i listan ovan, eller om du inte hittar din domän eller e-postadress i LLM Optimizer-gränssnittet, ber vi dig kontakta `llmo-at-edge@adobe.com` för att få hjälp med introduktionen. När konfigurationerna är klara kan du driftsätta förslag för Optimera på Edge i LLM Optimizer.
 
 Varje installationsguide för CDN ovan innehåller detaljerade verifieringssteg i slutet för att bekräfta att agell trafik dirigeras korrekt och att mänsklig trafik inte påverkas.
@@ -84,7 +87,7 @@ I följande tabell visas möjligheter som kan förbättra den agentiska webbuppl
 
 [Adobe LLM Optimizer: Kan din webbsida redigeras?](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome-tillägget visar hur mycket av webbsidans innehåll som LLM kan komma åt och vad som döljs. Det är utformat som ett kostnadsfritt, fristående diagnosverktyg och kräver ingen produktlicens eller konfiguration.
 
-Med ett enda klick kan du utvärdera vilken dator som kan läsas på en webbplats. Du kan visa en jämförelse sida vid sida av vad AI-agenter ser jämfört med vad människor ser och uppskatta hur mycket innehåll som kan återställas med hjälp av LLM Optimizer. Ser du [Kan AI läsa din webbplats?](https://business.adobe.com/se/blog/introducing-the-llm-optimizer-chrome-extension) sida för mer information.
+Med ett enda klick kan du utvärdera vilken dator som kan läsas på en webbplats. Du kan visa en jämförelse sida vid sida av vad AI-agenter ser jämfört med vad människor ser och uppskatta hur mycket innehåll som kan återställas med hjälp av LLM Optimizer. Ser du [Kan AI läsa din webbplats?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) sida för mer information.
 
 ## Detaljerade affärsmöjligheter
 
@@ -114,7 +117,7 @@ Här hittar du sidor med långa, komplexa stycken som kan minska förståelsen a
 
 För varje affärsmöjlighet kan du förhandsgranska, redigera, driftsätta, visa direkt och återställa optimeringarna.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477988/?captions=swe&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### Förhandsgranskning
 
@@ -152,13 +155,15 @@ F. Vilken typ av LLM riktar du dig till med Optimize på Edge?
 
 Listan med användaragenter som ska användas som mål definieras av dig under introduktionsprocessen.
 
-<!--Q. What does "Edge" in Optimize at Edge mean?
+<!--
+Q. What does "Edge" in Optimize at Edge mean?
 
 In our context, "Edge" means that the optimization is applied at the CDN layer and not inside your CMS.
 
 Q. Why does this optimization require a CDN?
 
-The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.-->
+The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.
+-->
 
 F. Vad händer om jag inte har börjat optimera på Edge än?
 

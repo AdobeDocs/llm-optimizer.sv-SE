@@ -2,7 +2,7 @@
 title: Översikt över instrumentpaneler
 description: Det här är artikelöversikten.
 feature: Onboarding
-source-git-commit: ae37ef578f279eae6ea51fd8aed5c6b91c8e1088
+source-git-commit: 945537c3139e5a2038858e6121172e1a1a10ddf4
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 0%
@@ -16,7 +16,8 @@ Välkommen till översikten över kontrollpanelerna. Kontrollpanelerna i LLM-Opt
 
 Bland huvudvyerna finns Översikt, Varumärkesnärvaro, Agentinsk trafik och Referenstrafik, URL-inspektör, Affärsmöjligheter, Collaboration och Kundkonfiguration.
 
-<!-- CARDS
+<!--
+CARDS
 
 * ./brand-presence.md
   {title= Brand presence dashboard}

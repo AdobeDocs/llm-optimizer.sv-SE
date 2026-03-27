@@ -2,9 +2,9 @@
 title: Hänvisningstrafik
 description: Lär dig hur du använder kontrollpanelen för hänvisningstrafik för att se hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar.
 feature: Referral Traffic
-source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
+source-git-commit: d0134d1b7f8e1e50c7edf75e427d759389a0d18b
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,11 @@ Vid den första inloggningen kan kontrollpanelen för hänvisningstrafik visas t
 
 ![Inställningar för hänskjutning](/help/dashboards/assets/referral-setup1.png)
 
-<!--- 1. Select your Source (either CDN logs or AEM Operational Telemetry).
+<!--
+1. Select your Source (either CDN logs or AEM Operational Telemetry).
 2. Enter a primary contact email.
-3. Click **Request activation** to enable data ingestion. Hiding this until confirmation from PM-->
+3. Click **Request activation** to enable data ingestion. Hiding this until confirmation from PM
+-->
 
 När kontrollpanelen har aktiverats fylls den i med referensvärden för trafik.
 
@@ -62,11 +64,13 @@ Kontrollpanelen markerar hänvisningens övergripande prestanda genom att visa v
 
 Förutom de övergripande prestandamätningarna ovan finns det ytterligare tre paneler som visar trafikfördelningen mellan olika marknader, hänvisningskällor och kategorier för sidavsikt <!-- the **Top Regions** panel breaks down traffic by geography. Meanwhile, the **Top Referral Sources** panel shows the platforms driving the most visits. Trend indicators for the metrics show how these values are changing over time compared to the previous period.-->
 
-<!--## Top Referral URLs {#top-referrals}
+<!--
+## Top Referral URLs {#top-referrals}
 
 The Top Referral URLs list surfaces your site's most visited pages from referrals.
 
-![Top Referral URLs](/help/dashboards/assets/top-url.png)-->
+![Top Referral URLs](/help/dashboards/assets/top-url.png)
+-->
 
 ## Information om referenskällor och URL-prestandaanalys {#traffic-details}
 
