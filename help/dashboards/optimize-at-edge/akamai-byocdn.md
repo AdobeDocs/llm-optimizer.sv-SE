@@ -2,10 +2,10 @@
 title: Optimera på Edge - Akamai (BYOCDN)
 description: Lär dig hur du konfigurerar Akamai BYOCDN för optimering på Edge i LLM Optimizer.
 feature: Opportunities
-source-git-commit: 9230e525340bb951fcd9f2ae1f88bad557d5b7d7
+source-git-commit: 16a1142cb70d9bcd70406a3779a43fc8568c77d0
 workflow-type: tm+mt
-source-wordcount: '587'
-ht-degree: 2%
+source-wordcount: '745'
+ht-degree: 1%
 
 ---
 
@@ -47,6 +47,10 @@ Ange routning för följande användaragenter :image.png
 **2. Ange ursprung och SSL-beteende**
 
 Ange ursprung som `live.edgeoptimize.net` och matcha SAN till `*.edgeoptimize.net`
+
+>[!NOTE]
+>
+>Om egenskapsaktiveringen misslyckas efter att du har lagt till regeln Optimera vid Edge, kontrollerar du om regeln använder ett annat SSL-verifieringsläge än standardregeln. Om så är fallet ska du uppdatera regeln Optimera vid Edge så att den matchar standardregeln. Om standardregeln till exempel använder **plattformsinställningar** ska du även använda **plattformsinställningar** här. Om du inte kan använda den inställning som krävs kontaktar du Akamai support.
 
 ![Ange ursprung och SSL-beteende](/help/assets/optimize-at-edge/akamai-step2-origin.png)
 
@@ -91,6 +95,10 @@ Konfigurationen för växling vid fel på plats har två delar: failover-funktio
 
 Inuti huvudroutningsregeln konfigurerar du beteendet Webbplatsväxling vid fel och det avancerade XML-fragmentet enligt följande:
 
+>[!IMPORTANT]
+>
+>XML-fragmentet i det här steget kräver beteendet **Avancerat**. I vissa Akamai-miljöer är det här beteendet inte tillgängligt för självbetjäningsredigering. Om du inte ser alternativet **Avancerat** kontaktar du ditt Akamai-kontoteam eller Akamai-support för att aktivera den konfiguration som krävs.
+
 ![Webbplatsredundans](/help/assets/optimize-at-edge/akamai-step9-failover.png)
 
 Lägg till begärandehuvudet `x-edgeoptimize-request` med värdet `fo` via avancerad XML:
@@ -120,6 +128,8 @@ Lägg till begärandehuvudet `x-edgeoptimize-request` med värdet `fo` via avanc
 >```
 >
 >Detta garanterar att huvudregeln för redundanstestning utvärderas för **alla**-routningsregler, inte bara en.
+>
+>Kontrollera också att regeln **Optimera vid Edge-routning** inte åsidosätts av någon senare matchningsregel som ändrar ursprung, cachelagring eller cache-ID för samma begäranden. Om en annan matchningsregel återställer dessa beteenden kanske Optimera vid Edge-routning eller cachelagring inte fungerar som förväntat.
 
 Om begärandehuvudet `x-edgeoptimize-request` är `fo` anger du det utgående svarshuvudet `x-edgeoptimize-fo` till `true`.
 
