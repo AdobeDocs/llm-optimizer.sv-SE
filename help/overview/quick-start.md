@@ -41,7 +41,7 @@ Aktiveringsflödet varierar beroende på vilken Adobe-produkt du använder.
 
 Om du vill aktivera testversionen som AEM Cloud-kund kan du antingen:
 
-* Navigera till [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub) och använd produktmeddelandekortet för att aktivera LLM Optimizer. När du har valt **Prova LLM Optimizer** omdirigeras du till [https://llmo.now](https://llmo.now). Logga in via IMS och ange sedan en domän och ett varumärkesnamn för att starta introduktionsprocessen.
+* Navigera till [Experience Hub](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/experience-hub/experience-hub) och använd produktmeddelandekortet för att aktivera LLM Optimizer. När du har valt **Prova LLM Optimizer** omdirigeras du till [https://llmo.now](https://llmo.now). Logga in via IMS och ange sedan en domän och ett varumärkesnamn för att starta introduktionsprocessen.
 * Eller gå direkt till [https://llmo.now](https://llmo.now) och logga in.
 
 ![Utvärderingsversion av LLM Optimizer](/help/overview/assets/llm-trial.png)
@@ -89,7 +89,7 @@ Anlita ert varumärke och er domän för att börja använda LLM Optimizer.
 
 En liten uppsättning kategorier, ämnen och uppmaningar genereras under introduktionsfasen. Analys av närvaro av varumärken i dessa meddelanden kommer att vara tillgänglig kort efter att webbplatsen har lanserats.
 
-Det finns även möjlighet att driftsätta optimeringar i realtid. Läs mer i [Optimera på Edge - Frågor och svar](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions).
+Det finns även möjlighet att driftsätta optimeringar i realtid. Läs mer i [Optimera på Edge - Frågor och svar](https://experienceleague.adobe.com/sv/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions).
 
 Konfigurera dessutom [CDN-loggvidarebefordran](#step-4) för trafikanalys. LLM Optimizer kräver varumärkets närvarodata och insikter från agens- och hänvisningstrafik för att identifiera möjligheter och tillhandahålla prediktiva rekommendationer som ökar AI:s synlighet.
 
