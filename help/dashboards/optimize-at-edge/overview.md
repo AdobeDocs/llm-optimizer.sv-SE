@@ -2,9 +2,9 @@
 title: Optimera på Edge
 description: Lär dig leverera optimeringar i LLM Optimizer i CDN-kanten utan att behöva göra några redigeringsändringar.
 feature: Opportunities
-source-git-commit: d0134d1b7f8e1e50c7edf75e427d759389a0d18b
+source-git-commit: 23a4b06e2492d9692d37eb0e52208bdc49328b2a
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '2240'
 ht-degree: 0%
 
 ---
@@ -13,10 +13,6 @@ ht-degree: 0%
 # Optimera på Edge
 
 På den här sidan finns en detaljerad översikt över hur du kan leverera optimeringar vid CDN-kanten utan att behöva göra några redigeringsändringar. Det handlar om introduktionsprocessen, tillgängliga optimeringsmöjligheter och hur ni kan optimera automatiskt vid behov.
-
->[!NOTE]
->
->Den här funktionen är för närvarande i tidig åtkomst. Du kan läsa mer om Tidig åtkomst-program [här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs).
 
 ## Vad är Optimize på Edge?
 
@@ -40,7 +36,17 @@ Möjligheter som kan förbättra den autentiska webbupplevelsen stöds av Optimi
 
 ## Onboarding
 
-Du bör kontakta antingen ditt Adobe-kontoteam eller FDE-teamet för att starta introduktionsprocessen. IT- eller CDN-teamet måste också slutföra installationen. Du kan även kontakta `llmo-at-edge@adobe.com` om du vill ha mer hjälp med introduktionen.
+<!--You should reach out to either your Adobe account team or the FDE team to start the onboarding process. Your IT or CDN team is also required to complete the pre-requisites and setup process. Additionally, you can also contact `llmo-at-edge@adobe.com` for further onboarding assistance.-->
+
+Starta introduktionsprocessen i ditt LLM Optimizer-konto:
+
+1. Välj fliken **CDN-konfiguration** på kontrollpanelen **Kundkonfiguration** n.
+1. Klicka på **Inbyggt CDN**.
+   ![fliken Konfiguration i CDN](/help/overview/assets/cc-cdn.png)
+1. För kunder med AEM Fast kan Adobe hjälpa till att slutföra introduktionsprocessen. För kunder som använder andra CDN-leverantörer måste IT-/CDN-teamet slutföra de nödvändiga inställningarna och förutsättningarna. Du kan även läsa exempelguiderna för CDN nedan för ytterligare vägledning.
+
+>[!NOTE]
+>Se de stegvisa guiderna nedan som täcker hela introduktionsflödet. För problem som inte lösts av guiderna kan du kontakta `llmo-at-edge@adobe.com`.
 
 Krav för att kunna utnyttja Optimera på Edge:
 
@@ -85,9 +91,9 @@ I följande tabell visas möjligheter som kan förbättra den agentiska webbuppl
 
 ### Ytterligare verktyg
 
-[Adobe LLM Optimizer: Kan din webbsida redigeras?](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome-tillägget visar hur mycket av webbsidans innehåll som LLM kan komma åt och vad som döljs. Det är utformat som ett kostnadsfritt, fristående diagnosverktyg och kräver ingen produktlicens eller konfiguration.
+Webbläsartillägget [AI Content Visibility Checker](https://chromewebstore.google.com/detail/ai-content-visibility-che/jbjngahjjdgonbeinjlepfamjdmdcbcc) visar hur mycket av webbsidans innehåll som LLM kan komma åt och vad som förblir dolt. Det är utformat som ett kostnadsfritt, fristående diagnosverktyg och kräver ingen produktlicens eller konfiguration.
 
-Med ett enda klick kan du utvärdera vilken dator som kan läsas på en webbplats. Du kan visa en jämförelse sida vid sida av vad AI-agenter ser jämfört med vad människor ser och uppskatta hur mycket innehåll som kan återställas med hjälp av LLM Optimizer. Ser du [Kan AI läsa din webbplats?](https://business.adobe.com/se/blog/introducing-the-llm-optimizer-chrome-extension) sida för mer information.
+Med ett enda klick kan du utvärdera vilken dator som kan läsas på en webbplats. Du kan visa en jämförelse sida vid sida av vad AI-agenter ser jämfört med vad människor ser och uppskatta hur mycket innehåll som kan återställas med hjälp av LLM Optimizer. Ser du [Kan AI läsa din webbplats?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) sida för mer information.
 
 ## Detaljerade affärsmöjligheter
 
@@ -117,7 +123,7 @@ Här hittar du sidor med långa, komplexa stycken som kan minska förståelsen a
 
 För varje affärsmöjlighet kan du förhandsgranska, redigera, driftsätta, visa direkt och återställa optimeringarna.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477988/?captions=swe&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### Förhandsgranskning
 
@@ -150,6 +156,10 @@ Med **Visa Live** kan du verifiera att optimeringen är aktiv och fungerar som f
 ![Återställning](/help/assets/optimize-at-edge/rollback.png)
 
 ## Vanliga frågor
+
+Fråga: Kan testkunder testa Optimera på Edge?
+
+Ja, utvärderingskunder har tillgång till en optimeringsmöjlighet och kan driftsätta den i upp till 10 sidor. Som standard är möjligheten Återskapa innehållets synlighet, vilket gör att AI-agenter kan komma åt den fullständiga versionen av sidinnehållet.
 
 F. Vilken typ av LLM riktar du dig till med Optimize på Edge?
 
