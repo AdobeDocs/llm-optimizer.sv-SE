@@ -86,7 +86,7 @@ Under konfigurationen definierar du vilken rapportsserie och siddimension som LL
 
 ### Hur LLM-trafik identifieras
 
-Trafik som har sitt ursprung i LLM identifieras med Adobe Analytics [Refererartyp - konversationsbaserade AI-verktyg](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer-type#conversational-ai-tools).
+Trafik som har sitt ursprung i LLM identifieras med Adobe Analytics [Refererartyp - konversationsbaserade AI-verktyg](https://experienceleague.adobe.com/sv/docs/analytics/components/dimensions/referrer-type#conversational-ai-tools).
 
 ### Insamlade data {#data-ingested}
 
