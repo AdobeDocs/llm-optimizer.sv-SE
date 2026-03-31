@@ -2,9 +2,9 @@
 title: Hänvisningstrafik
 description: Lär dig hur du använder kontrollpanelen för hänvisningstrafik för att se hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar.
 feature: Referral Traffic
-source-git-commit: d0134d1b7f8e1e50c7edf75e427d759389a0d18b
+source-git-commit: c0ef7710411a01410fddf87b0c4344eb782c264f
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '665'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,9 @@ ht-degree: 0%
 # Hänvisningstrafik
 
 Referenstrafik visar hur besökare kommer till din webbplats från externa plattformar, AI-citat och hänvisningslänkar. Den spårar och analyserar trafikkällor, referensmönster och konverteringsvärden från externa webbplatser och plattformar. Detta hjälper er att förstå vilka källor, regioner och sidor som driver den mest engagerade trafiken. <!--Data is sourced from the CDN logs, a privacy-preserving source that does not capture personal user data.--> Det finns också anpassningsbara filter som hjälper dig att förfina de data som visas.
+
+>[!NOTE]
+>Som standard bygger den här instrumentpanelen trafikinsikter från **CDN-loggar**. Om din organisation har ett betalt erbjudande kan du ansluta **Adobe Analytics** för att lägga till data som mäter AI-driven identifiering och webbplatsengagemang. Dessa data är tillgängliga på fliken **Affärspåverkan**. Fliken fylls inte i utan integrering med Adobe Analytics. Mer information finns i [Adobe Analytics-integrering](/help/dashboards/adobe-analytics-integration.md).
 
 ![Referenssida](/help/dashboards/assets/referral-traffic.png)
 
@@ -47,7 +50,7 @@ När kontrollpanelen har aktiverats fylls den i med referensvärden för trafik.
 * **Sidåtergivning** - Filtrera hänvisningstrafik efter användaråtergivning.
 * **Kanal-Source** - Filtrera efter kanalens källa. är bland annat LLM, förtjänade, betalda eller blandade hänvisningskanaler.
 * **Enhetstyp** - Analysera trafik efter besökarens enhetstyp, antingen på dator, mobil eller alla enheter.
-  **Region** - Visa hänvisningsmönster för olika platser.
+* **Region** - Visa hänvisningsmönster för olika platser.
 
 När du har valt önskat filter klickar du på **Använd filter** för att använda markeringen på instrumentpanelen.
 

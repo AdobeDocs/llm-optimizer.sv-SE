@@ -2,10 +2,10 @@
 user-guide-title: LLM Optimizer
 breadcrumb-title: LLM Optimizer
 user-guide-description: Lyft varumärket med Adobe LLM Optimizer. Spåra omnämnanden, identifiera insikter och dominera AI-driven sökning. Ta kontroll över din synlighet - börja optimera nu!
-source-git-commit: b590cd14ba7d64e56a6c972fd6090e2df9de58f6
+source-git-commit: 2170a6a0d2e693401269be998108300cbc8878fa
 workflow-type: tm+mt
-source-wordcount: '98'
-ht-degree: 0%
+source-wordcount: '101'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 0%
    + [Kundkonfiguration](/help/dashboards/customer-configuration.md)
    + [Collaboration](/help/dashboards/collaboration.md)
 + Vidarebefordran av BYOCDN-logg{#log-forwarding}
-   + [Ökning](/help/overview/log-forwarding/log-forwarding-overview.md)
+   + [Översikt](/help/overview/log-forwarding/log-forwarding-overview.md)
    + [Akamai](/help/overview/log-forwarding/akamai.md)
    + [Cloudflare](/help/overview/log-forwarding/cloudflare.md)
    + [CloudFront](/help/overview/log-forwarding/cloudfront.md)
@@ -37,9 +37,10 @@ ht-degree: 0%
    + [Annat (manuell överföring)](/help/overview/log-forwarding/other.md)
 + Ytterligare resurser{#resources}
    + Optimera på Edge{#optimize-at-edge}
-      + [Ökning](/help/dashboards/optimize-at-edge/overview.md)
+      + [Översikt](/help/dashboards/optimize-at-edge/overview.md)
       + [Hanterad CDN för tjänsten AEM Cloud (snabbt)](/help/dashboards/optimize-at-edge/aemcs-managed-cdn.md)
       + [Snabbt (BYOCDN)](/help/dashboards/optimize-at-edge/fastly-byocdn.md)
       + [Akamai (BYOCDN)](/help/dashboards/optimize-at-edge/akamai-byocdn.md)
       + [Cloudflare (BYOCDN)](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md)
       + [CloudFront (BYOCDN)](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md)
+   + [Integrering med Adobe Analytics](/help/dashboards/adobe-analytics-integration.md)
