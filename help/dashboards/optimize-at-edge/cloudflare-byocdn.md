@@ -2,9 +2,9 @@
 title: Optimera på Edge - Cloudflare (BYOCDN)
 description: Lär dig hur du konfigurerar Cloudflare BYOCDN för optimering på Edge i LLM Optimizer.
 feature: Opportunities
-source-git-commit: 9230e525340bb951fcd9f2ae1f88bad557d5b7d7
+source-git-commit: da789100d814004687de2f46e18a295671dec4b8
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1439'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,11 @@ Innan du konfigurerar Cloudflare Worker-routningsreglerna måste du se till att 
 * LLM Optimizer introduktionsprocess har slutförts.
 * CDN-loggen har vidarebefordrats till LLM Optimizer.
 * En Edge Optimize API-nyckel har hämtats från LLM Optimizer användargränssnitt.
+* (Valfritt) En mellanlagringsnyckel för Edge Optimize API om du först testar routning på ett mellanlagringsvärdnamn.
 
 {{retrieve-byocdn-api-key}}
+
+{{retrieve-staging-edge-optimize-api-key}}
 
 **Så här fungerar routning**
 
@@ -422,8 +425,17 @@ Svaret ska **inte** innehålla rubriken `x-edgeoptimize-request-id`. Sidinnehål
 | `x-edgeoptimize-request-id` | Presentera - innehåller ett unikt begärande-ID | Frånvarande |
 | `x-edgeoptimize-fo` | Finns bara om redundans inträffade (värde: `1`) | Frånvarande |
 
-Status för trafikroutningen kan också kontrolleras i LLM Optimizer-gränssnittet. Navigera till **Kundkonfiguration** och välj fliken **CDN-konfiguration** .
+**4. Mellanlagringsdomän (valfritt)**
 
-![AI-trafikroutningsstatus med routning aktiverat](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+Om du använder ett mellanlagringsvärdnamn och en mellanlagrings-API-nyckel från LLM Optimizer distribuerar du samma arbetslogik i **mellanlagringszonen** med API-nyckeln **staging**. Verifiera sedan starttrafiken på mellanlagringsvärden:
+
+```
+curl -svo /dev/null https://staging.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
+
+Ersätt `https://staging.example.com/page.html` med din faktiska mellanlagrings-URL och sökväg. Ett godkänt svar innehåller rubriken `x-edgeoptimize-request-id`.
+
+{{verify-routing-status-in-ui}}
 
 {{return-to-overview}}

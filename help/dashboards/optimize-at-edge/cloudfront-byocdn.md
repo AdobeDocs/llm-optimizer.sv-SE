@@ -2,9 +2,9 @@
 title: Optimera på Edge - CloudFront (BYOCDN)
 description: Lär dig hur du konfigurerar CloudFront BYOCDN för optimering på Edge i LLM Optimizer.
 feature: Opportunities
-source-git-commit: 1253d0f0a58f6523699c52fbfab23028dc469c82
+source-git-commit: da789100d814004687de2f46e18a295671dec4b8
 workflow-type: tm+mt
-source-wordcount: '2228'
+source-wordcount: '2265'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,11 @@ Innan du konfigurerar CloudFront bör du kontrollera att du har:
 * LLM Optimizer introduktionsprocess har slutförts.
 * CDN-loggen har vidarebefordrats till LLM Optimizer.
 * En Edge Optimize API-nyckel har hämtats från LLM Optimizer användargränssnitt.
+* (Valfritt) En mellanlagringsnyckel för Edge Optimize API om du först testar routning på ett mellanlagringsvärdnamn.
 
 {{retrieve-byocdn-api-key}}
+
+{{retrieve-staging-edge-optimize-api-key}}
 
 **Steg 1: Skapa Edge Optimera ursprung**
 
@@ -296,11 +299,20 @@ Svaret ska **inte** innehålla rubriken `x-edgeoptimize-request-id`. Sidinnehål
 | `x-edgeoptimize-request-id` | Presentera - innehåller ett unikt begärande-ID | Frånvarande |
 | `x-edgeoptimize-fo` | Finns bara om redundans inträffade (värde: `1`) | Frånvarande |
 
-Status för trafikroutningen kan också kontrolleras i LLM Optimizer-gränssnittet. Navigera till **Kundkonfiguration** och välj fliken **CDN-konfiguration** .
+**4. Mellanlagringsdomän (valfritt)**
 
-![AI-trafikroutningsstatus med routning aktiverat](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+Om du använder ett mellanlagringsvärdnamn och en mellanlagrings-API-nyckel från LLM Optimizer ska du distribuera samma CloudFront-konfiguration på din **mellanlagringsdistribution** med API-nyckeln **staging**. Verifiera sedan starttrafiken på mellanlagringsvärden:
 
-**4. Verifiera att loggarna flödar korrekt**
+```
+curl -svo /dev/null https://staging.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
+
+Ersätt `https://staging.example.com/page.html` med din faktiska mellanlagrings-URL och sökväg. Ett godkänt svar innehåller rubriken `x-edgeoptimize-request-id`.
+
+{{verify-routing-status-in-ui}}
+
+**5. Verifiera att loggarna flödar korrekt**
 
 När du har kört testförfrågningarna ovan kontrollerar du att loggarna skrivs för både funktionen CloudFront och funktionen Lambda@Edge.
 

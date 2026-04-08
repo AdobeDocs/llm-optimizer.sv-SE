@@ -2,9 +2,9 @@
 title: Optimera på Edge - Akamai (BYOCDN)
 description: Lär dig hur du konfigurerar Akamai BYOCDN för optimering på Edge i LLM Optimizer.
 feature: Opportunities
-source-git-commit: 16a1142cb70d9bcd70406a3779a43fc8568c77d0
+source-git-commit: f2a652761acbea7ca5b8e8740c1dbd0132e42f7f
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '849'
 ht-degree: 1%
 
 ---
@@ -22,25 +22,32 @@ Innan du konfigurerar Akamai Property Manager-reglerna bör du kontrollera att d
 * LLM Optimizer introduktionsprocess har slutförts.
 * CDN-loggen har vidarebefordrats till LLM Optimizer.
 * En Edge Optimize API-nyckel har hämtats från LLM Optimizer användargränssnitt.
+* (Valfritt) En mellanlagringsnyckel för Edge Optimize API om du först testar routning på ett mellanlagringsvärdnamn.
 
 {{retrieve-byocdn-api-key}}
 
+{{retrieve-staging-edge-optimize-api-key}}
+
 **Konfiguration**
 
-Följande Akamai Property Manager-regel skickar användaragenter för LLM till Edge Optimize. Konfigurationen innehåller följande steg:
+Följande Akamai Property Manager-regel dirigerar om statisk trafik från HTML till Edge Optimize. Konfigurationen innehåller följande steg:
 
-**1. Ange routningsvillkor (matchning av användaragent)**
+**1. Ange routningsvillkor (trafikmatchning mellan användaragent och HTML)**
 
-Ange routning för följande användaragenter :image.png
+Ange routning för följande användaragenter:
 
 ```
- *AdobeEdgeOptimize-AI*,
- *ChatGPT-User*,
- *GPTBot*,
- *OAI-SearchBot*,
- *PerplexityBot*,
+ *AdobeEdgeOptimize-AI*
+ *ChatGPT-User*
+ *GPTBot*
+ *OAI-SearchBot*
+ *PerplexityBot*
  *Perplexity-User*
 ```
+
+>[!NOTE]
+>
+>Använd endast routningsregeln Optimera vid Edge på äkta HTML-sidtrafik. En vanlig inställning är att använda villkor på sidan som krävs, till exempel **Filtillägg**, för att matcha `html` och `EMPTY_STRING` för URL-adresser utan tillägg. Om din webbplats använder HTML från andra URL-mönster, eller innehåller icke-sidiga utbyggnadsvägar som API-slutpunkter, kan du förfina regeln med ytterligare sökvägsbaserade villkor.
 
 ![Ange routningsvillkor](/help/assets/optimize-at-edge/akamai-step1-routing.png)
 
@@ -68,7 +75,7 @@ Ange cachenyckelvariabeln `PMUSER_EDGE_OPTIMIZE_CACHE_KEY` till `LLMCLIENT=TRUE;
 
 Ange följande rubriker för inkommande begäran:
 `x-edgeoptimize-api-key` till API-nyckeln som hämtats från LLMO
-`x-edgeoptimize-config` to `LLMCLIENT=TRUE;`
+`x-edgeoptimize-config` till `LLMCLIENT=TRUE;`
 `x-edgeoptimize-url` to `{{builtin.AK_URL}}`
 
 ![Ändra rubriker för inkommande begäran](/help/assets/optimize-at-edge/akamai-step5-request.png)
@@ -180,8 +187,17 @@ Svaret ska **inte** innehålla rubriken `x-edgeoptimize-request-id`. Sidinnehål
 | `x-edgeoptimize-request-id` | Presentera - innehåller ett unikt begärande-ID | Frånvarande |
 | `x-edgeoptimize-fo` | Finns bara om redundans inträffade (värde: `1`) | Frånvarande |
 
-Status för trafikroutningen kan också kontrolleras i LLM Optimizer-gränssnittet. Navigera till **Kundkonfiguration** och välj fliken **CDN-konfiguration** .
+**4. Mellanlagringsdomän (valfritt)**
 
-![AI-trafikroutningsstatus med routning aktiverat](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+Om du använder ett mellanlagringsvärdnamn och en mellanlagrings-API-nyckel från LLM Optimizer ska du distribuera samma routningsmönster på din **mellanlagringsegenskap** med hjälp av nyckeln **staging** i dina regler. Verifiera sedan starttrafiken på mellanlagringsvärden:
+
+```
+curl -svo /dev/null https://staging.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
+
+Ersätt `https://staging.example.com/page.html` med din faktiska mellanlagrings-URL och sökväg. Ett godkänt svar innehåller rubriken `x-edgeoptimize-request-id`.
+
+{{verify-routing-status-in-ui}}
 
 {{return-to-overview}}

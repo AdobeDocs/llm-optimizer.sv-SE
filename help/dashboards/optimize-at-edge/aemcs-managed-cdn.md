@@ -2,7 +2,7 @@
 title: Optimera på Edge - AEM Cloud Service Managed CDN (snabbt)
 description: Lär dig hur du konfigurerar AEM Cloud Service Managed CDN (snabbt) för optimering på Edge i LLM Optimizer.
 feature: Opportunities
-source-git-commit: 9230e525340bb951fcd9f2ae1f88bad557d5b7d7
+source-git-commit: 0c7ccadbb40c8c119cb2a57cf8118708c33c4236
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 0%
@@ -18,25 +18,27 @@ Den här konfigurationen dirigerar agens-trafik (begäranden från AI-bots och L
 
 Så här börjar du dirigera agrotisk trafik till Edge Optimize:
 
-1. Navigera till **Kundkonfiguration** och välj fliken **CDN-konfiguration** .
+1. Öppna **Kundkonfiguration** i LLM Optimizer och välj fliken **CDN-konfiguration** .
 
    ![Navigera till Kundkonfiguration](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
-2. Markera kryssrutan **Distribuera optimeringar till AI-agenter** under **AI-trafikroutning för att distribuera optimeringar**. Adobe-teamet hanterar routningskonfigurationen åt dig.
+2. Leta reda på avsnittet **Distribuera optimeringar till AI-agenter**. Markera kryssrutan **Aktivera optimeringsmotor**.
 
-   ![Tick Deploy Optimizations to AI Agents](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![Distribuera optimeringar till AI-agenter - väntar](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending.png)
 
-3. När du har aktiverat kryssrutan visas statusen för inställningen. Adobe-teamet kommer att slutföra routningskonfigurationen åt dig.
+3. Välj **Aktivera** i bekräftelsedialogrutan. Adobe-teamet hanterar routningskonfigurationen åt dig.
 
-   ![Konfigurering av AI-trafik pågår](/help/assets/optimize-at-edge/prereq-traffic-routing-progress.png)
+   ![Aktivera bekräftelsedialogrutan för optimeringsmotorn](/help/assets/optimize-at-edge/byocdn-enable-optimization-engine-dialog.png)
 
-   När routningen är konfigurerad och aktiv uppdateras statusen till en grön bock som anger att routning har aktiverats. Du behöver inte göra något mer.
+   När routningen är konfigurerad och aktiv uppdateras statusen till **Slutförd** med en grön bock som bekräftar att routning är aktiverat. Du behöver inte göra något mer.
+
+   ![Distribuera optimeringar till AI-agenter - slutfört](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 Om du behöver hjälp med ovanstående steg kontaktar du ditt Adobe-kontoteam eller `llmo-at-edge@adobe.com`.
 
 **Självbetjäningsroutning via Cloud Manager Pipeline**
 
-Om du föredrar att konfigurera routningen själv via Cloud Manager Pipeline följer du stegen nedan. Cirkulationskonfigurationen görs med en [originSelector CDN-regel](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). Förutsättningarna är följande:
+Om du föredrar att konfigurera routningen själv via Cloud Manager Pipeline följer du stegen nedan. Cirkulationskonfigurationen görs med en [originSelector CDN-regel](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors). Förutsättningarna är följande:
 
 * Bestäm vilken domän som ska dirigeras.
 * Bestäm vilka banor som ska dirigeras.
@@ -44,7 +46,7 @@ Om du föredrar att konfigurera routningen själv via Cloud Manager Pipeline fö
 
 För att kunna distribuera regeln måste du:
 
-* Skapa en [konfigurationspipeline](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/config-pipeline).
+* Skapa en [konfigurationspipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline).
 * Genomför konfigurationsfilen `cdn.yaml` i din databas.
 * Kör konfigurationsflödet.
 
@@ -115,8 +117,10 @@ Svaret ska **inte** innehålla rubriken `x-edgeoptimize-request-id`. Sidinnehål
 | `x-edgeoptimize-request-id` | Presentera - innehåller ett unikt begärande-ID | Frånvarande |
 | `x-edgeoptimize-fo` | Finns bara om redundans inträffade (värde: `1`) | Frånvarande |
 
-Status för trafikroutningen kan också kontrolleras i LLM Optimizer-gränssnittet. Navigera till **Kundkonfiguration** och välj fliken **CDN-konfiguration** .
+**4. Kontrollera routningsstatus i LLM Optimizer**
 
-![AI-trafikroutningsstatus med routning aktiverat](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
+Du kan även bekräfta routning i LLM Optimizer-gränssnittet. Öppna **Kundkonfiguration** och välj fliken **CDN-konfiguration** . När routning är aktiv visar avsnittet **Distribuera optimeringar till AI-agenter** **Slutfört**.
+
+![Distribuera optimeringar till AI-agenter - slutfört](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 {{return-to-overview}}
