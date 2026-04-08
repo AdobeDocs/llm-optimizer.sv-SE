@@ -2,9 +2,9 @@
 title: Optimera på Edge
 description: Lär dig leverera optimeringar i LLM Optimizer i CDN-kanten utan att behöva göra några redigeringsändringar.
 feature: Opportunities
-source-git-commit: 23a4b06e2492d9692d37eb0e52208bdc49328b2a
+source-git-commit: b56c2a355c794c8461dda15bf7c733983fd95740
 workflow-type: tm+mt
-source-wordcount: '2240'
+source-wordcount: '2348'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Möjligheter som kan förbättra den autentiska webbupplevelsen stöds av Optimi
 
 Starta introduktionsprocessen i ditt LLM Optimizer-konto:
 
-1. Välj fliken **CDN-konfiguration** på kontrollpanelen **Kundkonfiguration** n.
+1. Välj fliken **CDN-konfiguration** på kontrollpanelen **Kundkonfiguration**.
 1. Klicka på **Inbyggt CDN**.
    ![fliken Konfiguration i CDN](/help/overview/assets/cc-cdn.png)
 1. För kunder med AEM Fast kan Adobe hjälpa till att slutföra introduktionsprocessen. För kunder som använder andra CDN-leverantörer måste IT-/CDN-teamet slutföra de nödvändiga inställningarna och förutsättningarna. Du kan även läsa exempelguiderna för CDN nedan för ytterligare vägledning.
@@ -60,7 +60,14 @@ Krav för IT-avdelningen:
 * Lägg till Optimize på Edge routningsregler i CDN.
 * Bekräfta Optimera vid Edge-routning i LLM Optimizer gränssnitt.
 
+>[!IMPORTANT]
+>Routning måste konfigureras vid det yttre CDN (det CDN som ligger närmast klienten). Om du har flera CDN:er kan routning endast utföras på det yttre CDN:et.
+
 Om du vill vägleda installationsprocessen väljer du din CDN-leverantör nedan och följer motsvarande konfigurationsguide. Tänk på att dessa exempel bör anpassas till den aktuella livekonfigurationen. Vi rekommenderar att du gör ändringar i de lägre miljöerna först.
+
+### API-nycklar för mellanlagringsdomän (valfritt)
+
+Om du testar på ett mellanlagringsvärdnamn före produktion använder du LLM Optimizer för att registrera **en** mellanlagringsdomän och kopiera dess **mellanlagringsnyckel** Edge Optimize API-nyckel från **kundkonfiguration** → **CDN-konfiguration** → **Distribuera optimeringar till AI-agenter** → **Lägg till scendomän** (eller **Distribuera från. Scendomän**). Mellanlagringsvärdnamnet måste dela samma registreringsbara domän som produktionsplatsen. **Hämta dina egna CDN**-guider innehåller de fullständiga stegen för att hämta mellanlagringsnyckeln och verifiera routning på din mellanlagrings-URL.
 
 ### CDN-konfigurationsguider
 
@@ -93,7 +100,7 @@ I följande tabell visas möjligheter som kan förbättra den agentiska webbuppl
 
 Webbläsartillägget [AI Content Visibility Checker](https://chromewebstore.google.com/detail/ai-content-visibility-che/jbjngahjjdgonbeinjlepfamjdmdcbcc) visar hur mycket av webbsidans innehåll som LLM kan komma åt och vad som förblir dolt. Det är utformat som ett kostnadsfritt, fristående diagnosverktyg och kräver ingen produktlicens eller konfiguration.
 
-Med ett enda klick kan du utvärdera vilken dator som kan läsas på en webbplats. Du kan visa en jämförelse sida vid sida av vad AI-agenter ser jämfört med vad människor ser och uppskatta hur mycket innehåll som kan återställas med hjälp av LLM Optimizer. Ser du [Kan AI läsa din webbplats?](https://business.adobe.com/se/blog/introducing-the-llm-optimizer-chrome-extension) sida för mer information.
+Med ett enda klick kan du utvärdera vilken dator som kan läsas på en webbplats. Du kan visa en jämförelse sida vid sida av vad AI-agenter ser jämfört med vad människor ser och uppskatta hur mycket innehåll som kan återställas med hjälp av LLM Optimizer. Ser du [Kan AI läsa din webbplats?](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) sida för mer information.
 
 ## Detaljerade affärsmöjligheter
 
@@ -123,7 +130,7 @@ Här hittar du sidor med långa, komplexa stycken som kan minska förståelsen a
 
 För varje affärsmöjlighet kan du förhandsgranska, redigera, driftsätta, visa direkt och återställa optimeringarna.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477988/?captions=swe&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### Förhandsgranskning
 
