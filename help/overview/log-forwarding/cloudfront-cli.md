@@ -2,9 +2,9 @@
 title: Loggvidarebefordran - CloudFront (AWS CLI)
 description: Vidarebefordra CloudFront CDN loggar till Adobe S3-bucket med hjälp av AWS CLI för leveranskonfiguration och drift.
 feature: Agentic Traffic
-source-git-commit: 0d51bbde954c399dc6595522fa70b576461f458a
+source-git-commit: 3277e7f7f2e0c5e4693e40473d595b12d9e5f2e8
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ På LLM Optimizer-sidan [https://llmo.now/](https://llmo.now/):
 
 1. Ange ditt **AWS-konto**-ID.
 
-   ![AWS konto-ID](/help/overview/assets/log-forwarding/cloudfront/cloudfront-aws-account.png)
+<!--  ![AWS Account ID](/help/overview/assets/log-forwarding/cloudfront/cloudfront-aws-account.png)-->
 
 1. Välj **CloudFront (BYOCDN)**.
 
@@ -48,7 +48,7 @@ På LLM Optimizer-sidan [https://llmo.now/](https://llmo.now/):
 
 1. Klicka på **Anonboard**.
 
-   ![Knappen Inbyggt](/help/overview/assets/log-forwarding/common/onboard-button.png)
+<!-- ![Onboard button](/help/overview/assets/log-forwarding/common/onboard-button.png)-->
 
 ## Steg 2: Konfigurera CDN-loggvidarebefordran med AWS CLI {#step-2-cli}
 
