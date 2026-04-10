@@ -2,9 +2,9 @@
 title: Optimera på Edge - Cloudflare (BYOCDN)
 description: Lär dig hur du konfigurerar Cloudflare BYOCDN för optimering på Edge i LLM Optimizer.
 feature: Opportunities
-source-git-commit: da789100d814004687de2f46e18a295671dec4b8
+source-git-commit: 14dbee36f39b0d993d448edccb63fb8a519704a1
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1922'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,53 @@ Följande huvuden måste anges på begäranden till Edge Optimize-backend:
 | `x-edgeoptimize-url` | Den ursprungliga URL-sökvägen och frågesträngen för begäran. | `/page.html` eller `/products?id=123` |
 | `x-edgeoptimize-api-key` | Den API-nyckel som tillhandahålls av Adobe för din domän. | `your-api-key-here` |
 | `x-edgeoptimize-config` | Konfigurationssträng för cachenyckeldifferentiering. | `LLMCLIENT=TRUE;` |
+
+## Inställningsalternativ
+
+Det finns två sätt att konfigurera Cloudflare Worker för Edge Optimize:
+
+* [**Alternativ 1: Distribuera till CloudFlare (rekommenderas)**](#option-1-deploy-to-cloudflare) - Skapar automatiskt en ny arbetare och ber dig ange nödvändiga miljövariabler och hemligheter. Använd det här alternativet om du inte har någon befintlig CloudFlare Worker för den här domänen.
+* [**Alternativ 2: Manuell konfiguration**](#option-2-manual-setup) - Stegvisa instruktioner för att skapa och konfigurera arbetaren själv. Använd det här alternativet om du redan har en befintlig Cloudflare Worker som du vill utöka, eller om du föredrar fullständig kontroll över distributionen.
+
+Oavsett vilket alternativ du väljer måste du manuellt länka arbetaren till din domän. Se [Steg: Lägg till en väg till din domän](#add-a-route-to-your-domain).
+
+## Alternativ 1: Distribuera till CloudFlare
+
+Det här alternativet använder knappen **Distribuera till CloudFlare** för att automatiskt skapa arbetaren och konfigurera nödvändiga miljövariabler och hemligheter i ditt CloudFlare-konto. Det här är det snabbaste sättet att komma igång om du skapar en ny arbetare.
+
+>[!IMPORTANT]
+>
+>Använd bara det här alternativet om du **inte** har en befintlig CloudFlare Worker i din domän. Om du redan har en arbetare använder du [Alternativ 2: Manuell konfiguration](#option-2-manual-setup) för att lägga till Edge Optimize-routningslogiken till din befintliga arbetare.
+
+**Steg 1: Distribuera arbetaren**
+
+Klicka på knappen nedan för att distribuera Edge Optimize-arbetaren till ditt CloudFlare-konto:
+
+[![Distribuera till CloudFlare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/adobe/llmo-code-samples/tree/main/optimize-at-edge/cloudflare/automation)
+
+**Steg 2: Fyll i distributionsformuläret**
+
+När du klickar på knappen öppnas sidan Inställningar för arbetare. Fyll i formuläret enligt följande:
+
+![Konfigurationssida för CloudFlow-arbetare](/help/assets/optimize-at-edge/cloudflare-deploy-form.png)
+
+1. **Git-konto** - Välj ditt GitHub- eller GitLab-konto i listrutan. Cloudflare förser arbetskoden med en databas på ditt konto. Om inget konto visas kan du lägga till en ny anslutning direkt från listrutan genom att välja **+ Ny GitHub-anslutning** eller **+ Ny GitLab-anslutning**. Mer information finns i [Integreringsguiden för Git för Cloudflare](https://developers.cloudflare.com/workers/ci-cd/builds/git-integration/github-integration/).
+
+   ![Git-kontolistrutan med alternativen Ny GitHub-anslutning och Ny GitLab-anslutning](/help/assets/optimize-at-edge/cloudflare-git-connection.png)
+2. **Skapa privat Git-databas** - Låt detta vara markerat (standard).
+3. **Projektnamn** - Låt `edge-optimize-router` vara eller ange ett namn som du vill ha.
+4. **EDGE_OPTIMIZE_API_KEY** - Klistra in den Edge-optimerings-API-nyckel som tillhandahålls av Adobe. Värdet lagras som en krypterad hemlighet.
+5. **EDGE_OPTIMIZE_TARGET_HOST** - Ange webbplatsens domän utan protokollet (till exempel `www.example.com`).
+6. **Skapa kommando** - lämna tomt.
+7. **Distribuera kommando** - Låt vara `npm run deploy` (förfylld).
+8. **Bygger för icke-produktionsgrenar** - Låt vara omarkerat. Det här är en arbetsflödesfunktion för utvecklare och behövs inte för den här distributionen.
+9. Klicka på **Skapa och distribuera**.
+
+När arbetaren har distribuerats fortsätter du till [Lägg till en väg till domänen](#add-a-route-to-your-domain) för att länka arbetaren till domänen. Routning konfigureras inte automatiskt och måste utföras manuellt.
+
+## Alternativ 2: Manuell konfiguration
+
+Följ de här stegen för att skapa och konfigurera arbetaren manuellt.
 
 **Steg 1: Skapa molnarbetare**
 
@@ -239,7 +286,7 @@ Klicka på **Spara och distribuera** för att publicera arbetaren.
 
 ![Kodredigeraren för Cloudflare Worker](/help/assets/optimize-at-edge/cloudflare-worker-editor.png)
 
-**Steg 3: Konfigurera miljövariabler**
+**Steg 3: Konfigurera miljövariabler och hemligheter**
 
 Miljövariabler lagrar känslig konfiguration som din API-nyckel säkert.
 
@@ -257,9 +304,9 @@ Miljövariabler lagrar känslig konfiguration som din API-nyckel säkert.
 
 ![CloudFlare-miljövariabler](/help/assets/optimize-at-edge/cloudflare-env-variables.png)
 
-**Steg 4: Lägg till en väg till din domän**
+## Lägg till en väg till din domän {#add-a-route-to-your-domain}
 
-Så här aktiverar du arbetaren på din domän:
+Oavsett vilket konfigurationsalternativ du använde måste du länka arbetaren till din domän manuellt. Det här steget aktiverar arbetaren i din trafik.
 
 1. Gå till din arbetares **inställningar** > **Utlösare**.
 2. Klicka på **Lägg till flöde** under **Routningar**.
@@ -377,7 +424,7 @@ const FAILOVER_ON_5XX = false;
 | Problem | Möjlig orsak | Lösning |
 |-------|----------------|----------|
 | Inget `x-edgeoptimize-request-id`-huvud i svaret | Worker-vägen matchar inte, eller så finns inte användaragenten i listan med giltiga botar. | Kontrollera att ruttmönstret matchar begärande-URL:en. Kontrollera att användaragenten finns i `AGENTIC_BOTS`-arrayen. |
-| 401- eller 403-fel från Edge Optimize | Ogiltig eller saknad API-nyckel. | Kontrollera att `EDGE_OPTIMIZE_API_KEY` har angetts korrekt i miljövariabler. Kontakta Adobe för att bekräfta att API-nyckeln är aktiv. |
+| 401- eller 403-fel från Edge Optimize | Ogiltig eller saknad API-nyckel. | Kontrollera att `EDGE_OPTIMIZE_API_KEY` har angetts korrekt i miljövariabler och hemligheter. Kontakta Adobe för att bekräfta att API-nyckeln är aktiv. |
 | Oändliga omdirigeringar eller slingor | Loopskyddshuvudet är inte inställt eller korrekt markerat. | Kontrollera att rubrikkontrollen `x-edgeoptimize-request` är på plats. |
 | Infektion hos människan | Worker-routningslogiken är för bred. | Kontrollera att logiken för matchning av användaragent är korrekt och skiftlägeskänslig. Kontrollera att `TARGETED_PATHS` har konfigurerats korrekt. |
 | Långsamma svarstider | Nätverksfördröjning till Edge Optimize-backend. | Detta förväntas för den första begäran. Efterföljande begäranden cachelagras på Edge Optimize. |
